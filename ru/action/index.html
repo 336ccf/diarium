@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta name="author" content="suicvairduCConstantinius">
+   <meta name="description" content="action">
+   <link rel="shortcut icon" href="../../ICO/yellow.ico" type="image/png">
+   <meta charset="UTF-8">
+   <meta name="keywords" content="diarium, занятость">
+   <title>Занятость</title>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138677726-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+ 		function gtag(){dataLayer.push(arguments);}
+ 		gtag('js', new Date());
+
+ 		gtag('config', 'UA-138677726-1');
+    </script>
+    <script src="../../value.js"></script>
+</head>
+<style>
+* {
+   margin: 0;
+   padding: 0;
+}
+html {
+   background-color: #cccccc;
+}
+header {
+   width: 100%;
+}
+div.l {
+   width: 100%;
+   height: 24vh;
+   display:block;
+}
+div.li {
+   height: 33.33%;
+   width: 100%;
+   display: block;
+   margin: 0 auto;
+   float: left;
+}
+div.lin {
+   width: 20%;
+   height: 100%;
+   float: left;
+   border-radius: 10px;
+}
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 5vw;
+   border-radius: 50%;
+}
+p {
+   font-size: 2.4vh;
+   text-align:center;
+}
+div.button > img { 
+   height: 80%;
+   display: block;
+   margin: 0 auto;
+   margin-top:10%;
+   background-color: transparent;
+}
+@media screen and (min-width: 1200px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 39%;
+   border-radius: 50%;
+}
+p {
+   font-size: 2.5vh;
+   text-align:center;
+}
+div.l> div.li:nth-child(2) > div.lin {background-size: 39px;}
+}
+/* Portrait tablets and medium desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 12vw;
+   border-radius: 50%;
+}
+p {
+   font-size: 2.66vh;
+   text-align:center;
+}
+div.l> div.li:nth-child(2) > div.lin {background-size: 35px;}
+}
+/* Portrait tablets and small desktops */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 7vw;
+   border-radius: 50%;
+}
+p {
+   font-size: 2vh;
+   text-align:center;
+}
+div.l> div.li:nth-child(2) > div.lin {background-size: 65px;}
+}
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 9vw;
+
+   border-radius: 50%;
+}
+p {
+   font-size: 1em;
+   text-align:center;
+}
+div.l> div.li:nth-child(2) > div.lin {background-size: 50px;}
+}
+/* Landscape phones and smaller */
+@media screen and (max-width: 480px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 8.5vw;
+   border-radius: 50%;
+}
+p {
+   font-size: 2em;
+   text-align:center;
+}
+div.l> div.li:nth-child(2) > div.lin {background-size: 23%;}
+}
+div.l> div.li:nth-child(2) > div.lin:hover {
+   box-shadow:0px 0px 1px 1px#131313 inset;
+   cursor: pointer;
+}
+div.l> div.li:nth-child(2) > div.lin:nth-child(1) {
+   background-image: url(../../SVG/event.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+div.l> div.li:nth-child(2) > div.lin:nth-child(2) {
+   background-image: url(../../SVG/project.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+div.l> div.li:nth-child(2) > div.lin:nth-child(3) {
+   background-image: url(../../SVG/transit.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+div.l> div.li:nth-child(2) > div.lin:nth-child(4) {
+   background-image: url(../../SVG/action.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+div.l> div.li:nth-child(2) > div.lin:nth-child(5) {
+   background-image: url(../../SVG/home.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+</style>
+<header>
+   <div class="l">
+      <div class="li">
+         <div class="li"></div>
+         <div class="li">
+            <div class="lin"><p>Мероприятия</p></div>
+            <div class="lin"><p>Проекты</p></div>
+            <div class="lin"><p>Транзакции</p></div>
+            <div class="lin"><p>Занятость</p></div>
+            <div class="lin"><p>Домой</p></div>
+         </div>
+         <div class="li"></div>
+      </div>
+      <div class="li">
+         <div class="lin" onclick="location.href='../event/'">
+            <div class="button">
+            </div>
+         </div>
+         <div class="lin" onclick="location.href='../process/'">
+            <div class="button">
+            </div>
+         </div>
+         <div class="lin" onclick="location.href='../transit/'">
+            <div class="button">
+            </div>
+         </div>
+         <div class="lin" style="background-color: #131313; cursor: none;">
+            <div class="button">
+            </div>
+         </div>
+         <div class="lin" onclick="location.href='../'">
+            <div class="button">
+            </div>
+         </div>
+      </div>
+      <div class="li"></div>
+   </div>
+   <p id="language">RU</p>
+</header>
+<style>
+p#language {
+    position: fixed;
+    display: block;
+    padding-left: 2vw;
+    padding-right: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    background-color: #cccccc;
+    border-block-end: 1px solid #131313;
+}
+div.profile {
+    width: 80vw;
+    margin-left: 10vw;
+}
+div#constantinius{
+    width: 100%;
+    border-block-start: 1px solid #131313;
+    display: flex;
+    justify-content: space-between; 
+    overflow: auto; 
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+}
+span#age{padding-left: 5vw;}
+span#profile{}
+span#money{padding-right: 5vw;}
+div#ways {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: auto; 
+    margin-bottom: 1vh;
+}
+figure.block-type{
+    background-color: #131313;
+    width: 24.7%;
+    height: 25vh;
+    overflow: auto;
+    color: #cccccc;
+}
+figure.block-type:first-child {
+    border-bottom-left-radius: 0.5vw;
+}
+figure.block-type:last-child {
+    border-bottom-right-radius: 0.5vw;
+}
+div#manuscript {
+    width: 100%;
+    height: 20vh;
+    color: #cccccc;
+    background-color: #131313;
+    margin-bottom: 1vh;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    display: flex;
+    justify-content: center;
+}
+div#redirect {
+    width: 100%;
+    height: 10vh;
+    color: #cccccc;
+    background-color: #131313;
+    border-bottom-left-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.progressbar {
+    width: 80%;
+    margin-left: 10%;
+    height: 10%;
+    background-color: #cccccc;
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.progress {
+    width: unset;
+    height: 30%;
+    background-color: #cc1111;
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.big{
+    width: 62%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+div.big > .interest {
+    padding-left: 1.9vw;
+}
+div.small{
+    width: 38%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+div.small > .news {
+    padding-top: 1vh;
+}
+div.social_link {
+    width: 50%;
+    height: 50%;
+    border-block-end: 0.3vh solid #cccccc;
+    display:block;
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+}
+div.social_link:hover{
+    border-block-end: 0.39vh solid #cccccc;
+    border-bottom-left-radius: 3.9vh;
+    border-bottom-right-radius: 3.9vh;
+    opacity: 0.79;
+    cursor: pointer;
+}
+</style>
+<body>
+    <div class="profile">
+    <div id="constantinius">
+        <span id="age" title="19 лет">19</span><span id="profile">Константин Кудрявцев</span><span id="money">100</span>
+    </div>
+        <div id="ways">
+            <figure class="block-type" id="design">
+                <p class="headline">Дизайн</p>
+                <div class="progressbar"><div class="progress"><span></span></div></div>
+                <p class="description">Web-дизайн</p>
+                <span class="time"></span><span class="value"></span>
+                <p class="tasks"></p>
+            </figure>
+            <figure class="block-type" id="marketing">
+                <p class="headline">Маркетинг</p>
+                <div class="progressbar"><div class="progress"><span></span></div></div>
+                <p class="description">Реклама бренда</p>
+                <span class="time"></span><span class="value"></span>
+                <p class="tasks"></p>
+            </figure>
+            <figure class="block-type" id="management">
+                <p class="headline">Менеджмент</p>
+                <div class="progressbar"><div class="progress"><span></span></div></div>
+                <p class="description">Аналитика работы</p>
+                <span class="time"></span><span class="value"></span>
+                <p class="tasks"></p>
+            </figure>
+            <figure class="block-type" id="programming">
+                <p class="headline">Программирование</p>
+                <div class="progressbar"><div class="progress"><span></span></div></div>
+                <p class="description">Написание проектов</p>
+                <span class="time"></span><span class="value"></span>
+                <p class="tasks"></p>
+            </figure>
+        </div>
+        <div id="manuscript">
+            <div class="big">
+                <p class="interest">Интересы:</p>
+                <p>Письмо</p><p>Рисование</p><p>Танцы</p><p>Пение</p>
+            </div>
+            <div class="small">
+                <p class="news">Новости:</p>
+                <p>Я создал новую версию diarium.info</p>
+                <p>Я начал концепт стадию идеи и начинаю прототипирование</p>
+            </div>
+        </div>
+        <div id="redirect">
+            <div class="social_link" title="More about personallity" onclick="location.href='../profile/'">
+                <p>Открыть</p>
+            </div>
+        </div>
+    </div>
+    <script defer>
+        let work_lan = document.getElementById('language').textContent;
+
+        let design_block = document.getElementById('design');
+        let marketing_block = document.getElementById('marketing');
+        let management_block = document.getElementById('management');
+        let programming_block = document.getElementById('programming');
+        
+         design_block.getElementsByClassName('progress')[0].style.width = (design_block.getElementsByClassName('progressbar')[0].offsetWidth/100)*design + 'px';
+         marketing_block.getElementsByClassName('progress')[0].style.width = (marketing_block.getElementsByClassName('progressbar')[0].offsetWidth/100)*marketing + 'px';
+         management_block.getElementsByClassName('progress')[0].style.width = (management_block.getElementsByClassName('progressbar')[0].offsetWidth/100)*management + 'px';
+         programming_block.getElementsByClassName('progress')[0].style.width = (programming_block.getElementsByClassName('progressbar')[0].offsetWidth/100)*programming + 'px';
+
+         let birthday = new Date(2000,8,31,07,12,30,33);
+         
+         document.getElementById('age').textContent='Мне '+ ((timeNow-birthday)/1000/60/60/24).toFixed() + ' дней';
+         document.getElementById('money').textContent=m.toFixed(2) + ' рублей у меня';
+
+        console.log(work_lan); 
+    </script>
+    
+</body>
+<footer>
+
+</footer>
+</html>

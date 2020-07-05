@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="author" content="suicvairduCConstantinius"><meta name="description" content="paint"><meta charset="UTF-8">
+<link rel="shortcut icon" href="../../../ICO/black.ico" type="image/png">
+<meta name="keywords" content="diarium, рисование"><title>Рисование</title>
+<link rel="stylesheet" type="text/css" href="../../../style/position.css"><link rel="stylesheet" type="text/css" href="../../../style/type.css"><link rel="stylesheet" type="text/css" href="../../../style/size.css"><link rel="stylesheet" type="text/css" href="../../../style/block.css">
+<script src="../../../value.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-138677726-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-138677726-1');</script>
+</head>
+<style>
+<style>
+* {margin: 0 auto;padding: 0 auto;}
+::-webkit-scrollbar{display: none;}
+@media screen and (max-width:80vh) {.btn_03{height: 70%;}.photoblock01>img{height: auto;width: 100%;}}
+@media screen and (max-width:150vh) {.btn_03{height: 70%;}}
+</style>
+<body class="w10 h-a mt1 mb1 cbgw">
+    <div class="ha_w9_fx-m-dc f-s" id="type01">
+    <div class="wp10 h1 fx-m">
+    <div class="slider01">
+        <span>Painting</span>
+    </div>
+    <div class="slider02" onclick="openBlock();">Открыть</div>
+    </div>
+    <div class="bodyblock02" style="display: none;">
+        <div class="hp1 wp10 cbgw br_rv_b05 fx ialign-s">
+            <!-- <div class="btn_03">2017</div>
+            <div class="btn_03">2018</div> 
+            <div class="btn_03">2019</div> --><!--separatingon parts to years--> 
+        </div>
+        <div class="blockphoto01">
+            <div class="photoblock01 no-phone"><img data-place="home" data-date="2019" data-photo="Автопортрет" lowsrc="../../../LQ/JPG/avatar.jpg" src="../../../JPG/avatar.JPG" alt=""></div>
+            <div class="photoblock01" ><img data-place="home" data-date="2019" data-photo="Histors" src="../../../JPG/2.jpg" lowsrc="../../../LQ/JPG/2.jpg" data-photo="03" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="home" data-date="2016" data-photo='Wine' src="../../../JPG/1.jpg" lowsrc="../../../LQ/JPG/1.jpg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="home" data-date="2017" data-photo='Angel' src="../../../PNG/1.png" lowsrc="../../../LQ/PNG/1.png" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="home" data-date="2018" data-photo='Palette' src="../../../PNG/2.png" lowsrc="../../../LQ/PNG/2.png" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="hospital" data-date="2017" data-photo='Grud' src="../../../PNG/3.png" lowsrc="../../../LQ/PNG/3.png" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="hospital" data-date="2017" data-photo='Vera' src="../../../PNG/4.png" lowsrc="../../../LQ/PNG/4.png" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="hospital" data-date="2017" data-photo='Eye' src="../../../PNG/5.png" lowsrc="../../../LQ/PNG/5.png" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="home" data-date="2017" data-photo='Fuero' src="../../../PNG/6.png" lowsrc="../../../LQ/PNG/6.png" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="home" data-date="2016" data-photo='Watches' src="../../../PNG/7.png" lowsrc="../../../LQ/PNG/7.png" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="home" data-date="2016" data-photo='Orga sm' src="../../../PNG/8.png" lowsrc="../../../LQ/PNG/8.png" alt=""></div>
+            <div class="photoblock01 no-tablet"><img data-place="home" data-date="2019" data-photo="AM" lowsrc="../../../LQ/JPG/3.jpg" src="../../../JPG/3.jpg" alt=""></div>
+        </div>
+        <div class="wp8 hp2 br_rv_b05 fx-j">
+            <div class="buttonequal02 br_rv_t5 cbgw"><div class="buttonequal01 cbgbk cw" onclick="toLeft();"><</div></div>
+            <div class="wp5 hp10 cbgbk" id="settingblock1">
+                <div class="hp1 wp10 fx-m"></div>
+                <div class="hp5 wp10"></div>
+                <div class="hp3 wp10"></div>
+                <div class="hp1 wp10"></div>
+            </div>
+            <div class="buttonequal02 br_rv_t5 cbgw"><div class="buttonequal01 cbgbk cw" onclick="toRight();">></div></div>
+        </div>
+    </div>
+    <script>
+        // console.log(pb1l);// console.log('true')// console.log('false')// console.log(pbs+' '+i);// console.log(pb);// console.log('hello')// console.log(n + ' ' + pb1l )// console.log('true')// console.log('false')// console.log(pb);// console.log('hello')// console.log('true')// console.log('false')
+    let t1=document.getElementById('type01');
+    let bb1=t1.getElementsByClassName('bodyblock02')[0];
+    let bp01=bb1.getElementsByClassName('blockphoto01')[0];
+    let pb1l=bp01.getElementsByClassName('photoblock01').length;
+    let set1=document.getElementById('settingblock1');
+    let s1dn=set1.getElementsByTagName('div')[0];
+    let pbl = pb1l-1;
+    
+    for(var i=1;i<pbl;i++){
+        let pb=bp01.getElementsByClassName('photoblock01')[i]
+        let pbs = pb.style.display,
+        pbi = pb.getElementsByTagName('img')[0],
+        characteristic = pbi.dataset.photo + ' ' + pbi.dataset.date + ' ' + pbi.dataset.place;
+        pb.setAttribute('title',characteristic);
+        if(pbs!=="none")
+        {
+            s1dn.innerHTML+='<div class="hp8 cbgr wp1"><div>'
+    }
+        else
+        {
+            s1dn.innerHTML+='<div class="hp3 cbgw wp1"><div>'
+    }
+    
+    }
+    // right
+    function toRight(){
+    s1dn.innerHTML='';
+        for(var i=1;i<pbl;i++){
+        let pb=bp01.getElementsByClassName('photoblock01')[i];
+        let pbs = pb.style.display;
+        if(pbs!=="none")
+        {
+            var n=i+1;
+            pb.style.display='none';
+    }
+        else
+        {}
+    }
+
+    if(n!=pb1l-1){
+        bp01.getElementsByClassName('photoblock01')[n].style.display='flex';
+    } else {
+        bp01.getElementsByClassName('photoblock01')[1].style.display='flex';
+    }
+
+        for(var i=1;i<pbl;i++){
+            let pb=bp01.getElementsByClassName('photoblock01')[i]
+            let pbs = pb.style.display;
+            if(pbs!=="none")
+            {
+                s1dn.innerHTML+='<div class="hp8 cbgr wp1"><div>'
+        }
+            else
+            {
+                s1dn.innerHTML+='<div class="hp3 cbgw wp1"><div>'
+        }
+    }
+}
+    // left
+    function toLeft(){
+    s1dn.innerHTML='';
+        for(var i=1;i<pbl;i++){
+        let pb=bp01.getElementsByClassName('photoblock01')[i];
+        let pbs = pb.style.display;
+        
+        if(pbs!=="none")
+        {
+            var n=i-1;
+            pb.style.display='none';
+    }
+        else
+        {}
+    }
+
+    if(n!=0){
+        bp01.getElementsByClassName('photoblock01')[n].style.display='flex';
+        console.log(n + ' ' + pb1l )
+    } else {
+        bp01.getElementsByClassName('photoblock01')[pbl-1].style.display='flex';
+    }
+
+    for(var i=1;i<pbl;i++){
+            let pb=bp01.getElementsByClassName('photoblock01')[i]
+            let pbs = pb.style.display;
+            if(pbs!=="none")
+            {
+                s1dn.innerHTML+='<div class="hp8 cbgr wp1"><div>'
+        }
+            else
+            {
+                s1dn.innerHTML+='<div class="hp3 cbgw wp1"><div>' 
+        }
+    }
+}
+document.onkeydown = checkKey;
+function checkKey(e) {
+e = e || window.event;
+if (e.keyCode == '37') {toLeft();}
+else if (e.keyCode == '39') {toRight();}
+}
+    </script>
+    </div>
+</div>
+    <div class="ha_w9_fx-m-dc f-s" id="type02">
+        <div class="wp10 h1 fx-m">
+    <div class="slider01">
+        <span>Photography</span>
+    </div>
+    <div class="slider02" onclick="openBlock();">Открыть</div>
+    </div>
+    <div class="bodyblock02" style="display: none;">
+        <div class="hp1 wp10 cbgw br_rv_b05 fx ialign-s">
+            <!-- <div class="btn_03">2017</div>
+            <div class="btn_03">2018</div> 
+            <div class="btn_03">2019</div> --><!--separatingon parts to years--> 
+        </div>
+        <div class="blockphoto01">
+            <div class="photoblock01 no-phone"><img data-place="park" data-date="2019" data-photo="01" lowsrc="../../../LQ/JPG/pho1.jpg" src="../../../JPG/pho1.JPG" alt=""></div>
+            <div class="photoblock01" ><img data-place="park" data-date="2019" data-photo="03" src="../../../JPG/pho2.jpg" lowsrc="../../../LQ/JPG/pho2.jpg" data-photo="03" alt=""></div>
+            <div class="photoblock01 no-tablet"><img data-place="park" data-date="2019" data-photo="02" lowsrc="../../../LQ/JPG/pho3.jpg" src="../../../JPG/pho3.jpg" alt=""></div>
+        </div>
+        <div class="wp8 hp2 br_rv_b05 fx-j">
+            <!-- <div class="buttonequal02 br_rv_t5 cbgw"><div class="buttonequal01 cbgbk cw" onclick="toLeft();"><</div></div>
+            <div class="wp5 hp10 cbgbk" id="settingblock1">
+                <div class="hp1 wp10 fx-m"></div>
+                <div class="hp5 wp10"></div>
+                <div class="hp3 wp10"></div>
+                <div class="hp1 wp10"></div>
+            </div>
+            <div class="buttonequal02 br_rv_t5 cbgw"><div class="buttonequal01 cbgbk cw" onclick="toRight();">></div></div> -->
+        </div>
+    </div>
+</div>
+    <div class="ha_w9_fx-m-dc f-s" id="type03">
+    <div class="wp10 h1 fx-m">
+    <div class="slider01">
+        <span>Design</span>
+    </div>
+    <div class="slider02" onclick="openBlock();">Открыть</div>
+    </div>
+    <div class="bodyblock02" style="display: none;">
+        <div class="hp1 wp10 cbgw br_rv_b05 fx ialign-s">
+            <!-- <div class="btn_03">2017</div>
+            <div class="btn_03">2018</div> 
+            <div class="btn_03">2019</div> --><!--separatingon parts to years--> 
+        </div>
+        <div class="blockphoto01">
+            <div class="photoblock01 no-phone"></div>
+            <div class="photoblock01" ><img data-place="1C" data-date="2019" data-photo="01" src="../../../SVG/LOGO/1C.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Adobe Connect" data-date="2019" data-photo="01" src="../../../SVG/LOGO/Adobe connect.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Adobe Illustrator" data-date="2019" data-photo="01" src="../../../SVG/LOGO/adobe_illustrator.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Alibaba" data-date="2019" data-photo="01" src="../../../SVG/LOGO/alibaba group.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="AltaroVM" data-date="2019" data-photo="01" src="../../../SVG/LOGO/altaroVMBackup.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Android" data-date="2019" data-photo="01" src="../../../SVG/LOGO/android.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="ApicBase" data-date="2019" data-photo="01" src="../../../SVG/LOGO/ApicBase.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Apple" data-date="2019" data-photo="01" src="../../../SVG/LOGO/apple.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Assembler" data-date="2019" data-photo="01" src="../../../SVG/LOGO/assembler.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Autodesk Maya" data-date="2019" data-photo="01" src="../../../SVG/LOGO/autodesk_maya.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Basic" data-date="2019" data-photo="01" src="../../../SVG/LOGO/basic.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Bigmarker" data-date="2019" data-photo="01" src="../../../SVG/LOGO/bigmarker.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Bitrix" data-date="2019" data-photo="01" src="../../../SVG/LOGO/bitrix 24.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Bootstrap" data-date="2019" data-photo="01" src="../../../SVG/LOGO/bootstrap.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="BruteForce" data-date="2019" data-photo="01" src="../../../SVG/LOGO/BruteForce.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="C++" data-date="2019" data-photo="01" src="../../../SVG/LOGO/C++.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Cisco" data-date="2019" data-photo="01" src="../../../SVG/LOGO/cisco.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Cloud Era" data-date="2019" data-photo="01" src="../../../SVG/LOGO/cloud era.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Config Box" data-date="2019" data-photo="01" src="../../../SVG/LOGO/config box.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="CSS" data-date="2019" data-photo="01" src="../../../SVG/LOGO/css.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Customer Canvas" data-date="2019" data-photo="01" src="../../../SVG/LOGO/customer canvas.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Delphi" data-date="2019" data-photo="01" src="../../../SVG/LOGO/delphi.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Dragon" data-date="2019" data-photo="01" src="../../../SVG/LOGO/dragon.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Dynamics" data-date="2019" data-photo="01" src="../../../SVG/LOGO/dynamics.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="FTP" data-date="2019" data-photo="01" src="../../../SVG/LOGO/ftp.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Harmony PSA" data-date="2019" data-photo="01" src="../../../SVG/LOGO/harmonyPSA.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="HashCat" data-date="2019" data-photo="01" src="../../../SVG/LOGO/hashcat.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="HTML" data-date="2019" data-photo="01" src="../../../SVG/LOGO/html.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="HTML JS CSS" data-date="2019" data-photo="01" src="../../../SVG/LOGO/html_js_css.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Instagram" data-date="2019" data-photo="01" src="../../../SVG/LOGO/instagram.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Java" data-date="2019" data-photo="01" src="../../../SVG/LOGO/java.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="JS" data-date="2019" data-photo="01" src="../../../SVG/LOGO/js.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Kaspersky" data-date="2019" data-photo="01" src="../../../SVG/LOGO/kaspersky.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Linux" data-date="2019" data-photo="01" src="../../../SVG/LOGO/linux.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="LogMeInPro" data-date="2019" data-photo="01" src="../../../SVG/LOGO/LogMeInPro.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Marketo" data-date="2019" data-photo="01" src="../../../SVG/LOGO/Marketo.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="MatLab" data-date="2019" data-photo="01" src="../../../SVG/LOGO/MatLab.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="MySQL" data-date="2019" data-photo="01" src="../../../SVG/LOGO/mysql.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="NetFlix" data-date="2019" data-photo="01" src="../../../SVG/LOGO/netflix.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="NVidia" data-date="2019" data-photo="01" src="../../../SVG/LOGO/nvidia.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="OnBase" data-date="2019" data-photo="01" src="../../../SVG/LOGO/OnBase.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Pascal" data-date="2019" data-photo="01" src="../../../SVG/LOGO/Pascal.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Perl" data-date="2019" data-photo="01" src="../../../SVG/LOGO/perl.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="PHP" data-date="2019" data-photo="01" src="../../../SVG/LOGO/php.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="ReStream" data-date="2019" data-photo="01" src="../../../SVG/LOGO/restream.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Scooty Labs" data-date="2019" data-photo="01" src="../../../SVG/LOGO/scooty labs.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Sentinel One" data-date="2019" data-photo="01" src="../../../SVG/LOGO/sentinel one.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="Whats App" data-date="2019" data-photo="01" src="../../../SVG/LOGO/whats app.svg" alt=""></div>
+            <div class="photoblock01" style="display: none;"><img data-place="wix" data-date="2019" data-photo="01" src="../../../SVG/LOGO/wix.svg" alt=""></div>
+            <div class="photoblock01 no-tablet"></div>
+        </div>
+        <div class="wp8 hp2 br_rv_b05 fx-j">
+            <div class="buttonequal02 br_rv_t5 cbgw"><div class="buttonequal01 cbgbk cw" onclick="toLeft3();"><</div></div>
+            <div class="wp5 hp10 cbgbk" id="settingblock3">
+                <div class="hp1 wp10 fx-m"></div>
+                <div class="hp5 wp10"></div>
+                <div class="hp3 wp10"></div>
+                <div class="hp1 wp10"></div>
+            </div>
+            <div class="buttonequal02 br_rv_t5 cbgw"><div class="buttonequal01 cbgbk cw" onclick="toRight3();">></div></div>
+        </div>
+    </div>
+    <script>
+        // console.log(pb3l);// console.log('true')// console.log('false')// console.log(pbs+' '+i);// console.log(pb);// console.log('hello')// console.log(n + ' ' + pb3l )// console.log('true')// console.log('false')// console.log(pb);// console.log('hello')// console.log('true')// console.log('false')
+    let t3=document.getElementById('type03');
+    let bb3=t3.getElementsByClassName('bodyblock02')[0];
+    let bp03=bb3.getElementsByClassName('blockphoto01')[0];
+    let pb3l=bp03.getElementsByClassName('photoblock01').length;
+    let set3=document.getElementById('settingblock3');
+    let s3dn=set3.getElementsByTagName('div')[0];
+    let pbl3 = pb3l-1;
+    
+    for(var i=1;i<pbl3;i++){
+        let pb=bp03.getElementsByClassName('photoblock01')[i]
+        let pbs = pb.style.display,
+        pbi = pb.getElementsByTagName('img')[0],
+        characteristic = pbi.dataset.photo + ' ' + pbi.dataset.date + ' ' + pbi.dataset.place;
+        pb.setAttribute('title',characteristic);
+        if(pbs!=="none")
+        {
+            s3dn.innerHTML+='<div class="hp8 cbgr wp1"><div>'
+    }
+        else
+        {
+            s3dn.innerHTML+='<div class="hp3 cbgw wp1"><div>'
+    }
+    
+    }
+    // right
+    function toRight3(){
+    s3dn.innerHTML='';
+        for(var i=1;i<pbl3;i++){
+        let pb=bp03.getElementsByClassName('photoblock01')[i];
+        let pbs = pb.style.display;
+        if(pbs!=="none")
+        {
+            var n=i+1;
+            pb.style.display='none';
+    }
+        else
+        {}
+    }
+
+    if(n!=pb3l-1){
+        bp03.getElementsByClassName('photoblock01')[n].style.display='flex';
+    } else {
+        bp03.getElementsByClassName('photoblock01')[1].style.display='flex';
+    }
+
+        for(var i=1;i<pbl3;i++){
+            let pb=bp03.getElementsByClassName('photoblock01')[i]
+            let pbs = pb.style.display;
+            if(pbs!=="none")
+            {
+                s3dn.innerHTML+='<div class="hp8 cbgr wp1"><div>'
+        }
+            else
+            {
+                s3dn.innerHTML+='<div class="hp3 cbgw wp1"><div>'
+        }
+    }
+}
+    // left
+    function toLeft3(){
+    s3dn.innerHTML='';
+        for(var i=1;i<pbl3;i++){
+        let pb=bp03.getElementsByClassName('photoblock01')[i];
+        let pbs = pb.style.display;
+        
+        if(pbs!=="none")
+        {
+            var n=i-1;
+            pb.style.display='none';
+    }
+        else
+        {}
+    }
+
+    if(n!=0){
+        bp03.getElementsByClassName('photoblock01')[n].style.display='flex';
+        console.log(n + ' ' + pb3l )
+    } else {
+        bp03.getElementsByClassName('photoblock01')[pbl3-1].style.display='flex';
+    }
+
+    for(var i=1;i<pbl3;i++){
+            let pb=bp03.getElementsByClassName('photoblock01')[i]
+            let pbs = pb.style.display;
+            if(pbs!=="none")
+            {
+                s3dn.innerHTML+='<div class="hp8 cbgr wp1"><div>'
+        }
+            else
+            {
+                s3dn.innerHTML+='<div class="hp3 cbgw wp1"><div>' 
+        }
+    }
+}
+document.onkeydown = checkKey;
+function checkKey(e) {
+e = e || window.event;
+if (e.keyCode == '37') {toLeft3();toLeft();}
+else if (e.keyCode == '39') {toRight3();toRight();}
+}
+    </script>
+    </div>
+</div>
+<script>
+    let t2=document.getElementById('type02');
+    let bb2=t2.getElementsByClassName('bodyblock02')[0];
+    function openBlock(e){
+        var elem=e ? e.target : window.event.srcElement;let parent=elem.parentNode;parent=parent.parentNode;
+        if(parent==t1){
+            console.log(elem)
+            if(elem.textContent==='Открыть'){elem.innerHTML="Закрыть"; bb1.style.display='flex'}else if(elem.textContent==='Закрыть'){elem.innerHTML="Открыть"; bb1.style.display='none'}
+        }
+        else if(parent==t2){
+            if(elem.textContent==='Открыть'){elem.innerHTML="Закрыть"; bb2.style.display='flex'}else if(elem.textContent==='Закрыть'){elem.innerHTML="Открыть"; bb2.style.display='none'}
+        }
+        else if(parent==t3){
+            if(elem.textContent==='Открыть'){elem.innerHTML="Закрыть"; bb3.style.display='flex'}else if(elem.textContent==='Закрыть'){elem.innerHTML="Открыть"; bb3.style.display='none'}
+        }
+    }
+</script>    
+</body>
+</html>

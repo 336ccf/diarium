@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="author" content="suicvairduCConstantinius">
+  <meta name="description" content="profile">
+  <link rel="shortcut icon" href="../../ICO/blue.ico" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="diarium, profile">
+  <title>Profile</title>
+  <link rel="stylesheet" type="text/css" href="../../style/position.css"><link rel="stylesheet" type="text/css" href="../../style/type.css"><link rel="stylesheet" type="text/css" href="../../style/size.css"><link rel="stylesheet" type="text/css" href="../../style/block.css">
+  <script src="../../value.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-138677726-1"></script>
+	<script>
+ 		window.dataLayer = window.dataLayer || [];
+ 		function gtag(){dataLayer.push(arguments);}
+ 		gtag('js', new Date());
+
+ 		gtag('config', 'UA-138677726-1');
+  </script>
+</head>
+<!-- CSS -->
+<style>
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+#avatar {
+  background-image: url(../../JPG/avatar.JPG);
+}
+#back-bk-img {
+  background-image: url(../../SVG/paint.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#back-bk-img1 {
+  background-image: url(../../JPG/img2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 160%;
+}
+#back-bk-img2 {
+  background-image: url(../../JPG/img3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#back-bk-img3 {
+  background-image: url(../../JPG/img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 170%;
+}
+#back-bk-img4 {
+  background-image: url(../../JPG/img6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+#back-bk-img5 {
+  background-image: url(../../JPG/img5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#back-bk-img6 {
+  background-image: url(../../JPG/img4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#back-bk-img7 {
+  background-image: url(../../JPG/img8.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 62%;
+}
+#back-bk-img8 {
+  background-image: url(../../JPG/img7.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 62%;
+}
+#back-bk-img9 {
+  background-image: url(../../JPG/img9.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 62%;
+}
+.interest-bk {
+    display: inline-block;
+    position: relative; 
+    color: #131313;
+   }
+.interest-bk:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: 1;
+    background-color: #cccccc;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 1vw 1vh;
+    border: 0.5vh solid #131313;
+    border-radius: 1vh;
+    text-align: center;
+}
+.menubtn{width: 30%;height: 90%;background-color: #131313; margin-bottom: 1vh; border-radius: 3vh; display: flex; justify-content: space-around; align-items: center; font-size: 1.2em;color:#cccccc}
+.menubtn:hover{width: 31%;height: 93%;opacity: 0.85; cursor: pointer;}
+</style>
+<!-- HTML -->
+<body class="w10 h-a mb1 ">
+    <div class="h1 w10 fx-m"><div class="menubtn" onclick="location.href='../menu/achievement/'">Achievement</div><div class="menubtn" onclick="location.href='../menu/market/'">Statistic</div><div class="menubtn" onclick="location.href='../menu/blog/'">Blog</div><div class="menubtn" onclick="location.href='../menu/cooperate/'">Cooperate</div><div class="menubtn" onclick="location.href='../menu/dream/'">Dream</div><div class="menubtn" onclick="location.href='../menu/paint/'">Gallery</div><div class="menubtn" onclick="location.href='../menu/idea/'">Idea</div><div class="menubtn" onclick="location.href='../menu/promo/'">Promotion</div><div class="menubtn" onclick="location.href='../menu/work/'">Work</div></div>
+<div class="c fx-j br_rv_t5">
+    <div class="ca unmad br_rv_tl5 fx-m br_rv_tr5"><div id="avatar" class="ibackfull w1min h1min cbgr br_rv1"></div></div>
+    <div class="cb unmad br_rv_tr5"><div class="cbgbk wp10 hp2 br_rv_bl05 br_rv_tr4 tac cw f-s" id="name-surname">Kudryavtsev Konstantin</div><div class="f-ss cbgw fx-m fxdc"><span>Birth date: <span id="birth">31.08.2000</span></span><span>Country: <span>Russia</span></span><span>City: <span>Saint-Petersburg</span></span><span>Money: <span id="money"></span></span><span>Age: <span id="age"></span></span><span>Quote: <span>Per aspera et perpectus doctrina ad astra</span></span></div></div>
+</div>
+<div class="d fx-j">
+    <div class="da unmad br_rv_l05 fx justcon ialign_e fxfc"><div class="hp5 wp10 cbgbk unmad br_rv_l05 fx-m"><img id="profile1" class="hp9 curna" src="../../SVG/profile.svg" alt="Profile" title="profile #"><img id="profile2" class="hp9 no-phone curna" src="../../SVG/profile.svg" alt="Profile" title="profile #"><img id="profile3" class="hp9 no-phone curna" src="../../SVG/profile.svg" alt="Profile" title="profile #"><img id="profile4" class="hp9 no-tablet curna" src="../../SVG/profile.svg" alt="Profile" title="profile #"><img id="profile5" class="hp9 no-tablet curna" src="../../SVG/profile.svg" alt="Profile" title="profile #"><img id="profile6" class="hp9 no-tablet curna" src="../../SVG/profile.svg" alt="Profile" title="profile #"></div><div class="unmad br_rv_l1 btn_01">Friend list</div></div>
+    <form action="../../send.php" method="POST" class="db unmad br_rv_r05 fx justcon ialign_s fxfc"><textarea name="text" class="unset-btn hp5 wp10 cbgbk unmad br_rv_r05 cw" placeholder="Write me message!" required></textarea><input type="submit" class="unset-btn unmad br_rv_r1 btn_01" title="Send" value="Send me message"></input></form>
+</div>
+  <!-- JS -->
+<script>let age = document.getElementById('age');age.textContent=((timeNow-birth)/1000/60/60/24).toFixed() + ' days'; let money_profile = document.getElementById('money');money_profile.textContent=(m/dol).toFixed(2) + ' $'</script>
+<!-- HTML -->  
+<div class="e fx-j tac f-s">
+    <div class="eaa unmad br_rv05"><font class="fontsolo1">C</font><br> Communicate <br><span class='c_t' id="communication_value"></span><span class='c_t_s'></span><p class="f-ss">Time spent for communication with someone new</p></div>
+    <div class="eab unmad br_rv05"><font class="fontsolo1">A</font><br> Action <br> <span class='c_t' id="action_value"></span><span class='c_t_s'></span><p class="f-ss">Time spent to create something new</p></div>
+    <div class="eba unmad br_rv05"><font class="fontsolo1">S</font><br> Study <br> <span class='c_t' id="study_value"></span><span class='c_t_s'></span><p class="f-ss">Time spent to study something new</p></div>
+    <div class="ebb unmad br_rv05"><font class="fontsolo1">R</font><br> Repose <br> <span class='c_t' id="repose_value"></span><span class='c_t_s'></span><p class="f-ss">Time spent to recover my mind</p></div>
+</div>
+<!-- JS -->
+<script>let c_t_s = document.getElementsByClassName('c_t_s');let c_t = document.getElementsByClassName('c_t');let com_val = document.getElementById('communication_value');let act_val = document.getElementById('action_value');let stu_val = document.getElementById('study_value');let rep_val = document.getElementById('repose_value');com_val.textContent=communication;act_val.textContent=action;stu_val.textContent=study;rep_val.textContent=repose;for(var i = 0;i < c_t_s.length;i++){if(c_t[i]=1){c_t_s[i].textContent='hour/day'}else if(c_t[i]=0){c_t_s[i].textContent='nothing today'}else{c_t_s[i].textContent='hours/day'}}</script>
+<!-- HTML -->
+<div class="f fx-j">
+    <div class="fa unmad br_rv_l05 fx fx-m fxfw "><div id="block_stat1" class="wp10 hp2 cbgr br_rv_l1 f-s tac"><span id="title_stat1">Life statistic</span></div><figure onclick="statistic();" class="stat-bk1 fontsolo3 fx-m">Water</figure><figure onclick="statistic();" class="stat-bk1 fontsolo3 fx-m">Earn</figure><figure onclick="statistic();" class="stat-bk1 fontsolo3 fx-m">Spend</figure><figure onclick="statistic();" class="stat-bk1 fontsolo3 fx-m">Weight</figure><figure onclick="statistic();" class="stat-bk1 fx-m">DSP</figure><figure onclick="statistic();" class="stat-bk1 fontsolo3 fx-m">Art</figure></div>
+    <div class="fb unmad br_rv_r05 fx fx-m fxfw "><div id="block_stat2" class="wp10 hp2 cbgr br_rv_r1 f-s tac"><span id="title_stat2">Company statistic</span></div><figure onclick="statistic();" class="stat-bk2 fontsolo3 fx-m">Diarium</figure><figure onclick="statistic();" class="stat-bk2 fontsolo3 fx-m">Imagine_</figure><figure onclick="statistic();" class="stat-bk2 fontsolo3 fx-m">Social</figure><figure onclick="statistic();" class="stat-bk2 fontsolo3 fx-m">Shop</figure><figure onclick="statistic();" class="stat-bk2 fontsolo3 fx-m">Game</figure><figure onclick="statistic();" class="stat-bk2 fontsolo3 fx-m">Soft</figure></div>
+</div>
+  <!-- JS -->
+<script>function statistic(e) {var elem=e ? e.target : window.event.srcElement;
+// stastistic
+let title_stat1= document.getElementById('title_stat1');let title_stat2= document.getElementById('title_stat2');let block_stat1= document.getElementById('block_stat1');let block_stat2= document.getElementById('block_stat2');
+  // height + width
+let f=document.getElementsByClassName('f')[0];let fa=document.getElementsByClassName('fa')[0];let fb=document.getElementsByClassName('fb')[0];
+    // life statistic
+let bks1=fa.getElementsByClassName('stat-bk1')[0];let bks2=fa.getElementsByClassName('stat-bk1')[1];let bks3=fa.getElementsByClassName('stat-bk1')[2];let bks4=fa.getElementsByClassName('stat-bk1')[3];let bks5=fa.getElementsByClassName('stat-bk1')[4];let bks6=fa.getElementsByClassName('stat-bk1')[5];
+    // company statistic
+let bks7=fb.getElementsByClassName('stat-bk2')[6];let bks8=fb.getElementsByClassName('stat-bk2')[7];let bks9=fb.getElementsByClassName('stat-bk2')[8];let bks10=fb.getElementsByClassName('stat-bk2')[9];let bks11=fb.getElementsByClassName('stat-bk2')[10];let bks12=fb.getElementsByClassName('stat-bk2')[11];
+// all
+let bk1=document.getElementsByClassName('fa')[0].getElementsByClassName('stat-bk1');let bk2=document.getElementsByClassName('fb')[0].getElementsByClassName('stat-bk2');
+
+  if(elem.parentNode==fa){for(var i=0;i<bk1.length;i++){document.getElementsByClassName('stat-bk1')[i].style.display='none';}}
+  else if(elem.parentNode==fb){for(var i=0;i<bk2.length;i++){document.getElementsByClassName('stat-bk2')[i].style.display='none';}}
+  else{console.log(elem)};
+  elem.style.display='flex';elem.style.width=(f.offsetWidth/2)*0.9 + 'px';elem.style.height=(f.offsetHeight-block_stat1.offsetHeight)*0.9 + 'px';
+  if (elem.textContent=='Water'){elem.innerHTML=wateryear + ' (ml) per 2019 year\n' + '<br>'+ watermonth + ' (ml) average per month'+ '<br>' + waterday + ' (ml) average per day'; title_stat1.innerHTML='Drinked water'}
+  else if(elem.textContent=='Earn'){elem.innerHTML=(earnyear/dol).toFixed(2) + '$ per 2019 year\n' + '<br>'+ (earnmonth/dol).toFixed(2) + '$ average per month'+ '<br>' + (earnday/dol).toFixed(2) + '$ average per day'; title_stat1.innerHTML='Earned money'}
+  else if(elem.textContent=='Spend'){elem.innerHTML=(spendyear/dol).toFixed(2) + '$ per 2019 year\n' + '<br>'+ (spendmonth/dol).toFixed(2) + '$ average per month'+ '<br>' + (spendday/dol).toFixed(2) + '$ average per day'; title_stat1.innerHTML='Spent money'}
+  else if(elem.textContent=='Weight'){elem.innerHTML=weightyear + ' (kg) average per 2019 year\n' + '<br>'+ weightseason + ' (kg) average per season'+ '<br>' +weightweek + ' (kg) average per week'; title_stat1.innerHTML='Weight'}
+  else if(elem.textContent=='DSP'){elem.innerHTML=diayear+' '+sysyear+' '+pulseyear + ' dia/sys/pulse value per 2019 year\n' + '<br>'+ diaseason+' '+sysseason+' '+pulseseason + ' dia/sys/pulse value average per season'+ '<br>' +diaweek+' '+sysweek+' '+pulseweek + ' dia/sys/pulse value average per week'; title_stat1.innerHTML='Pulse / Sys * Dia = ' + DSP.toFixed(0)}
+  else if(elem.textContent=='Art'){elem.innerHTML= artyear + ' count per 2019 year\n' + '<br>'+ artmonth + ' count per month'+ '<br>' + artweek + ' count per day'; title_stat1.innerHTML='Idea + write + paint'}
+  else if(elem.textContent=='Diarium'){elem.innerHTML= projectprogress + ' % ' + ' of version'+ d_version + '<br>' + diarium_release_date.getDate() +'.'+ diarium_release_date.getMonth()+'.'+ diarium_release_date.getFullYear() + ' release day'+'<br>'+'Time spent: ' + (((timeNow-diarium_release_date)/1000/60)*0.52 - nonwork).toFixed() + ' min '  ; title_stat2.innerHTML='https://diarium.info/'}
+  else if(elem.textContent=='Imagine_'){elem.innerHTML= imagine_value + ' % ' + ' of version'+ imagine_version + '<br>' + imagine_release_date.getDate() +'.'+ imagine_release_date.getMonth()+'.'+ imagine_release_date.getFullYear() + ' release day'+'<br>'+'Time spent: ' + imagine_time + ' min '  ; title_stat2.innerHTML='https://diarium.info/service'}
+  else if(elem.textContent=='Social'){elem.innerHTML= social_value + ' % of prototype version' + '<br>' + 'Time spent: ' + social_time + ' min '  ; title_stat2.innerHTML='Social networking'}
+  else if(elem.textContent=='Shop'){elem.innerHTML= shop_value + ' % of prototype version' + '<br>' + 'Time spent: ' + shop_time + ' min '  ; title_stat2.innerHTML='Internet market'}
+  else if(elem.textContent=='Game'){elem.innerHTML= game_value + ' % of concept version' + '<br>' + 'Time spent: ' + game_time + ' min '  ; title_stat2.innerHTML='Educational game'}
+  else if(elem.textContent=='Soft'){elem.innerHTML= software_value + ' % of prototype version' + '<br>' + 'Time spent: ' + software_time + ' min '  ; title_stat2.innerHTML='Statistic software'}
+  else{
+    if(elem.parentNode==fa){for(var i=0;i<bk1.length;i++){document.getElementsByClassName('stat-bk1')[i].style.display='flex';};elem.parentNode.removeChild(elem);}
+    else if(elem.parentNode==fb){for(var i=0;i<bk2.length;i++){document.getElementsByClassName('stat-bk2')[i].style.display='flex';};elem.parentNode.removeChild(elem);}
+    else{console.log(elem)};
+};}</script>
+<!-- HTML -->
+<div class="g fx-j">
+    <div class="ga unmad br_rv05 f-s fx-m fxdc"><div class="topside cbgr hp3 wp10 fx-m br_rv_t05"><p>Music</p></div><div class="bottomside hp7 wp10 cbgbk fx-j fxdc"><div class="topline hp6 wp10 cbgw fx-m br_rv_b05"><div id="back-bk-img1" class="interest-bk" data-title="Haroinfather - Forever" ondblclick="location.href='https://www.youtube.com/watch?v=W9Ul8EJ05Mo'"></div><div id="back-bk-img2" class="interest-bk no-phone" data-title="Kanye West - Closed on sunday" ondblclick="location.href='https://www.youtube.com/watch?v=MKM90u7pf3U'"></div><div id="back-bk-img3" class="interest-bk no-tablet" data-title="Xxxtentaction - Sad!" ondblclick="location.href='https://www.youtube.com/watch?v=pgN-vvVVxMA'"></div></div><div class="bottombutton" title="More songs" onclick="button();"><span>More</span><span class="f-ss">3 song</span></div></div></div>
+    <div class="gb unmad br_rv05 f-s fx-m fxdc"><div class="topside cbgr hp3 wp10 fx-m br_rv_t05"><p>Game</p></div><div class="bottomside hp7 wp10 cbgbk fx-j fxdc"><div class="topline hp6 wp10 cbgw fx-m br_rv_b05"><div id="back-bk-img4" class="interest-bk" data-title="Heroes of Might and Magic 3: WOG" ondblclick="location.href='https://www.ubisoft.com/ru-ru/game/heroes-of-might-and-magic-3-hd/'"></div><div id="back-bk-img5" class="interest-bk no-phone" data-title="Civilization 5" ondblclick="location.href='https://store.steampowered.com/app/8930/Sid_Meiers_Civilization_V/'"></div><div id="back-bk-img6" class="interest-bk no-tablet" data-title="Counter - Strike : source" ondblclick="location.href='https://store.steampowered.com/app/240/CounterStrike_Source/'"></div></div><div class="bottombutton" title="More games" onclick="button();"><span>More</span><span class="f-ss">3 game</span></div></div></div>
+    <div class="gc unmad br_rv05 f-s fx-m fxdc"><div class="topside cbgr hp3 wp10 fx-m br_rv_t05"><p>Film</p></div><div class="bottomside hp7 wp10 cbgbk fx-j fxdc"><div class="topline hp6 wp10 cbgw fx-m br_rv_b05"><div id="back-bk-img7" class="interest-bk" data-title="Forrest gump" ondblclick="location.href='https://www.imdb.com/title/tt0109830/'"></div><div id="back-bk-img8" class="interest-bk no-phone" data-title="Founder" ondblclick="location.href='https://www.imdb.com/title/tt4276820/'"></div><div id="back-bk-img9" class="interest-bk no-tablet" data-title="Jobs" ondblclick="location.href='https://www.imdb.com/title/tt2357129/'"></div></div><div class="bottombutton" title="More films" onclick="button();"><span>More</span><span class="f-ss">3 film</span></div></div></div>
+</div>
+<div class="h fx-j br_rv_b5">
+    <div class="ha unmad br_rv_b5 fx-m"><div class="interest2bk"><div class="hp8 wp10 fx-m br_rv_b1"></div><div class="hp2 wp10 tac"></div></div><div class="interest2bk"><div class="hp8 wp10 fx-m br_rv_b1"></div><div class="hp2 wp10 tac"></div></div><div class="interest2bk"><div class="hp8 wp10 fx-m br_rv_b1"></div><div class="hp2 wp10 tac"></div></div></div>
+</div>
+  <!-- JS -->
+<script>
+// function money(){}
+// function age(){}
+// function friend{}
+// function message{}
+function button(e){var elem=e ? e.target : window.event.srcElement;
+// buttonbottom
+let ga=document.getElementsByClassName('ga')[0];
+let gb=document.getElementsByClassName('gb')[0];
+let gc=document.getElementsByClassName('gc')[0];
+
+let ha=document.getElementsByClassName('ha')[0];
+
+let btn1=document.getElementsByClassName('bottombutton')[0];
+let btn2=document.getElementsByClassName('bottombutton')[1];
+let btn3=document.getElementsByClassName('bottombutton')[2];
+
+let bck1=document.getElementsByClassName('interest2bk')[0];
+let bck2=document.getElementsByClassName('interest2bk')[1];
+let bck3=document.getElementsByClassName('interest2bk')[2];
+
+if(elem==btn1){
+    bck1.setAttribute('onclick',"location.href='https://soundcloud.com/loverbboi/forever/s-2NRk1'");bck1.getElementsByTagName('div')[0].innerHTML='<iframe class="br_rv_t3" src="https://www.youtube.com/embed/U39b3uSnETQ" allowfullscreen allowtransparency frameborder="no" width="" height="" id="bck-vid1"></iframe>';document.getElementById('bck-vid1').style.width=bck1.offsetWidth+'px';document.getElementById('bck-vid1').style.height=bck1.offsetHeight*0.79+'px';bck1.getElementsByTagName('div')[1].innerHTML='Haroinfather - forever';
+    bck2.setAttribute('onclick',"location.href='https://www.kanyewest.com/'");bck2.getElementsByTagName('div')[0].innerHTML='<iframe class="br_rv_t3" src="https://www.youtube.com/embed/MKM90u7pf3U" allowfullscreen allowtransparency frameborder="no" width="" height="" id="bck-vid2"></iframe>';document.getElementById('bck-vid2').style.width=bck2.offsetWidth+'px';document.getElementById('bck-vid2').style.height=bck2.offsetHeight*0.79+'px';bck2.getElementsByTagName('div')[1].innerHTML='Kanye West - Closed on Sunday';
+    bck3.setAttribute('onclick',"location.href='https://www.youtube.com/channel/UCM9r1xn6s30OnlJWb-jc3Sw'");bck3.getElementsByTagName('div')[0].innerHTML='<iframe class="br_rv_t3" src="https://www.youtube.com/embed/iAeYPfrXwk4" allowfullscreen allowtransparency frameborder="no" width="" height="" id="bck-vid3"></iframe>';document.getElementById('bck-vid3').style.width=bck2.offsetWidth+'px';document.getElementById('bck-vid3').style.height=bck3.offsetHeight*0.79+'px';bck3.getElementsByTagName('div')[1].innerHTML='XXXTentaction - Sad!';
+}
+else if(elem==btn2){
+    bck1.setAttribute('onclick',"location.href='https://store.steampowered.com/app/297000/Heroes_of_Might__Magic_III__HD_Edition/'");bck1.getElementsByTagName('div')[0].innerHTML='<iframe class="br_rv_t3" src="https://steamcdn-a.akamaihd.net/steam/apps/2036961/movie480.webm?t=1447368462" allowfullscreen allowtransparency frameborder="no" width="" height="" id="bck-vid1"></iframe>';document.getElementById('bck-vid1').style.width=bck1.offsetWidth+'px';document.getElementById('bck-vid1').style.height=bck1.offsetHeight*0.79+'px';bck1.getElementsByTagName('div')[1].innerHTML='Heroes of Might and Magic';
+    bck2.setAttribute('onclick',"location.href='https://store.steampowered.com/app/8930/Sid_Meiers_Civilization_V/'");bck2.getElementsByTagName('div')[0].innerHTML='<iframe class="br_rv_t3" src="https://steamcdn-a.akamaihd.net/steam/apps/5690/movie480.webm?t=1447353146" allowfullscreen allowtransparency frameborder="no" width="" height="" id="bck-vid2"></iframe>';document.getElementById('bck-vid2').style.width=bck2.offsetWidth+'px';document.getElementById('bck-vid2').style.height=bck2.offsetHeight*0.79+'px';bck2.getElementsByTagName('div')[1].innerHTML='Civilization V';
+    bck3.setAttribute('onclick',"location.href='https://store.steampowered.com/app/240/CounterStrike_Source/'");bck3.getElementsByTagName('div')[0].innerHTML='<img src="../../JPG/img4.jpg" width="100%">';bck3.getElementsByTagName("div")[1].innerHTML='Counter-Strike:Source';
+}
+else if(elem==btn3){
+    bck1.setAttribute('onclick',"location.href='https://www.imdb.com/title/tt0109830/'");bck1.getElementsByTagName('div')[0].innerHTML='<iframe class="br_rv_t3" src="https://www.imdb.com/videoembed/vi3567517977" allowfullscreen allowtransparency frameborder="no" width="" height="" id="bck-vid1"></iframe>';document.getElementById('bck-vid1').style.width=bck1.offsetWidth+'px';document.getElementById('bck-vid1').style.height=bck1.offsetHeight*0.79+'px';bck1.getElementsByTagName('div')[1].innerHTML='Forrest gump';
+    bck2.setAttribute('onclick',"location.href='https://www.imdb.com/title/tt4276820/'");bck2.getElementsByTagName('div')[0].innerHTML='<iframe class="br_rv_t3" src="https://www.imdb.com/videoembed/vi1128052249" allowfullscreen allowtransparency frameborder="no" width="" height="" id="bck-vid2"></iframe>';document.getElementById('bck-vid2').style.width=bck2.offsetWidth+'px';document.getElementById('bck-vid2').style.height=bck2.offsetHeight*0.79+'px';bck2.getElementsByTagName('div')[1].innerHTML='Founder';
+    bck3.setAttribute('onclick',"location.href='https://www.imdb.com/title/tt2357129/'");bck3.getElementsByTagName('div')[0].innerHTML='<iframe class="br_rv_t3" src="https://www.imdb.com/videoembed/vi2922490137" allowfullscreen allowtransparency frameborder="no" width="" height="" id="bck-vid3"></iframe>';document.getElementById('bck-vid3').style.width=bck3.offsetWidth+'px';document.getElementById('bck-vid3').style.height=bck3.offsetHeight*0.79+'px';bck3.getElementsByTagName('div')[1].innerHTML='Jobs';
+}
+else{
+    bck1.getElementsByTagName('div')[0].innerHTML='';bck1.getElementsByTagName('div')[1].innerHTML='';
+    bck2.getElementsByTagName('div')[0].innerHTML='';bck2.getElementsByTagName('div')[1].innerHTML='';
+    bck3.getElementsByTagName('div')[0].innerHTML='';bck3.getElementsByTagName('div')[1].innerHTML='';
+}
+}
+</script>
+</body>
+</html>
