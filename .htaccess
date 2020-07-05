@@ -1,0 +1,25 @@
+RewriteEngine on
+AddDefaultCharset UTF-8
+
+php_value max_execution_time 60
+php_value upload_max_filesize 51M
+
+ErrorDocument 404 https://diarium.info/error/404/
+ErrorDocument 401 https://diarium.info/error/401/
+ErrorDocument 301 https://diarium.info/error/301/
+ErrorDocument 406 https://diarium.info/error/406/
+ErrorDocument 206 https://diarium.info/error/206/
+
+RewriteBase /
+RewriteRule (.*)\.html$ $1 [R=301,L]
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4.0[678] no-gzip
+BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+<ifmodule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_item_include file \.js$
+mod_gzip_item_include file \.css$ </ifmodule>
+</IfModule>

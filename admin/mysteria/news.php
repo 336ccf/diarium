@@ -2,7 +2,7 @@
 ini_set(‘session.gc_maxlifetime’, 2592000);
 ini_set(‘session.cookie_lifetime’, 2592000);
 session_start();
-$conn = new mysqli("31.31.196.251", "u0703038_admin", "diariumCc366", "u0703038_dayler");
+$conn = new mysqli("31.31.196.251", "u0703038_my", "DiariumCC366", "u0703038_mysteria");
 if (!$conn) {
     die("Connection ERROR: " . mysqli_connect_error());
 }
@@ -15,18 +15,24 @@ if (!mysqli_set_charset($conn, "utf8")) {
     printf("Текущий набор символов: %s\n", mysqli_character_set_name($conn));
 }
 
-$day=$_SESSION['day'];
+$ruti=$_POST['rutitle'];
+$rupn=$_POST['rupostnews'];
+$enti=$_POST['entitle'];
+$enpn=$_POST['enpostnews'];
+$rank = $_SESSION['admin'];
 
-$rutextdata=$_POST['rutextdata'];
-$entextdata=$_POST['entextdata'];
+$name=$_FILES["docs"]["name"];
+$dir="files/";
+move_uploaded_file($_FILES["docs"]["tmp_name"],"$dir".$_FILES["docs"]["name"]);
+echo $_FILES["docs"]["error"];
 
-$sql = "INSERT INTO day (day,date,rutext,entext) VALUES ('$day',NOW(),'$rutextdata','$entextdata')";
+$sql = "INSERT INTO news (ruti,enti,rupn,enpn,date,rank,file) VALUES ('$ruti','$enti','$rupn','$enpn',NOW(),'$rank','$name')";
 
 echo '<br>';
 if (mysqli_query($conn, $sql)) {
       echo "Created sucessfully";
       ?>
-<script>location.href='https://diarium.info/admin/dayler/';</script>
+<script>location.href='https://diarium.info/admin/mysteria/';</script>
       <?php
 } else {
       echo "ERROR: " . $sql . "<br>" . mysqli_error($conn);

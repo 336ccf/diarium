@@ -1,0 +1,140 @@
+<html>
+    <title>Mysteria admin</title>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="author" content="suicvairduCConstantinius">
+        <meta name="format-detection" content="telephone=no">
+    </head>
+    <style>
+        *{margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1.4vmax;}
+        .f1x{display: flex; justify-content: space-around; align-items: center;}.fdc{flex-direction: column;}.fdrc{flex-direction: column-reverse;}
+        .hidden{display: none;}
+
+    .title{width:100%;height: auto; text-align: center; margin-top: 10vmin;}
+    .backlink{width:100%;height: auto; text-align: left;}
+    .checkdata{width:100%;height: auto; text-align: right;}
+
+    .create{width: 100%; height: auto; background-color: rgba(0, 0, 0, 0.033); display: flex; justify-content: space-around; align-items: center; flex-direction: column;}
+    .addsite{width: 80vmin; height: auto; background-color: rgba(0, 0, 0, 0.033); display: flex; flex-direction: column;margin-bottom: 10vmin;}
+
+    .addsite>form>input{width: 100%; height: 5vmin; text-indent: 1.5vw; margin-top: 2vmin; margin-bottom: 2vmin;}
+    .addsite>form>textarea{resize: vertical; width: 100%; height: 25vmin; text-indent: 1.5vw;}
+    #list{list-style: none; width: 100%; height: auto; display: flex; justify-content: space-around; align-items: center; }
+
+    .setrelate>form>input{width: 100%; height: 5vmin; text-indent: 1.5vw; margin-top: 2vmin; margin-bottom: 2vmin;}
+    .setrelate>form>textarea{resize: vertical; width: 100%; height: 25vmin; text-indent: 1.5vw;}
+
+    .editdata{width: 80vw; background-color: rgba(0, 0, 0, 0.033);}
+    .editdata>form{margin-bottom: 2.5vmin;}
+
+    #delete{color:red;background-color:transparent; cursor:not-allowed;}
+    #update{color:black;border: 0.1vmin solid black;}#update:hover{ padding-left: 1vw; padding-right: 1vw;cursor:pointer}
+    #page{color:green;border: 0.1vmin solid black;}#page:hover{ padding-left: 1vw; padding-right: 1vw;cursor:pointer}
+
+    #identification,.reicontype{width: 3vw; background-color: transparent; border: none; outline: none;}
+    #rename,#retype{width: 10vw; background-color: transparent;}
+    #redescription{width: 100%; background-color: transparent;}
+    #rephone,#remail,#renlink{width: 33%; background-color: transparent;}
+
+    </style>
+    <body>
+        <div class="title">
+            Panel for redacting DATA BASE
+        </div>
+        <div class="backlink">
+            <a href="../">Back to admin panel HOME page</a>
+        </div>
+        <div class="checkdata">
+            <a href="http://mysteria.space/">Go to DATALIST PAGE</a>
+        </div>
+        <div class="create">
+            <div class="addsite">
+                <form action="add.php" method="post" enctype="multipart/form-data">
+                    <input type="text" name="name" id="name" required placeholder="Name">
+                    <input type="text" name="type" id="type" required placeholder="Type">
+                    
+                    <input type="text" name="description" id="description" required placeholder="Description">
+
+                    <input type="tel" name="phone" id="phone" required placeholder="Phone">
+                    <input type="email" name="email" id="email" required placeholder="E-mail">
+                    <input type="url" name="link" id="link" required placeholder="Link">
+                    
+                    <input type="text" name="location" id="location" required placeholder="Location">
+                    
+                    <input type="file" id="files" name="files" required/>
+                    <ul id="list"></ul>
+
+                    <input type="submit" value="Add" name="adddata">
+                </form>
+                    <script>
+                    function showFile(e) {
+                        var files = e.target.files;
+                        for (var i = 0, f; f = files[i]; i++) {
+                        if (!f.type.match('image.*')) continue;
+                        var fr = new FileReader();
+                        fr.onload = (function(theFile) {
+                            return function(e) {
+                            var li = document.createElement('li');
+                            li.innerHTML = "<img src='" + e.target.result + "' />";
+                            document.getElementById('list').insertBefore(li, null);
+                            };})(f); fr.readAsDataURL(f); }}document.getElementById('files').addEventListener('change', showFile, false);
+                    </script>
+                <div class="setrelate">
+                    <legend>Relate</legend>
+                    <form action="news.php" method="post" enctype="multipart/form-data">
+                        <input type="number" name="idto" id="idto" required placeholder="ID to">
+                        <textarea name="relto" id="relto" cols="30" rows="10" required placeholder="Relate to"></textarea>
+
+                        <input type="number" name="idfrom" id="idfrom" required placeholder="ID from">
+                        <textarea name="relfrom" id="relfrom" cols="30" rows="10" required placeholder="Relate from"></textarea>
+
+                        <input type="submit" value="Add" name="setrelate">
+                    </form>
+                </div>
+            </div>
+            <div class="editdata">
+                <legend>Edit</legend>
+                <form action="" method="post" enctype="multipart/form-data">
+                    <input type="number" name="identification" id="identification" readonly value="[id]">
+                    <input type="text" name="rename" id="rename" placeholder="Name" value="[name]">
+                    <input type="text" name="retype" id="retype" required value="[Type]">
+                    <input type="text" name="reicontype" id="reicontype1" class="reicontype" value="1">
+                    <span id="icontype1"></span>
+                    <input type="text" name="redescription" id="redescription" required value="Description">
+
+                    <input type="tel" name="rephone" id="rephone" placeholder="Version" value="[phone]">
+                    <input type="email" name="remail" id="remail" placeholder="E-mail" value="[email]">
+                    <input type="url" name="relink" id="renlink" placeholder="Link" value="[link]">
+
+                    <input type="submit" name="updater" value="UPDATE" id="update">
+                    <input type="submit" name="deleter" value="DELETE" id="delete">
+                    <input type="submit" name="pager" value="OPEN" id="page">
+
+                    <p id="relates[id]">
+                        <input type="submit" value="1" name="openrelate">
+                        ,
+                        <input type="submit" value="2" name="openrelate">
+                        ,
+                        <input type="submit" value="4" name="openrelate">
+                    
+                    </p>
+                </form>
+                <script>
+                if(reicontype1.value==1){icontype1.innerHTML='agency'}
+                else if(reicontype1.value==2){icontype1.innerHTML='art'}
+                else if(reicontype1.value==3){icontype1.innerHTML='bank'}
+                else if(reicontype1.value==4){icontype1.innerHTML='base'}
+                else if(reicontype1.value==5){icontype1.innerHTML='communication'}
+                else if(reicontype1.value==6){icontype1.innerHTML='company'}
+                else if(reicontype1.value==7){icontype1.innerHTML='education'}
+                else if(reicontype1.value==8){icontype1.innerHTML='factory'}
+                else if(reicontype1.value==9){icontype1.innerHTML='government'}
+                else if(reicontype1.value==10){icontype1.innerHTML='personallity'}
+                else if(reicontype1.value==11){icontype1.innerHTML='production'}
+                else if(reicontype1.value==12){icontype1.innerHTML='sport'}
+                else if(reicontype1.value==14){icontype1.innerHTML='www'}
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

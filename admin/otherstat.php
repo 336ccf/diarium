@@ -27,19 +27,13 @@ $alcho=$_POST['alchohol'];
 $milk=$_POST['milk'];
 
 
-$sql = "INSERT INTO otherstat (day,date,wu,hf,pss,pp,ejc,art,weight,dia,sys,pulse,coffee,tea,water,alcho,milk,ol) VALUES ('$day',NOW(),$wu,$hf,$pss,$pp,$ejc,$art,$weight,$dia,$sys,$pulse,$coffee,$tea,$water,$alcho,$milk,$ol)";
+$sql = "INSERT INTO stat (day,date,wu,hf,pss,pp,ejc,art,weight,dia,sys,pulse,coffee,tea,water,ol,alcho,milk) VALUES ('$day',NOW(),$wu,$hf,$pss,$pp,$ejc,$art,$weight,$dia,$sys,$pulse,$coffee,$tea,$water,$ol,$alcho,$milk)";
 
 echo '<br>';
 if (mysqli_query($conn, $sql)) {
       echo "Created sucessfully";
-      ?>
-<script>location.href='https://diarium.info/admin/dayler/';</script>
-      <?php
 } else {
       echo "ERROR: " . $sql . "<br>" . mysqli_error($conn);
-      ?>
-<script>setTimeout(() => history.back(), 1000);</script>
-      <?php
 }
 
 ?>

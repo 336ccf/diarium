@@ -1,4 +1,6 @@
-<?php session_start(); 
+<?php ini_set(‘session.gc_maxlifetime’, 2592000);
+ini_set(‘session.cookie_lifetime’, 2592000);
+session_start(); 
 $conn = new mysqli("31.31.196.251", "u0703038_admin", "diariumCc366", "u0703038_dayler");
 if (!$conn) { die("Connection ERROR: " . mysqli_connect_error()); }
 $dayt=$_SESSION['day'];
@@ -40,6 +42,7 @@ else{
 
     .sessiondata{margin-bottom: 10vmin;}
     #exit{margin-top: 5vmin;}
+    .time{position: fixed; top: 10px; font-weight: 600; text-align: center; width: 100%;}
     </style>
     <body>
         <div class="title">
@@ -51,6 +54,7 @@ else{
         <div class="checkdata">
             <a href="../../dayler">Go to DAYLER page</a>
         </div>
+        <div class="time">00:00</div>
         <div class="add f1x fdc">
 <!-- add stats  -->
             <div class="statistic">
@@ -113,6 +117,7 @@ else{
                     <br>
                     <input type="submit" name="mainstat"  value="Send">
                 </form>
+
                 <?php } 
                 else { ?>
     <legend>ADD main stats</legend>
@@ -171,6 +176,90 @@ else{
                 </form>
                 <?php } ?>
             </div>
+            <script>
+            let time=0, timer=document.getElementsByClassName('time')[0],st=0,pgv=0,mkv=0,mav=0,div=0,suv=0,ecv=0,rtv=0;
+
+            wakedown.onchange=function(){
+                var arr2 = wakeup.value.split(':');
+                var arr1 = wakedown.value.split(':');
+
+                let wd=[parseInt(arr1[0],10),parseInt(arr1[1],10)];
+                let wu=[parseInt(arr2[0],10),parseInt(arr2[1],10)];
+
+                if (wd[0]>wu[0]){
+                    if(wd[1]>wu[1]){
+                        st=[(24-wd[0])-1+wu[0],(60-wd[1])+wu[1]]
+                    } else if(wd[1]<wu[1]){
+                        st=[(24-wd[0])+1+wu[0],wu[1]-wd[1]]
+                    } else {st=[(24-wd[0])+wu[0],0]}
+                    
+                } else {
+                    if(wd[1]<wu[1]){
+                        st=[wu[0]-wd[0],wu[1]-wd[1]]
+                    } else if(wd[1]>wu[1]){
+                        st=[wu[0]-wd[0]-1,(60-wd[1])+wu[1]]
+                    } else {st=[wu[0]-wd[0],0]}
+                    
+                }
+                st=[parseInt(st[0],10),parseInt(st[1],10)];
+                timer.innerHTML=st[0]+':'+st[1];
+                
+            }
+            progtime.onchange=function(){
+                var arr = progtime.value.split(':');
+
+                pgv=[parseInt(arr[0],10),parseInt(arr[1],10)];
+                if(pgv[1]>=60){pgv[1]=pgv[1]-59;pgv[0]=pgv[0]+1;}else{}
+            }
+            marktime.onchange=function(){
+                var arr = marktime.value.split(':');
+
+                mkv=[parseInt(arr[0],10),parseInt(arr[1],10)];
+                time=[st[0]+pgv[0]+mkv[0],st[1]+pgv[1]+mkv[1]];
+                if(time[1]>=60){time[1]=time[1]-60;time[0]=time[0]+1;}else{}
+                timer.innerHTML=time[0]+':'+time[1];
+            }
+            manatime.onchange=function(){
+                var arr = manatime.value.split(':');
+
+                mav=[parseInt(arr[0],10),parseInt(arr[1],10)];
+                time=[st[0]+pgv[0]+mkv[0]+mav[0],st[1]+pgv[1]+mkv[1]+mav[1]];
+                if(time[1]>=60){time[1]=time[1]-60;time[0]=time[0]+1;}else{}
+                timer.innerHTML=time[0]+':'+time[1];
+            }
+            desitime.onchange=function(){
+                var arr = desitime.value.split(':');
+
+                div=[parseInt(arr[0],10),parseInt(arr[1],10)];
+                time=[st[0]+pgv[0]+mkv[0]+mav[0]+div[0],st[1]+pgv[1]+mkv[1]+mav[1]+div[1]];
+                if(time[1]>=60){time[1]=time[1]-60;time[0]=time[0]+1;}else{}
+                timer.innerHTML=time[0]+':'+time[1];
+            }
+            strutime.onchange=function(){
+                var arr = strutime.value.split(':');
+
+                suv=[parseInt(arr[0],10),parseInt(arr[1],10)];
+                time=[st[0]+pgv[0]+mkv[0]+mav[0]+div[0]+suv[0],st[1]+pgv[1]+mkv[1]+mav[1]+div[1]+suv[1]];
+                if(time[1]>=60){time[1]=time[1]-60;time[0]=time[0]+1;}else{}
+                timer.innerHTML=time[0]+':'+time[1];
+            }
+            eductime.onchange=function(){
+                var arr = eductime.value.split(':');
+
+                ecv=[parseInt(arr[0],10),parseInt(arr[1],10)];
+                time=[st[0]+pgv[0]+mkv[0]+mav[0]+div[0]+suv[0]+ecv[0],st[1]+pgv[1]+mkv[1]+mav[1]+div[1]+suv[1]+ecv[1]];
+                if(time[1]>=60){time[1]=time[1]-60;time[0]=time[0]+1;}else{}
+                timer.innerHTML=time[0]+':'+time[1];
+            }
+            resttime.onchange=function(){
+                var arr = resttime.value.split(':');
+
+                rtv=[parseInt(arr[0],10),parseInt(arr[1],10)];
+                time=[st[0]+pgv[0]+mkv[0]+mav[0]+div[0]+suv[0]+ecv[0]+rtv[0],st[1]+pgv[1]+mkv[1]+mav[1]+div[1]+suv[1]+ecv[1]+rtv[1]];
+                if(time[1]>=60){time[1]=time[1]-60;time[0]=time[0]+1;}else{}
+                timer.innerHTML=time[0]+':'+time[1];
+            }
+            </script>
 <!-- add stats  -->
             <div class="otherstatistic">
             <?php 
@@ -321,7 +410,7 @@ else{
                 </form>
                 <form action="" method="post" id="EUR">
                     <label for="eurvalue">EUR currency cost</label>
-                    <input type="number" step="0.01" name="eurvalue" id="eurvalue" value="<?php if ($res = mysqli_query($conn_adm, "SELECT * FROM currency ")){$curr = mysqli_fetch_array($res); echo ($curr['rur']/$curr['eur']); } ?>">
+                    <input type="number" step="0.01" name="eurvalue" id="eurvalue" value="<?php if ($res = mysqli_query($conn_adm, "SELECT * FROM currency ")){$curr = mysqli_fetch_array($res);$rur=$curr['rur'];$eur=$curr['eur']; echo $rur/$eur; } ?>">
                     <input type="submit" name="updateeur" value="set">
                 </form>
                 <form action="" method="post" id="exit">

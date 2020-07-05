@@ -1,0 +1,2227 @@
+
+<html>
+    <title>Dayler</title>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="author" content="suicvairduCConstantinius"><link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+        <meta name="format-detection" content="telephone=no">
+    </head>
+    <style>
+    *{margin: 0; padding: 0; -webkit-appearance: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+    .f1x{display: flex; justify-content: space-around; align-items: center;}.fdc{flex-direction: column;}.fdrc{flex-direction: column-reverse;}
+    .hidden{display: none;}
+
+    body{overflow: auto;}
+
+    .blogline{ width: 88%; height: auto; margin-top:15vmax; color: rgba(255, 255, 255, 1); font-size: 1.4vmax;}
+
+    .post{width: 100%; height: 50vh;display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;background-color: rgba(0, 0, 0, 0.93);}
+
+    .post>.gallery{width:50%;height: 50vh; border-bottom-left-radius: 2vmax;}
+    .image{width:50%;height: 100%; background-position: center; background-size: contain; background-repeat: no-repeat; text-align: center;}
+    .gallery>input[type="button"]{width: 25%; height: 100%; font-size: 3vmax; background-color: rgba(0, 0, 0, 0.3); border: none; }
+    .gallery>input[type="button"]:hover{background-color: rgba(0, 0, 0, 0.3); box-shadow: 0 0 0.3vmin 0.1vmin rgba(255,0,0,1) inset; cursor: pointer;}
+
+    .statery{width:50%;height: 50vh; border-bottom-left-radius: 2vmax;}
+
+    .post>.info{width:50%;height: 50vh; border-bottom-right-radius: 2vmax; display: flex; justify-content: space-around; align-items: center; flex-direction: column;}
+    .info>.togglebar{width: 100%; height: 20%; display: flex; justify-content: space-around; align-items: center;}
+    .info>.content{width: 100%; height: 80%; border-bottom-right-radius: 2vmax;}
+    .info>.togglebar>div{width: 50%; height: 100%; display: flex; justify-content: space-around; align-items: center;}
+    .info>.togglebar>div:hover{background-color: rgba(0, 0, 0, 0.3); cursor: pointer; box-shadow: 0 0 0.3vmin 0.1vmin rgba(255,0,0,1) inset;}
+    .info>.togglebar>.use{background-color: rgba(0, 0, 0, 0.3);}
+
+    .text, .stat{padding: 1vmax; overflow: auto; height:100%; max-height:100%;}
+    .text>.blog{font-size: 1.4vmax; padding-bottom:5vmin;}
+    .time{font-weight: 500; font-size: 1.7vmax; margin-left: 1vw; border-top-left-radius: 2vmin; border-top-right-radius: 2vmin;color: rgba(0, 0, 0, 0.93); width:100%; height:auto;}
+
+    .headline{width: 100%; height: 10%; display: flex; justify-content: space-between; align-items: center;}
+    .table{width: 100%; height: 80%;  display: flex; justify-content: space-between; align-items: center; flex-direction: column;}
+
+        mysteria{display: block; position: fixed; top: 0; font-size: 1.4vmax;}
+    .valuetype:hover{cursor:pointer; text-decoration: underline;}
+    .search{width: 100vw; background-color: rgba(0, 0, 0, 0.123);}
+    .search>form{width: 80%; height: 7.7vmin; display: flex; justify-content: space-around; align-items: center;}
+    #submit{display: none;}
+    #search{color: rgba(0, 0, 0, 0.93);font-size: 2.3vmin ;height: 5vmin; width: 80%; display: inline-flex; outline: none; text-indent: 2.4vw; background-color: white; border:none; border-radius: 0.5vmin; border-top-left-radius: 3vmin; border-bottom-left-radius: 3vmin; }
+    #search:focus{box-shadow: 0vmin 0vmin 3vmin 1vmin rgba(255, 0, 0, 0.033);}
+    .search>form>label{width: 7vmin; height: 7vmin; border-radius: 50%; margin-left: 5vmin; background-color: rgba(255,255,255,1);}
+    .search>form>label:hover{box-shadow: 0vmin 0vmin 1.2vmin 0.3vmin rgba(0,0,0,0.099);}
+    #logotype1, #search1{fill: rgba(255,255,255,0.62);}
+    #logotype1:hover, #search1:hover{fill: rgba(255,255,255,1);}
+    #logotype2, #search2{fill: rgba(0,0,0,0.62)}
+    #logotype2:hover, #search2:hover{fill: rgba(0,0,0,1)}
+    .language{width: 100vw; height: 3vmin;display: flex; justify-content: space-around; font-weight: 500;}
+    .language>span{width: 15vw; height: 100%; background-color: rgba(0,0,0,0.39); cursor: pointer; text-align: center; padding-bottom: 1vmax; border-bottom-left-radius: 1vmax; border-bottom-right-radius: 1vmax;}
+    .language>span:hover{background-color: rgba(0,0,0,0.099); padding-bottom: 1vmin;font-weight: 400;}
+    .language>span.click{background-color: rgba(0,0,0,0.099); padding-bottom: 1vmin; cursor: none; font-weight: 400;}
+
+        .functionline{width: 100%; height: 10vmin; background-color: rgba(0, 0, 0, 0.123); display: flex; justify-content: space-around; align-items: center; font-size: 2.4vmax;}
+    input#day{color: rgba(0, 0, 0, 0.97); font-size: 2.5vmax; border: none; background-color: transparent; outline: none; border-bottom: 0.1vmax solid rgba(0, 0, 0, 0.97); width: 5vw; text-align: center;}
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;}
+    .analytic{width: auto; height: 88%; display: flex; justify-content: space-around; align-items: center; padding-left: 2vw; padding-right: 2vw;}
+    .analytic:hover{background-color: rgba(0, 0, 0, 0.123); cursor: pointer; border-radius: 0.3vmin;}
+            .analytics{width: 100vw; height: 100vh; background-color: rgba(255, 255, 255, 0.99); position: fixed; top: 0; left: 0;}
+        .analytics>.menutop{width: 100%; height: 10vh; top: 0; position: fixed; background-color: rgba(0, 0, 0, 0.123);left: 0; display: flex; justify-content: space-around; align-items: center;}
+    .menutop>.close{background-position: center; background-size: 120%; width: 10vh; height: 10vh; background-repeat: no-repeat; background-image: url(http://mysteria.space/base/svg/close.svg);}
+    .menutop>.close:hover{background-size: 100%; box-shadow: 0 0 1vmin 2vmin rgba(0, 0, 0, 0.033); border-radius: 50%; cursor: not-allowed;}
+        .analytics>.choosetype{position: fixed; left: 0; bottom: 0; width: 10vw; height: 90vh;  display: flex; justify-content: space-around; align-items: center; flex-direction: column;}
+    .analytics>.choosetype>div{ background-color: rgba(0, 0, 0, 0.123); font-size: 1.6vmax; }
+    .choosetype>div{width: 100%; height: 100%;display: flex; justify-content: space-around; align-items: center;}
+    .choosetype>div:hover{background-color: rgba(0, 0, 0, 0.321 ); cursor: pointer;}.choosetype>div.click{background-color: rgba(0, 0, 0, 0.321 ); cursor: default;}
+        .analytics>.statistic{width: 90vw; height: 90vmin; position: fixed; bottom: 0; left: 10vw; background-color: rgba(0, 0, 0, 0.03);}
+    
+.statistic>.foodtable{width: 90vmin; height: 90vw; overflow-y:auto; transform: rotate(-90deg) translate(40vmin,20.8vw);}.statistic>.foodtable::-webkit-scrollbar { width: 0; }
+    .foodtable>.block{width: 100%; height: 10vmin; display: block;display: block; font-size: 3vmax; }
+    .foodtable>.block>.value{height: 10vmin;float: left; }
+    .foodtable>.block>span.textvalue{float: left; height: 10vmin; display:flex;justify-content: space-around; align-items: center; text-indent: 1vw;}
+    .foodtable>.block>.value>span{font-size: 1.5vmax; float: left;}
+    .foodtable>.block>.value>.ca{height: 100%; display: flex;justify-content: space-around; align-items: center; background-color: rgba(248, 217, 196, 0.767);}
+    .foodtable>.block>.value>.pr{height: 100%; display: flex;justify-content: space-around; align-items: center; background-color: rgba(255, 255, 255, 0.794);}
+    .foodtable>.block>.value>.fa{height: 100%; display: flex;justify-content: space-around; align-items: center; background-color: rgba(255, 227, 100, 0.876);}
+
+.statistic>.healthtable{width: 100%; height: 100%; overflow-y:auto; background-color: rgba(0, 0, 0, 0.03)}.statistic>.healthtable::-webkit-scrollbar { width: 0; }
+    .statistic>.healthtable>.choosetype{width: 7%; height: 100%; background-color: #00000008; font-size: 1vmax; display: flex; justify-content: space-around; align-items: center; flex-direction: column;float: left;}
+    .statistic>.healthtable>.table{width: 93%; height: 100%; display: block;overflow-y: auto !important;float: left;}
+    .healthtable>.table>.healthcube{height: 3vw; width: 3vw; background-color: rgba(0, 0, 0, 0.03);margin: 1vmax; float: left;}
+    .healthtable>.table>.healthcube.medium{height: 20vw; width: 20vw; background-color: rgba(0, 0, 0, 0.03);margin: 1vmax;}
+    .healthtable>.table>.healthcube.small{height: 14vw; width: 14vw; background-color: rgba(0, 0, 0, 0.03);margin: 0.5vmax;}
+    .healthtable>.table>.healthcube.big{height: 34vw; width: 34vw; background-color: rgba(0, 0, 0, 0.03);margin: 1.5vmax;}
+    .healthtable>.table>.healthcube.line{height: 10vh; width: 100%; background-color: rgba(0, 0, 0, 0.03);margin: 0.5vmin;}
+    .healthcube>.healthcircle{height: 100%; width: 100%; border-radius: 50%; background-color: rgba(0, 0, 0, 0.03); display: flex; justify-content: space-around; align-items: center;}
+    .healthtable>.table>.healthcube.line>.healthcircle{border-radius:0%;opacity: 0.7;}
+    .healthcircle>.dia{border-radius: 50%; background-color: rgba(255, 0, 0, 0.3); display:flex; justify-content: space-around; align-items: center;}
+    .healthcircle>.dia>.pulse{border-radius: 50%; background-color: rgba(255, 255, 0, 0.3); display:flex; justify-content: space-around; align-items: center;}
+    .healthcircle>.dia>.pulse>.sys{border-radius: 50%; background-color: rgba(0, 0, 255, 0.3); display:flex; justify-content: space-around; align-items: center;}
+    .healthcube.line>.healthcircle>.dia,.healthcube.line>.healthcircle>.dia>.pulse,.healthcube.line>.healthcircle>.dia>.pulse>.sys{border-radius:0%;}
+
+.statistic>.moneytable{width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.3)}.statistic>.moneytable>.left,.statistic>.moneytable>.right::-webkit-scrollbar { width: 0; }
+    .statistic>.moneytable>.right{width: 50%; height:100%;overflow-y:auto !important; background-color: rgba(255,0, 0, 0.3);float: left;}
+    .statistic>.moneytable>.left{width: 50%; height:100%;overflow-y:auto !important; background-color: rgba(0, 255, 0, 0.3);float: left;}
+    .right>.prevalue{float: left; width: 100%; height: 10vmin; text-align: left; font-size: 2vmax;}
+    .left>.prevalue{float: right; width: 100%; height: 10vmin; text-align: right; font-size: 2vmax;}
+    .right>.prevalue>.value{float: left; width: 40%; height: 100%; background-color: rgba(0, 0, 0, 0.33);}
+    .left>.prevalue>.value{float: right; width: 40%; height: 100%; background-color: rgba(255, 255, 255, 0.33);}
+    .prevalue>.value[data-attr]::after{content: attr(data-attr) ' руб.'; font-size: 1.5vmax; display:flex; justify-content: space-around; align-items: center; width: 100%; height:100%;}
+    .right>.prevalue>.day{float: left; width: auto; height: 10vmin; display:flex; justify-content: space-around; align-items: center;font-weight: 500;}
+    .left>.prevalue>.day{float: right; width: auto; height: 10vmin; display:flex; justify-content: space-around; align-items: center;font-weight: 500;}
+
+.statistic>.timetable{width: 100%; height: 100%;overflow-y:auto !important;}.statistic>.timetable::-webkit-scrollbar { width: 0; }
+    .timetable>.values{width: 30vmin; height: 40vmin; border: 0.1vmax solid rgba(0, 0, 0, 0.97); margin:1vmin;padding: 1vmin;}
+    .timetable>.values>.title{font-size: 2vmax;font-weight: 500; width: 100%;height: 10vmin;display: flex; justify-content: space-around; align-items: center;}
+    .timetable>.values>.circles{width: 100%;height: 30vmin;display:flex;position: sticky; text-align: center;z-index: 1;}
+    .circles>.prog{background-color: rgba(0, 0, 123, 0.38); top: 0; left: 0;}
+    .circles>.mark{background-color: rgba(123, 0, 0, 0.38); bottom: 0; left: 0;}
+    .circles>.mana{background-color: rgba(0, 123, 0, 0.38); bottom: 0; left: 0;}
+    .circles>.desi{background-color: rgba(255, 0, 0, 0.38); top: 0; left: 0;}
+    .circles>.stru{background-color: rgba(0, 255, 0, 0.62); bottom: 0; left: 0;}
+    .circles>.educ{background-color: rgba(255, 0, 0, 0.62); top: 0; left: 0;}
+    .circles>.rest{background-color: rgba(0, 0, 255, 0.62); bottom: 0; left: 0;}
+    .circles>.sleep{background-color: rgba(255, 0, 0, 0.51); bottom: 0; left: 0;}
+    .circles>div{border-radius: 50%;justify-content: flex-end; flex-direction: column; align-items: center; position: absolute; z-index: 2;}
+    .circles>div::before{content: attr(data-time);box-sizing:border-box; display: block; z-index: 3; width: 30vmin; height: 5vmin;background-color: rgba(123,123,123,.6); opacity: 0;z-index: 999999; position: fixed; top: 11vmin;transition:.38s ease-in-out; font-size: 1.7vmax;}
+    .circles>div::after{content:attr(data-type); box-sizing:border-box; display: block; z-index: 3; width: 30vmin; height: 5vmin;background-color: rgba(123,123,123,.6); opacity: 0;z-index: 999999; position: fixed; top: 11vmin;transition:.38s ease-in-out; font-size: 1.7vmax; border-bottom-left-radius: 1vmax; border-bottom-right-radius: 1vmax;}
+    .circles>div:hover::after{opacity: 1;top: 16vmin;}
+    .circles>div:hover::before{opacity: 1;top: 11vmin;}
+    #all>span.prog{color: rgba(0, 0, 123, 0.38);font-weight: 500; font-size:2vmax}
+    #all>span.mark{color: rgba(123, 0, 0, 0.38);font-weight: 500; font-size:2vmax}
+    #all>span.mana{color: rgba(0, 123, 0, 0.38);font-weight: 500; font-size:2vmax}
+    #all>span.desi{color: rgba(255, 0, 0, 0.38);font-weight: 500; font-size:2vmax}
+    #all>span.stru{color: rgba(0, 255, 0, 0.62);font-weight: 500; font-size:2vmax}
+    #all>span.educ{color: rgba(255, 0, 0, 0.62);font-weight: 500; font-size:2vmax}
+    #all>span.rest{color: rgba(0, 0, 255, 0.62);font-weight: 500; font-size:2vmax}
+    #all>span.sleep{color: rgba(255, 0, 0, 0.51);font-weight: 500; font-size:2vmax}
+
+.statistic>.sporttable{width: 100%; height: 100%;overflow-y:auto !important;}.statistic>.sporttable::-webkit-scrollbar { width: 0; }
+    .sporttable>.sportblock{width: 30vmin; height: 30vmin; border: 0.1vmax solid rgba(0, 0, 0, 0.97);float:left; margin:1vmin;padding: 1vmin;display: flex;justify-content: space-between; flex-wrap: wrap; }
+    .sportblock>.run{width: 60%; height: 60%; background-color: rgba(0, 0, 123, 0.38); display: flex; justify-content: space-around; align-items: center;}
+    .sportblock>.walk{width: 30%; height: 30%; background-color: rgba(0, 0, 255, 0.38); display: flex; justify-content: space-around; align-items: center;}
+
+.statistic>.watertable{width: 100%; height: 100%;overflow-y:auto !important;}.statistic>.watertable::-webkit-scrollbar { width: 0; }
+    .watertable>.waterblock{width: 100%; height: 30vmin; border: 0.1vmax solid rgba(0, 0, 0, 0.97); margin:1vmin;padding: 1vmin;display: flex;justify-content: end ; align-items:flex-end; }
+    .waterblock>.water{background-color: rgba(0, 0, 255, 0.38);}
+    .waterblock>.liquid{background-color: rgba(0, 0, 123, 0.38);}
+    .waterblock>.alchohol{background-color: rgba(123, 123, 123, 0.38);}
+    .waterblock>.milk{background-color: rgba(255, 255, 255, 0.38);}
+    .waterblock>.tea{background-color: rgba(255, 192, 90, 0.38);}
+    .waterblock>.coffee{background-color: rgba(70, 40, 12, 0.38);}
+    .waterblock>div{display: flex; justify-content: space-around; align-items: center;}
+    .waterblock>div:hover{cursor: help; }
+    .waterblock>div::before{content: attr(data-type);box-sizing:border-box;color: rgba(0, 0, 0, 0.97); font-weight: 600; display: flex;justify-content: space-around; align-items: center; z-index: 3; width: 10vmin; height: 5vmin;border-bottom: 1vmin solid rgba(0, 0, 0, .97); opacity: 0;z-index: 999999; position: absolute; top: 3vmin;transition:.51s ease-in-out; font-size: 1.4vmax;}
+    .waterblock>div::after{content:''; display: block; opacity: 0; position: absolute; top: 7vmin;transition:.51s ease-in-out;border-left:2vmin solid transparent; border-right:2vmin solid transparent;  border-top:2vmin solid rgba(0,0,0,0.97);}
+    .waterblock>div:hover::after{opacity: 1;top: 12%;}
+    .waterblock>div:hover::before{opacity: 1;top: 7%;}
+    
+    
+
+    @media screen and (max-width: 70vh) {
+        input#day{width:5vmax}
+        label[for="day"]{display: none;}
+        .analytics>.statistic{width: 100vw; height: 80vh; position: fixed; top: 10vh; left: 0; background-color: rgba(0, 0, 0, 0.03);}
+        .analytics>.choosetype{position: fixed; left: 0; bottom: 0; width: 100vmin; height: 10vh;  display: flex; justify-content: space-around; align-items: center;flex-direction: row;font-size: 1.6vmax;}
+        .statistic>.foodtable{width: 90vmin; height: 90vw; overflow-y:auto; transform: rotate(0deg);}.statistic>.foodtable::-webkit-scrollbar { width: 0; }
+    .foodtable>.block{width: 100%; height: 10vmin; display: block;display: block; font-size: 3vmax; }
+        .choosetype>div{margin: 1vmin;}
+        .post>.gallery, .post>.statery{width: 88vw; height: 25vh;}.post>.info{width: 88vw; height: 25vh;}.gallery>input[type="button"]:nth-child(1){border-bottom-left-radius: 0px;}}
+    </style>
+<mysteria>
+    <div class="f1x search">
+        <form action="http://mysteria.space/search/index.php" method="POST">
+        <input type="text" name="search" id="search" placeholder="Поисковый движок Мистерия" required>
+        <label for="submit" title="Искать"><svg version="1.1" id="search_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7vmin" height="7vmin" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><g id="search"><circle id="search1" cx="125" cy="125" r="85"/><path id="search2" d="M89.645,89.645c-19.523,19.523-19.523,51.188,0,70.711c18.328,18.328,47.362,19.445,66.999,3.359l24.818,24.818 c1.238-1.096,2.454-2.241,3.643-3.43c1.188-1.188,2.333-2.403,3.429-3.642l-24.819-24.819c16.087-19.636,14.97-48.67-3.358-66.998 C140.832,70.121,109.168,70.121,89.645,89.645z M160.157,153.086c-1.025,1.295-2.143,2.539-3.338,3.734 c-1.194,1.194-2.439,2.313-3.733,3.337c-17.663,14.156-43.529,13.039-59.905-3.337c-17.572-17.572-17.572-46.068,0-63.64 c17.57-17.571,46.067-17.572,63.639,0C173.196,109.557,174.313,135.423,160.157,153.086z"/></g></svg>
+        </label><input type="submit" id="submit">
+        </form>
+        <svg version="1.1" id="mysteria" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7vmin" height="7vmin" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><switch><g i:extraneous="self"><g><circle id="logotype1" cx="125" cy="125" r="95"/><polygon id="logotype2" points="198,153 180,162 153,89.38 136.13,117.89 144,180 126,189 108,180 115.87,117.93 99,89.5 72,162 54,153 90,72 126,107.75 162,72"/></g></g></switch></svg>
+    </div>
+    <script>mysteria.onclick = function(){location.href="http://mysteria.space/"}</script>
+    <div class="functionline">
+        <form action="" method="get">
+            <label for="day">Показать </label><input type="number" name="days" id="day" max="35" value="10"><label for="day"> дней из 38 возможных</label>
+        </form>
+        <div class="analytic" onclick="toggleAnalytics()">Аналитика</div>
+    </div>
+    <div class="language">
+        <span onclick="location.href='../en/'">English</span>
+        <span class="click">Русский</span>
+    </div>
+</mysteria>
+<div class="analytics hidden" id="analytics">
+    <div class="menutop">
+        <div class="close" onclick="toggleAnalytics()"></div>
+        <div id="all">?</div>
+    </div>
+    <div class="statistic">
+        <div class="timetable hidden">
+            <div class="values">
+                <div class="title" data-day="1" data-other="30"></div>
+                <div class="circles">
+                    <div class="prog" data-time="06:00" data-type="Программирование"></div>
+                    <div class="mark" data-time="02:30" data-type="Маркетинг"></div>
+                    <div class="mana" data-time="02:00" data-type="Менеджмент"></div>
+                    <div class="desi" data-time="01:00" data-type="Дизайн"></div>
+                    <div class="stru" data-time="01:00" data-type="Общение"></div>
+                    <div class="educ" data-time="01:00" data-type="Образование"></div>
+                    <div class="rest" data-time="01:00" data-type="Отдых"></div>
+                    <div class="sleep" data-time="09:00" data-type="Сон"></div>
+                </div>
+            </div>
+            <script>
+            let time = document.getElementsByClassName('timetable')[0],
+            timevalue=time.getElementsByClassName('values'),
+            timevalues=timevalue.length,
+            maxdaytime=1440,
+            allprog=0,
+            allmark=0,
+            allmana=0,
+            alldesi=0,
+            allstru=0,
+            alleduc=0,
+            allrest=0,
+            allsleep=0;
+            for(var v=0;v<timevalues;v++){
+                let it=timevalue[v].getElementsByClassName('circles')[0],
+                prog=it.getElementsByClassName('prog')[0],
+                mark=it.getElementsByClassName('mark')[0],
+                mana=it.getElementsByClassName('mana')[0],
+                desi=it.getElementsByClassName('desi')[0],
+                stru=it.getElementsByClassName('stru')[0],
+                educ=it.getElementsByClassName('educ')[0],
+                rest=it.getElementsByClassName('rest')[0],
+                sleep=it.getElementsByClassName('sleep')[0];
+    
+                var itprog = prog.dataset.time.split(':'),
+                itmark = mark.dataset.time.split(':'),
+                itmana = mana.dataset.time.split(':'),
+                itdesi = desi.dataset.time.split(':'),
+                itstru = stru.dataset.time.split(':'),
+                iteduc = educ.dataset.time.split(':'),
+                itrest = rest.dataset.time.split(':'),
+                itsleep = sleep.dataset.time.split(':'),
+                alltime=0;
+
+                for(var i=0;i<it.getElementsByTagName('div').length;i++){
+                    let its = it.getElementsByTagName('div')[i].dataset.time.split(':'),
+                    itis = it.getElementsByTagName('div')[i];
+                    alltime+=(parseInt(its[0],10)*60)+(parseInt(its[1],10));
+                    itis.style.width=(((parseInt(its[0],10)*60)+(parseInt(its[1],10))/1240)/30)+ 'vmin';
+                    itis.style.height=(((parseInt(its[0],10)*60)+(parseInt(its[1],10))/1240)/30)+ 'vmin';
+
+                }
+
+                allprog+=(parseInt(itprog[0],10)*60)+(parseInt(itprog[1],10));
+                allmark+=(parseInt(itmark[0],10)*60)+(parseInt(itmark[1],10));
+                allmana+=(parseInt(itmana[0],10)*60)+(parseInt(itmana[1],10));
+                alldesi+=(parseInt(itdesi[0],10)*60)+(parseInt(itdesi[1],10));
+                allstru+=(parseInt(itstru[0],10)*60)+(parseInt(itstru[1],10));
+                alleduc+=(parseInt(iteduc[0],10)*60)+(parseInt(iteduc[1],10));
+                allrest+=(parseInt(itrest[0],10)*60)+(parseInt(itrest[1],10));
+                allsleep+=(parseInt(itsleep[0],10)*60)+(parseInt(itsleep[1],10));
+
+                document.getElementsByClassName('timetable')[0].getElementsByClassName('values')[v].getElementsByClassName('title')[0].dataset.other=1440-alltime;
+
+            }
+            </script>
+        </div>
+        <div class="foodtable hidden">
+            <div class="block">
+                <span class="value">
+                    <span class="ca">10</span>
+                    <span class="pr">20</span>
+                    <span class="fa">15</span>
+                </span>
+                <span class="textvalue">1250</span>
+            </div>
+            <div class="block">
+                <span class="value">
+                    <span class="ca">30</span>
+                    <span class="pr">10</span>
+                    <span class="fa">15</span>
+                </span>
+                <span class="textvalue">2001</span>
+            </div>
+            <div class="block">
+                <span class="value">
+                    <span class="ca">12</span>
+                    <span class="pr">19</span>
+                    <span class="fa">45</span>
+                </span>
+                <span class="textvalue">1075</span>
+            </div>
+            <script>
+                let food=document.getElementsByClassName('foodtable')[0], foodblocks=food.getElementsByClassName('block').length, foodblock=food.getElementsByClassName('block');
+                let max=food.getElementsByClassName('block')[0].getElementsByClassName('textvalue')[0].innerHTML,min=food.getElementsByClassName('block')[0].getElementsByClassName('textvalue')[0].innerHTML,allfood=0,mca=0,mpr=0,mfa=0,nca=0,npr=0,nfa=0;
+                for(var i=0;i<foodblocks;i++){
+                    let textvalue = food.getElementsByClassName('block')[i].getElementsByClassName('textvalue')[0];
+                    let val=parseInt(textvalue.innerHTML,10);
+                    if (max < val)max = val; 
+                    if (min > val)min = val; 
+                    let ca=food.getElementsByClassName('block')[i].getElementsByClassName('value')[0].getElementsByTagName('span')[0],pr=food.getElementsByClassName('block')[i].getElementsByClassName('value')[0].getElementsByTagName('span')[1],fa=food.getElementsByClassName('block')[i].getElementsByClassName('value')[0].getElementsByTagName('span')[2];
+
+                    if (mca < parseInt(ca.innerHTML,10))mca = parseInt(ca.innerHTML,10); 
+                    if (nca > parseInt(ca.innerHTML,10))nca = parseInt(ca.innerHTML,10);
+                    if (mpr < parseInt(pr.innerHTML,10))mpr = parseInt(pr.innerHTML,10); 
+                    if (npr > parseInt(pr.innerHTML,10))npr = parseInt(pr.innerHTML,10);
+                    if (mfa < parseInt(fa.innerHTML,10))mfa = parseInt(fa.innerHTML,10); 
+                    if (nfa > parseInt(fa.innerHTML,10))nfa = parseInt(fa.innerHTML,10);
+
+                }
+                for(var i=0;i<foodblocks;i++){
+                    let all=min+max;
+                    let value = food.getElementsByClassName('block')[i].getElementsByClassName('value')[0];
+                    let textvalue = food.getElementsByClassName('block')[i].getElementsByClassName('textvalue')[0];
+                    let val=parseInt(textvalue.innerHTML,10);
+                    value.style.width=(90/all)*val+ 'vmin';
+        
+                    let ca=value.getElementsByTagName('span')[0],pr=value.getElementsByTagName('span')[1],fa=value.getElementsByTagName('span')[2];
+                    let cpf=parseInt(ca.innerHTML,10)+parseInt(pr.innerHTML,10)+parseInt(fa.innerHTML,10);
+                    ca.style.width=(parseInt(ca.innerHTML,10)/cpf)*100+'%';
+                    pr.style.width=(parseInt(pr.innerHTML,10)/cpf)*100+'%';
+                    fa.style.width=(parseInt(fa.innerHTML,10)/cpf)*100+'%';
+
+
+                    allfood='Ккал -'+all/2+' У,Б,Ж -'+(mca+nca)/2+', '+(mpr+npr)/2+', '+(mfa+nfa)/2;
+                }
+                </script>
+        </div>
+        <div class="healthtable hidden">
+            <div class="choosetype" id="healthtype">
+                <div class="small" onclick="toggleHealth();">Маленький</div>
+                <div class="medium click" onclick="toggleHealth();">Средний</div>
+                <div class="big" onclick="toggleHealth();">Большой</div>
+                <div class="line" onclick="toggleHealth();">Линии</div>
+            </div>
+            <div class="table">
+                <div class="healthcube medium" title="64000">
+                    <div class="healthcircle"><div class="dia" title="144"> <div class="pulse" title="71"> <div class="sys" title="74">35</div></div></div></div>
+                </div>
+                <div class="healthcube medium" title="69050">
+                    <div class="healthcircle"><div class="dia" title="123"> <div class="pulse" title="84"> <div class="sys" title="70">35</div></div></div></div>
+                </div>
+                <div class="healthcube medium" title="68850">
+                    <div class="healthcircle"><div class="dia" title="105"> <div class="pulse" title="81"> <div class="sys" title="62">35</div></div></div></div>
+                </div>
+                <div class="healthcube medium" title="74050">
+                    <div class="healthcircle"><div class="dia" title="155"> <div class="pulse" title="65"> <div class="sys" title="44">35</div></div></div></div>
+                </div>
+                <div class="healthcube medium" title="71050">
+                    <div class="healthcircle"><div class="dia" title="155"> <div class="pulse" title="65"> <div class="sys" title="44">35</div></div></div></div>
+                </div>
+                <script>
+                let health=document.getElementsByClassName('healthtable')[0], healthtable=health.getElementsByClassName('table')[0],healthcube=healthtable.getElementsByClassName('healthcube'), healthcubes=healthtable.getElementsByClassName('healthcube').length;
+                let maxweight=health.getElementsByClassName('table')[0].getElementsByClassName('healthcube')[0].title,minweight=health.getElementsByClassName('table')[0].getElementsByClassName('healthcube')[0].title;
+                let maxdia=health.getElementsByClassName('table')[0].getElementsByClassName('healthcube')[0].getElementsByClassName('dia')[0].title,mindia=health.getElementsByClassName('table')[0].getElementsByClassName('healthcube')[0].getElementsByClassName('dia')[0].title;
+                let maxpulse=health.getElementsByClassName('table')[0].getElementsByClassName('healthcube')[0].getElementsByClassName('pulse')[0].title,minpulse=health.getElementsByClassName('table')[0].getElementsByClassName('healthcube')[0].getElementsByClassName('pulse')[0].title;
+                let maxsys=health.getElementsByClassName('table')[0].getElementsByClassName('healthcube')[0].getElementsByClassName('sys')[0].title,minsys=health.getElementsByClassName('table')[0].getElementsByClassName('healthcube')[0].getElementsByClassName('sys')[0].title;
+                let allhealth=0;
+                for(var i=0;i<healthcubes;i++){
+                    let weight = healthcube[i].title;
+                    let weightval=parseInt(weight,10);
+                    if (maxweight < weightval)maxweight = weightval; 
+                    if (minweight > weightval)minweight = weightval; 
+                    minweight=parseInt(minweight,10);
+                    maxweight=parseInt(maxweight,10);
+
+                    let dia = healthcube[i].getElementsByClassName('dia')[0].title;
+                    let diaval=parseInt(dia,10);
+                    if (maxdia < diaval)maxdia = diaval; 
+                    if (mindia > diaval)mindia = diaval; 
+                    mindia=parseInt(mindia,10);
+                    maxdia=parseInt(maxdia,10);
+
+                    let pulse = healthcube[i].getElementsByClassName('pulse')[0].title;
+                    let pulseval=parseInt(pulse,10);
+                    if (maxpulse < pulseval)maxpulse = pulseval; 
+                    if (minpulse > pulseval)minpulse = pulseval; 
+                    minpulse=parseInt(minpulse,10);
+                    maxpulse=parseInt(maxpulse,10);
+
+                    let sys = healthcube[i].getElementsByClassName('sys')[0].title;
+                    let sysval=parseInt(sys,10);
+                    if (maxsys < sysval)maxsys = sysval; 
+                    if (minsys > sysval)minsys = sysval; 
+                    minsys=parseInt(minsys,10);
+                    maxsys=parseInt(maxsys,10);
+                }
+                for(var i=0;i<healthcubes;i++){
+                    let dia = healthcube[i].getElementsByClassName('dia')[0], 
+                    dia1 = healthcube[i].getElementsByClassName('dia')[0].title, 
+                    diaval=parseInt(dia1,10), 
+                    meddia=(maxdia+mindia)/2;
+                    diaopacity=(meddia-((Math.abs(meddia-diaval))))/meddia;
+                    dia.style.backgroundColor='rgba(255,0,0,'+ diaopacity +')';
+
+                    let pulse = healthcube[i].getElementsByClassName('pulse')[0], 
+                    pulse1 = healthcube[i].getElementsByClassName('pulse')[0].title, 
+                    pulseval=parseInt(pulse1,10), 
+                    medpulse=(maxpulse+minpulse)/2;
+                    pulseopacity=(medpulse-((Math.abs(medpulse-pulseval))))/medpulse;
+                    pulse.style.backgroundColor='rgba(255,255,0,'+ pulseopacity +')';
+
+                    let sys = healthcube[i].getElementsByClassName('sys')[0], 
+                    sys1 = healthcube[i].getElementsByClassName('sys')[0].title, 
+                    sysval=parseInt(sys1,10), 
+                    medsys=(maxsys+minsys)/2;
+                    sysopacity=(medsys-((Math.abs(medsys-sysval))))/medsys;
+                    sys.style.backgroundColor='rgba(0,0,255,'+ sysopacity +')';
+
+                    let maxtype=diaval;
+                    if (maxtype < pulseval)maxtype = pulseval;
+                    if (maxtype < sysval)maxtype = sysval; 
+
+                    dia.style.width=(100*(diaval/maxtype))+'%';
+                    dia.style.height=(100*(diaval/maxtype))+'%';
+                    sys.style.width=(100*(sysval/maxtype))+'%';
+                    sys.style.height=(100*(sysval/maxtype))+'%';
+                    pulse.style.width=(100*(pulseval/maxtype))+'%';
+                    pulse.style.height=(100*(pulseval/maxtype))+'%';
+                    
+                    let weight = healthcube[i] 
+                    weight1 = healthcube[i].title, 
+                    weightval=parseInt(weight1,10), 
+                    medweight=(maxweight+minweight)/2;
+                    weightopacity=(medweight-((Math.abs(medweight-weightval))*Math.cbrt(medweight)))/medweight;
+                    weight.style.backgroundColor='rgba(0,0,0,'+ weightopacity +')';
+                    allhealth='Вес - '+medweight+' D,S,P -'+meddia+', '+medsys+', '+medpulse;
+                }
+                </script>
+            </div>
+        </div>
+        <div class="sporttable hidden">
+            <div class="sportblock">
+                <div class="run" data-value="0"></div>
+                <div class="walk" data-value="50"></div>
+            </div>
+            <div class="sportblock">
+                <div class="run" data-value="3600"></div>
+                <div class="walk" data-value="1200"></div>
+            </div>
+            <div class="sportblock">
+                <div class="run" data-value="10000"></div>
+                <div class="walk" data-value="10000"></div>
+            </div>
+            <div class="sportblock">
+                <div class="run" data-value="10000"></div>
+                <div class="walk" data-value="50"></div>
+            </div>
+            <script>
+            let sport=document.getElementsByClassName('sporttable')[0],
+            sportblock=sport.getElementsByClassName('sportblock'),
+            sportblocks=sport.getElementsByClassName('sportblock').length,
+            allsport=0;
+            for(var i=0;i<sportblocks;i++){
+                let it=sportblock[i],
+                all = it.getElementsByTagName('div').length;
+                allvalue=0;
+                let itr = it.getElementsByTagName('div')[0];
+                let itw = it.getElementsByTagName('div')[1];
+                itr.innerHTML=itr.dataset.value + ' км';
+                itw.innerHTML=itw.dataset.value + ' км';
+
+                allvalue=parseInt(itr.dataset.value,10)+parseInt(itw.dataset.value,10);
+
+                itr.style.width=parseInt(itr.dataset.value,10)/allvalue*30+'vmin';
+                itr.style.height=parseInt(itr.dataset.value,10)/allvalue*30+'vmin';
+
+                itw.style.width=parseInt(itw.dataset.value,10)/allvalue*30+'vmin';
+                itw.style.height=parseInt(itw.dataset.value,10)/allvalue*30+'vmin';
+
+                allsport+=allvalue;
+            }
+            </script>
+        </div>
+        <div class="watertable hidden">
+            <div class="waterblock">
+                <div class="water" data-value="2550" data-type="Вода"></div>
+                <div class="liquid" data-value="900" data-type="Жидкость"></div>
+                <div class="alchohol" data-value="0" data-type="Алкоголь"></div>
+                <div class="milk" data-value="100" data-type="Молоко"></div>
+                <div class="coffee" data-value="100" data-type="Кофе"></div>
+                <div class="tea" data-value="1200" data-type="Чай"></div>
+            </div>
+            <script>
+                let water=document.getElementsByClassName('watertable')[0],
+                waterblock=water.getElementsByClassName('waterblock'),
+                waterblocks=waterblock.length,
+                allwater=0;
+                    for(var i=0;i<waterblocks;i++){
+                    let it=waterblock[i],
+                    all = it.getElementsByTagName('div').length;
+                    allvalue=0;
+                    let itw = it.getElementsByTagName('div')[0];
+                    let itl = it.getElementsByTagName('div')[1];
+                    let ita = it.getElementsByTagName('div')[2];
+                    let itm = it.getElementsByTagName('div')[3];
+                    let itc = it.getElementsByTagName('div')[4];
+                    let itt = it.getElementsByTagName('div')[5];
+                    itw.innerHTML=itw.dataset.value + ' л';
+                    itl.innerHTML=itl.dataset.value + ' л';
+                    ita.innerHTML=ita.dataset.value + ' л';
+                    itm.innerHTML=itm.dataset.value + ' л';
+                    itc.innerHTML=itc.dataset.value + ' л';
+                    itt.innerHTML=itt.dataset.value + ' л';
+
+                    allvalue=parseInt(itw.dataset.value,10)+parseInt(itl.dataset.value,10)+parseInt(ita.dataset.value,10)+parseInt(itm.dataset.value,10)+parseInt(itc.dataset.value,10)+parseInt(itt.dataset.value,10);
+
+                    itw.style.width=(parseInt(itw.dataset.value,10)/allvalue)*100+'%';
+                    itw.style.height=(parseInt(itw.dataset.value,10)/allvalue)*30+'vmin';
+
+                    itl.style.width=parseInt(itl.dataset.value,10)/allvalue*100+'%';
+                    itl.style.height=parseInt(itl.dataset.value,10)/allvalue*30+'vmin';
+
+                    ita.style.width=parseInt(ita.dataset.value,10)/allvalue*100+'%';
+                    ita.style.height=parseInt(ita.dataset.value,10)/allvalue*30+'vmin';
+
+                    itm.style.width=parseInt(itm.dataset.value,10)/allvalue*100+'%';
+                    itm.style.height=parseInt(itm.dataset.value,10)/allvalue*30+'vmin';
+
+                    itc.style.width=parseInt(itc.dataset.value,10)/allvalue*100+'%';
+                    itc.style.height=parseInt(itc.dataset.value,10)/allvalue*30+'vmin';
+
+                    itt.style.width=parseInt(itt.dataset.value,10)/allvalue*100+'%';
+                    itt.style.height=parseInt(itt.dataset.value,10)/allvalue*30+'vmin';
+
+                    allsport+=allvalue;
+                }
+                </script>
+        </div>
+        <div class="moneytable hidden">
+            <div class="left">
+                <div class="prevalue"><div class="value" data-attr="100" flow="right"></div><span class="day">1</span></div>
+            </div>
+            <div class="right">
+                <div class="prevalue"><div class="value" data-attr="200" flow="right"></div><span class="day">1</span></div>
+                <div class="prevalue"><div class="value" data-attr="100" flow="right"></div><span class="day">1</span></div>
+                <div class="prevalue"><div class="value" data-attr="300" flow="right"></div><span class="day">1</span></div>
+                <div class="prevalue"><div class="value" data-attr="700" flow="right"></div><span class="day">1</span></div>
+                <div class="prevalue"><div class="value" data-attr="350" flow="right"></div><span class="day">1</span></div>
+                <div class="prevalue"><div class="value" data-attr="250" flow="right"></div><span class="day">1</span></div>
+            </div>
+            <script>
+            let money=document.getElementsByClassName('moneytable')[0],
+            left= money.getElementsByClassName('left')[0],
+            right= money.getElementsByClassName('right')[0],
+            leftpre=left.getElementsByClassName('prevalue'),
+            rightpre=right.getElementsByClassName('prevalue'),
+            allmoney=0,
+            pluscash=0,
+            minuscash=0,
+            leftmax=0,
+            rightmax=0;
+            for(var i=0;i<leftpre.length;i++){
+                let val=leftpre[i].getElementsByClassName('value')[0].dataset.attr;
+                val = parseInt(val,10);
+                if (leftmax < val)leftmax = val; 
+            }
+            for(var i=0;i<rightpre.length;i++){
+                let val=rightpre[i].getElementsByClassName('value')[0].dataset.attr;
+                val = parseInt(val,10);
+                if (rightmax < val)rightmax = val; 
+            }
+            for(var i=0;i<leftpre.length;i++){
+                let val=leftpre[i].getElementsByClassName('value')[0].dataset.attr,
+                it=leftpre[i].getElementsByClassName('value')[0],
+                per=((parseInt(val,10))/(leftmax+(leftmax/8)))*100;
+                it.style.width=per+'%';
+                pluscash+=parseInt(val,10);
+
+            }
+            for(var i=0;i<rightpre.length;i++){
+                let val=rightpre[i].getElementsByClassName('value')[0].dataset.attr,
+                it=rightpre[i].getElementsByClassName('value')[0],
+                per=((parseInt(val,10))/(rightmax+(rightmax/8)))*100;
+                it.style.width=per+'%';
+                minuscash+=parseInt(val,10);
+            }
+            
+            </script>
+        </div>
+    </div>
+    <div class="choosetype">
+        <div class="times" onclick="toggleStats();">Время</div>
+        <div class="health" onclick="toggleStats();">Здоровье</div>
+        <div class="food" onclick="toggleStats();">Питание</div>
+        <div class="sport" onclick="toggleStats();">Спорт</div>
+        <div class="water" onclick="toggleStats();">Вода</div>
+        <div class="money" onclick="toggleStats();">Деньги</div>
+    </div>
+    <script>
+    function toggleAnalytics(){
+        if(analytics.classList.contains('hidden')){document.getElementsByTagName('body')[0].style.overflow='hidden';analytics.classList.toggle('hidden');}
+        else{document.getElementsByTagName('body')[0].style.overflow='auto';analytics.classList.toggle('hidden');}
+    }
+
+    let healthlist=document.getElementsByClassName('healthcube').length;
+    function toggleStats(e){
+        var elem=e ? e.target : window.event.srcElement;
+        if(elem.classList.contains('click')){}
+        else{
+        
+            for(var i=0;i<elem.parentNode.children.length;i++){
+                
+                if(elem.parentNode.children[i].classList.contains('click')){
+                    
+                    if(elem.parentNode.children[i].innerHTML=='Время'){elem.parentNode.children[i].classList.toggle('click')&time.classList.toggle('hidden');all.innerHTML='';}
+                    if(elem.parentNode.children[i].innerHTML=='Питание'){elem.parentNode.children[i].classList.toggle('click')&food.classList.toggle('hidden');all.innerHTML='';}
+                    if(elem.parentNode.children[i].innerHTML=='Здоровье'){elem.parentNode.children[i].classList.toggle('click')&health.classList.toggle('hidden');all.innerHTML='';}
+                    if(elem.parentNode.children[i].innerHTML=='Спорт'){elem.parentNode.children[i].classList.toggle('click')&sport.classList.toggle('hidden');all.innerHTML='';}
+                    if(elem.parentNode.children[i].innerHTML=='Вода'){elem.parentNode.children[i].classList.toggle('click')&water.classList.toggle('hidden');all.innerHTML='';}
+                    if(elem.parentNode.children[i].innerHTML=='Деньги'){elem.parentNode.children[i].classList.toggle('click')&money.classList.toggle('hidden');all.innerHTML='';}
+        
+                }}
+        if(elem.innerHTML=='Время'){elem.classList.toggle('click');time.classList.toggle('hidden');all.innerHTML='<span class="prog" title="Программирование">'+allprog+' мин. </span><span class="mark" title="Маркетинг">'+allmark+' мин. </span><span class="mana" title="Менеджмент">'+allmana+' мин. </span><span class="desi" title="Дизайн">'+alldesi+' мин. </span><span class="stru" title="Общение">'+allstru+' мин. </span><span class="educ" title="Образование">'+alleduc+' мин. </span><span class="rest" title="Отдых">'+allrest+' мин. </span><span class="sleep" title="Сон">'+allsleep+' мин. </span>';}
+        if(elem.innerHTML=='Питание'){elem.classList.toggle('click')&food.classList.toggle('hidden');all.innerHTML=allfood;}
+        if(elem.innerHTML=='Здоровье'){elem.classList.toggle('click')&health.classList.toggle('hidden');all.innerHTML=allhealth;}
+        if(elem.innerHTML=='Спорт'){elem.classList.toggle('click')&sport.classList.toggle('hidden');all.innerHTML=(allsport/1000) +' км';}
+        if(elem.innerHTML=='Вода'){elem.classList.toggle('click')&water.classList.toggle('hidden');all.innerHTML=(allwater/1000) +' л';}
+        if(elem.innerHTML=='Деньги'){elem.classList.toggle('click')&money.classList.toggle('hidden');all.innerHTML='+ '+pluscash+' руб., - '+minuscash+' руб.';}
+        
+        
+    }
+    }
+    function toggleHealth(e){
+        var elem=e ? e.target : window.event.srcElement;
+        let child=healthtype.getElementsByTagName('div');
+
+        if(elem.innerHTML=='Средний'){
+            if(elem.classList.contains('click')){}
+        else{
+            for(var i=0;i<child.length;i++){if(healthtype.getElementsByTagName('div')[i].classList.contains('click'))healthtype.getElementsByTagName('div')[i].classList.toggle('click');}
+            elem.classList.toggle('click'); 
+        for(var i = 0;i<healthlist;i++){document.getElementsByClassName('healthcube')[i].classList.toggle('medium');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('small'))document.getElementsByClassName('healthcube')[i].classList.toggle('small');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('big'))document.getElementsByClassName('healthcube')[i].classList.toggle('big');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('line'))document.getElementsByClassName('healthcube')[i].classList.toggle('line');}
+        }}
+        else if(elem.innerHTML=='Маленький'){
+            if(elem.classList.contains('click')){}
+        else{
+            for(var i=0;i<child.length;i++){if(healthtype.getElementsByTagName('div')[i].classList.contains('click'))healthtype.getElementsByTagName('div')[i].classList.toggle('click');}
+            elem.classList.toggle('click'); 
+        for(var i = 0;i<healthlist;i++){document.getElementsByClassName('healthcube')[i].classList.toggle('small');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('medium'))document.getElementsByClassName('healthcube')[i].classList.toggle('medium');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('big'))document.getElementsByClassName('healthcube')[i].classList.toggle('big');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('line'))document.getElementsByClassName('healthcube')[i].classList.toggle('line');}
+        }}
+        if(elem.innerHTML=='Большой'){
+            if(elem.classList.contains('click')){}
+        else{
+            for(var i=0;i<child.length;i++){if(healthtype.getElementsByTagName('div')[i].classList.contains('click'))healthtype.getElementsByTagName('div')[i].classList.toggle('click');}
+            elem.classList.toggle('click'); 
+        for(var i = 0;i<healthlist;i++){document.getElementsByClassName('healthcube')[i].classList.toggle('big');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('medium'))document.getElementsByClassName('healthcube')[i].classList.toggle('medium');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('small'))document.getElementsByClassName('healthcube')[i].classList.toggle('small');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('line'))document.getElementsByClassName('healthcube')[i].classList.toggle('line');}
+        }}
+        if(elem.innerHTML=='Линии'){
+            if(elem.classList.contains('click')){}
+        else{
+            for(var i=0;i<child.length;i++){if(healthtype.getElementsByTagName('div')[i].classList.contains('click'))healthtype.getElementsByTagName('div')[i].classList.toggle('click');}
+            elem.classList.toggle('click'); 
+        for(var i = 0;i<healthlist;i++){document.getElementsByClassName('healthcube')[i].classList.toggle('line');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('medium'))document.getElementsByClassName('healthcube')[i].classList.toggle('medium');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('small'))document.getElementsByClassName('healthcube')[i].classList.toggle('small');
+        if(document.getElementsByClassName('healthcube')[i].classList.contains('big'))document.getElementsByClassName('healthcube')[i].classList.toggle('big');}
+        }}
+    }
+    </script>
+</div>
+<body  class="f1x fdc">
+    <div class="blogline">
+        <span class="time">35 день</span>
+<div class="post" id="post35">
+    <div class="gallery f1x">
+        <input type="button" id="left35" value="<">
+        <div class="image" id="img35">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right35" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight35">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue35();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp35">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar35();">Пост</div>
+            <div class="statistic" onclick="toggleBar35();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Обновил дизайн. Обдумал предстоящие проекты. Сейчас вновь немного опустошен, потому что не совсем понимаю точный путь. Что то тормозится, что то бежит. Надо определится пока все не сгорит. Забросил написание строчек на 1 куплете, дальше просто даже руки не доходят. Надо наполнять базу и дорабатывать проекты для их собственной автономности, надо бы написать простейший новостной блог, чтобы как то следить за важными новостями и делиться этим. Возможно это будет лишнее и лучше просто улучшить блог. Восстанавливаюсь после спорта, дни хмурые, но вроде как активные. </span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep35">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue35();"> (мин)</span></span>
+                    <span class="type" id="earn35">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue35();"> руб.</span></span>
+                    <span class="type" id="spend35">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue35();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog35">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark35">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana35">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi35">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru35">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ35">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest35">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk35"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue35();"> (м)</span></span> | <span id="run35"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue35();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water35"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue35();"> (мл)</span></span> | <span id="drink35"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue35();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost35=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4859.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4860.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4861.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4862.JPG`,  ], imgnow35 = 0;
+var imagepost35=imgpost35[imgnow35];
+let valpost35=[`Ккал-145|У-4|Б-16|Ж-5`, `Ккал-193|У-14|Б-2|Ж-6`, `Ккал-234|У-15|Б-8|Ж-6`, `Ккал-171|У-13|Б-4|Ж-5`, ], valnow35 = 0;
+var valuepost35=valpost35[valnow35];
+img35.style.backgroundImage="url("+imagepost35+")";
+img35.getElementsByClassName('foodvalue')[0].innerHTML=valuepost35;
+right35.onclick = function() {
+    let length = imgpost35.length-1;
+    if (imgnow35<length){imgnow35+=1;valnow35+=1}
+    else if(imgnow35==length){imgnow35=0;valnow35=0}
+    else{alert('error')}  
+    imagepost35=imgpost35[imgnow35];
+    valuepost35=valpost35[valnow35];
+    img35.style.backgroundImage="url("+imagepost35+")";
+    img35.getElementsByClassName('foodvalue')[0].innerHTML=valuepost35;
+}
+left35.onclick = function() {
+    let length = imgpost35.length-1;
+    if (imgnow35==0){imgnow35=length;valnow35=length}
+    else if(!imgnow35==0){imgnow35-=1;valnow35-=1}
+    else{alert('error')}  
+    imagepost35=imgpost35[imgnow35];
+    valuepost35=valpost35[valnow35];
+    img35.style.backgroundImage="url("+imagepost35+")";
+    img35.getElementsByClassName('foodvalue')[0].innerHTML=valuepost35;
+}
+function toggleBar35(){
+    post35.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post35.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post35.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post35.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post35.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post35.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep35.getElementsByClassName('value')[0].innerHTML='430';
+earn35.getElementsByClassName('value')[0].innerHTML='0';
+spend35.getElementsByClassName('value')[0].innerHTML='0';
+prog35.getElementsByClassName('value')[0].innerHTML='07:12:00';
+prog35.getElementsByClassName('value')[1].innerHTML='3';
+prog35.getElementsByClassName('value')[2].innerHTML='31';
+mark35.getElementsByClassName('value')[0].innerHTML='00:40:00';
+mark35.getElementsByClassName('value')[1].innerHTML='1';
+mark35.getElementsByClassName('value')[2].innerHTML='6';
+mana35.getElementsByClassName('value')[0].innerHTML='00:57:00';
+mana35.getElementsByClassName('value')[1].innerHTML='1';
+mana35.getElementsByClassName('value')[2].innerHTML='12';
+desi35.getElementsByClassName('value')[0].innerHTML='00:40:00';
+desi35.getElementsByClassName('value')[1].innerHTML='3';
+desi35.getElementsByClassName('value')[2].innerHTML='31';
+stru35.getElementsByClassName('value')[0].innerHTML='02:10:00';
+stru35.getElementsByClassName('value')[1].innerHTML='2';
+stru35.getElementsByClassName('value')[2].innerHTML='15';
+educ35.getElementsByClassName('value')[0].innerHTML='00:35:00';
+educ35.getElementsByClassName('value')[1].innerHTML='1';
+educ35.getElementsByClassName('value')[2].innerHTML='6';
+rest35.getElementsByClassName('value')[0].innerHTML='03:36:00';
+rest35.getElementsByClassName('value')[1].innerHTML='4';
+rest35.getElementsByClassName('value')[2].innerHTML='9';
+walk35.getElementsByClassName('value')[0].innerHTML='150';
+run35.getElementsByClassName('value')[0].innerHTML='2950';
+water35.getElementsByClassName('value')[0].innerHTML='34130';
+drink35.getElementsByClassName('value')[0].innerHTML='2900';
+weight35.getElementsByClassName('value')[0].innerHTML='69560';
+dsp35.getElementsByClassName('value')[0].innerHTML='111';
+dsp35.getElementsByClassName('value')[1].innerHTML='72';
+dsp35.getElementsByClassName('value')[2].innerHTML='64';
+
+function changeValue35(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 35')}
+}
+</script>
+        <span class="time">34 день</span>
+<div class="post" id="post34">
+    <div class="gallery f1x">
+        <input type="button" id="left34" value="<">
+        <div class="image" id="img34">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right34" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight34">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue34();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp34">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar34();">Пост</div>
+            <div class="statistic" onclick="toggleBar34();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Настроил базы. Начинаю наполнять. Следует изменить дизайн для телефонов и настольных компьютеров. Слабо видны пункты меню. Нужно сделать настройку по отображению номеров и скрытию отсутствующих контактов. На телефонах отображаться номера телефона, а на компьютере должны отображаться почтовые адреса. Админ панель становится неудобной, нужно обновлять интерфейс и добавлять новые функции. Также обновлять блог и добавлять уже статистику по месяцу неделе и за все время, возможно с настройкой по дням. Стоит добавить несколько новых сводок для простоты. Сегодня весь день ходил наискосок, не люблю спорт за то что следующие дни ты не можешь нормально функционировать. Наверное все к лучшему. Вскоре стоит добавить регистрацию и вход, чтобы заниматься кастомизацией. Не хочется писать про себя и вообще вспоминать о том, что я существую.</span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep34">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue34();"> (мин)</span></span>
+                    <span class="type" id="earn34">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue34();"> руб.</span></span>
+                    <span class="type" id="spend34">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue34();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog34">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark34">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana34">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi34">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru34">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ34">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest34">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk34"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue34();"> (м)</span></span> | <span id="run34"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue34();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water34"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue34();"> (мл)</span></span> | <span id="drink34"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue34();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost34=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4855.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4856.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4857.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4858.JPG`,  ], imgnow34 = 0;
+var imagepost34=imgpost34[imgnow34];
+let valpost34=[`Ккал-255|У-26|Б-9|Ж-12`, `Ккал-165|У-16|Б-4|Ж-6`, `Ккал-305|У-29|Б-11|Ж-10`, `Ккал-234|У-15|Б-11|Ж-13`, ], valnow34 = 0;
+var valuepost34=valpost34[valnow34];
+img34.style.backgroundImage="url("+imagepost34+")";
+img34.getElementsByClassName('foodvalue')[0].innerHTML=valuepost34;
+right34.onclick = function() {
+    let length = imgpost34.length-1;
+    if (imgnow34<length){imgnow34+=1;valnow34+=1}
+    else if(imgnow34==length){imgnow34=0;valnow34=0}
+    else{alert('error')}  
+    imagepost34=imgpost34[imgnow34];
+    valuepost34=valpost34[valnow34];
+    img34.style.backgroundImage="url("+imagepost34+")";
+    img34.getElementsByClassName('foodvalue')[0].innerHTML=valuepost34;
+}
+left34.onclick = function() {
+    let length = imgpost34.length-1;
+    if (imgnow34==0){imgnow34=length;valnow34=length}
+    else if(!imgnow34==0){imgnow34-=1;valnow34-=1}
+    else{alert('error')}  
+    imagepost34=imgpost34[imgnow34];
+    valuepost34=valpost34[valnow34];
+    img34.style.backgroundImage="url("+imagepost34+")";
+    img34.getElementsByClassName('foodvalue')[0].innerHTML=valuepost34;
+}
+function toggleBar34(){
+    post34.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post34.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post34.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post34.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post34.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post34.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep34.getElementsByClassName('value')[0].innerHTML='375';
+earn34.getElementsByClassName('value')[0].innerHTML='0';
+spend34.getElementsByClassName('value')[0].innerHTML='0';
+prog34.getElementsByClassName('value')[0].innerHTML='09:00:00';
+prog34.getElementsByClassName('value')[1].innerHTML='4';
+prog34.getElementsByClassName('value')[2].innerHTML='59';
+mark34.getElementsByClassName('value')[0].innerHTML='01:10:00';
+mark34.getElementsByClassName('value')[1].innerHTML='1';
+mark34.getElementsByClassName('value')[2].innerHTML='6';
+mana34.getElementsByClassName('value')[0].innerHTML='00:45:00';
+mana34.getElementsByClassName('value')[1].innerHTML='1';
+mana34.getElementsByClassName('value')[2].innerHTML='7';
+desi34.getElementsByClassName('value')[0].innerHTML='01:10:00';
+desi34.getElementsByClassName('value')[1].innerHTML='2';
+desi34.getElementsByClassName('value')[2].innerHTML='4';
+stru34.getElementsByClassName('value')[0].innerHTML='01:00:00';
+stru34.getElementsByClassName('value')[1].innerHTML='0';
+stru34.getElementsByClassName('value')[2].innerHTML='9';
+educ34.getElementsByClassName('value')[0].innerHTML='01:25:00';
+educ34.getElementsByClassName('value')[1].innerHTML='2';
+educ34.getElementsByClassName('value')[2].innerHTML='7';
+rest34.getElementsByClassName('value')[0].innerHTML='03:40:00';
+rest34.getElementsByClassName('value')[1].innerHTML='3';
+rest34.getElementsByClassName('value')[2].innerHTML='6';
+walk34.getElementsByClassName('value')[0].innerHTML='100';
+run34.getElementsByClassName('value')[0].innerHTML='0';
+water34.getElementsByClassName('value')[0].innerHTML='32250';
+drink34.getElementsByClassName('value')[0].innerHTML='3940';
+weight34.getElementsByClassName('value')[0].innerHTML='69540';
+dsp34.getElementsByClassName('value')[0].innerHTML='116';
+dsp34.getElementsByClassName('value')[1].innerHTML='63';
+dsp34.getElementsByClassName('value')[2].innerHTML='56';
+
+function changeValue34(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 34')}
+}
+</script>
+        <span class="time">33 день</span>
+<div class="post" id="post33">
+    <div class="gallery f1x">
+        <input type="button" id="left33" value="<">
+        <div class="image" id="img33">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right33" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight33">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue33();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp33">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar33();">Пост</div>
+            <div class="statistic" onclick="toggleBar33();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Поиграл в футбол, очень много ссадин и все болит. Ужасная погода, она меня пугает. Мне кажется мои наблюдения уже повторяются и мне нечего писать на самом деле. Посмотрел подкаст от тесла с Илоном, прямо таки приуныл, осознавая, что у меня история запоздавшая. Мне уже 19 а я ничто и никто. Веду какие то блоги и ничего толкового не сделал. Спорт убивает время, поиграл вроде бы 2 часа, а отдыхать и восстанавливаться чуть ли не 2 дня. Мне кажется никто никогда в жизни этого не прочтёт, но наверное это самостоятельная структуризация данных полученных за день. Как заключение хочется отметить, что я каждый день просто не замечаю, у меня нет никого близкого и нет ничего ценного. Я не знаю как продолжать находится в этом пространстве но я честно говоря высыхаю, оставляя после себя только кристаллики соли.</span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep33">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue33();"> (мин)</span></span>
+                    <span class="type" id="earn33">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue33();"> руб.</span></span>
+                    <span class="type" id="spend33">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue33();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog33">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark33">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana33">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi33">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru33">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ33">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest33">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk33"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue33();"> (м)</span></span> | <span id="run33"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue33();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water33"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue33();"> (мл)</span></span> | <span id="drink33"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue33();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost33=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4852.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4853.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4854.JPG`,  ], imgnow33 = 0;
+var imagepost33=imgpost33[imgnow33];
+let valpost33=[`Ккал-145|У-15|Б-1|Ж-4`, `Ккал-175|У-16|Б-7|Ж-5`, `Ккал-315|У-24|Б-8|Ж-7`, ], valnow33 = 0;
+var valuepost33=valpost33[valnow33];
+img33.style.backgroundImage="url("+imagepost33+")";
+img33.getElementsByClassName('foodvalue')[0].innerHTML=valuepost33;
+right33.onclick = function() {
+    let length = imgpost33.length-1;
+    if (imgnow33<length){imgnow33+=1;valnow33+=1}
+    else if(imgnow33==length){imgnow33=0;valnow33=0}
+    else{alert('error')}  
+    imagepost33=imgpost33[imgnow33];
+    valuepost33=valpost33[valnow33];
+    img33.style.backgroundImage="url("+imagepost33+")";
+    img33.getElementsByClassName('foodvalue')[0].innerHTML=valuepost33;
+}
+left33.onclick = function() {
+    let length = imgpost33.length-1;
+    if (imgnow33==0){imgnow33=length;valnow33=length}
+    else if(!imgnow33==0){imgnow33-=1;valnow33-=1}
+    else{alert('error')}  
+    imagepost33=imgpost33[imgnow33];
+    valuepost33=valpost33[valnow33];
+    img33.style.backgroundImage="url("+imagepost33+")";
+    img33.getElementsByClassName('foodvalue')[0].innerHTML=valuepost33;
+}
+function toggleBar33(){
+    post33.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post33.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post33.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post33.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post33.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post33.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep33.getElementsByClassName('value')[0].innerHTML='505';
+earn33.getElementsByClassName('value')[0].innerHTML='0';
+spend33.getElementsByClassName('value')[0].innerHTML='0';
+prog33.getElementsByClassName('value')[0].innerHTML='07:15:00';
+prog33.getElementsByClassName('value')[1].innerHTML='2';
+prog33.getElementsByClassName('value')[2].innerHTML='25';
+mark33.getElementsByClassName('value')[0].innerHTML='00:45:00';
+mark33.getElementsByClassName('value')[1].innerHTML='0';
+mark33.getElementsByClassName('value')[2].innerHTML='4';
+mana33.getElementsByClassName('value')[0].innerHTML='01:05:00';
+mana33.getElementsByClassName('value')[1].innerHTML='1';
+mana33.getElementsByClassName('value')[2].innerHTML='6';
+desi33.getElementsByClassName('value')[0].innerHTML='01:10:00';
+desi33.getElementsByClassName('value')[1].innerHTML='1';
+desi33.getElementsByClassName('value')[2].innerHTML='9';
+stru33.getElementsByClassName('value')[0].innerHTML='02:10:00';
+stru33.getElementsByClassName('value')[1].innerHTML='3';
+stru33.getElementsByClassName('value')[2].innerHTML='13';
+educ33.getElementsByClassName('value')[0].innerHTML='01:10:00';
+educ33.getElementsByClassName('value')[1].innerHTML='2';
+educ33.getElementsByClassName('value')[2].innerHTML='20';
+rest33.getElementsByClassName('value')[0].innerHTML='03:20:00';
+rest33.getElementsByClassName('value')[1].innerHTML='1';
+rest33.getElementsByClassName('value')[2].innerHTML='5';
+walk33.getElementsByClassName('value')[0].innerHTML='5100';
+run33.getElementsByClassName('value')[0].innerHTML='11000';
+water33.getElementsByClassName('value')[0].innerHTML='38600';
+drink33.getElementsByClassName('value')[0].innerHTML='3400';
+weight33.getElementsByClassName('value')[0].innerHTML='69040';
+dsp33.getElementsByClassName('value')[0].innerHTML='107';
+dsp33.getElementsByClassName('value')[1].innerHTML='74';
+dsp33.getElementsByClassName('value')[2].innerHTML='80';
+
+function changeValue33(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 33')}
+}
+</script>
+        <span class="time">32 день</span>
+<div class="post" id="post32">
+    <div class="gallery f1x">
+        <input type="button" id="left32" value="<">
+        <div class="image" id="img32">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right32" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight32">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue32();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp32">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar32();">Пост</div>
+            <div class="statistic" onclick="toggleBar32();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Сегодня была приятная, спокойная суббота, я приготовил парочку блюд и развил навыки кондитерского мастерства. На самом деле большую часть времени я думал о том как оформить новое оформление для базы данных. Я думаю этот аналог баз данных является интересной и главное многофункциональной альтернативой, которая может быть масштабирована по всему миру и использована в разных организациях от малого до крупного бизнеса. Множество из того что я делаю не довелось мне видеть на других рынках и мне кажется это интересной альтернативой. Я скорее всего столкнусь с множеством проблем, но не на стадиях прототипирования и доработки. Посмотрел мультики с сестренкой и поигрался с братом. Сестренка сказала, что это была лучшая тусовка, мы смотрели мультики и ели чипсы. На следующую неделю множество планов, но я не успеваю реализовывать все проекты из-за некоторого стороннего отвлекания. Нужно быть более эффективным и продуктивным иначе я не сделаю, то что хочу сделать.</span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep32">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue32();"> (мин)</span></span>
+                    <span class="type" id="earn32">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue32();"> руб.</span></span>
+                    <span class="type" id="spend32">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue32();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog32">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark32">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana32">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi32">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru32">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ32">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest32">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk32"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue32();"> (м)</span></span> | <span id="run32"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue32();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water32"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue32();"> (мл)</span></span> | <span id="drink32"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue32();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost32=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4838.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4842.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4844.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4848.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4850.JPG`,  ], imgnow32 = 0;
+var imagepost32=imgpost32[imgnow32];
+let valpost32=[`Ккал-150|У-13|Б-5|Ж-4`, `Ккал-465|У-41|Б-15|Ж-20`, `Ккал-115|У-17|Б-10|Ж-2`, `Ккал-190|У-26|Б-3|Ж-8`, `Ккал-200|У-19|Б-11|Ж-9`, ], valnow32 = 0;
+var valuepost32=valpost32[valnow32];
+img32.style.backgroundImage="url("+imagepost32+")";
+img32.getElementsByClassName('foodvalue')[0].innerHTML=valuepost32;
+right32.onclick = function() {
+    let length = imgpost32.length-1;
+    if (imgnow32<length){imgnow32+=1;valnow32+=1}
+    else if(imgnow32==length){imgnow32=0;valnow32=0}
+    else{alert('error')}  
+    imagepost32=imgpost32[imgnow32];
+    valuepost32=valpost32[valnow32];
+    img32.style.backgroundImage="url("+imagepost32+")";
+    img32.getElementsByClassName('foodvalue')[0].innerHTML=valuepost32;
+}
+left32.onclick = function() {
+    let length = imgpost32.length-1;
+    if (imgnow32==0){imgnow32=length;valnow32=length}
+    else if(!imgnow32==0){imgnow32-=1;valnow32-=1}
+    else{alert('error')}  
+    imagepost32=imgpost32[imgnow32];
+    valuepost32=valpost32[valnow32];
+    img32.style.backgroundImage="url("+imagepost32+")";
+    img32.getElementsByClassName('foodvalue')[0].innerHTML=valuepost32;
+}
+function toggleBar32(){
+    post32.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post32.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post32.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post32.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post32.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post32.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep32.getElementsByClassName('value')[0].innerHTML='350';
+earn32.getElementsByClassName('value')[0].innerHTML='0';
+spend32.getElementsByClassName('value')[0].innerHTML='0';
+prog32.getElementsByClassName('value')[0].innerHTML='07:45:00';
+prog32.getElementsByClassName('value')[1].innerHTML='3';
+prog32.getElementsByClassName('value')[2].innerHTML='62';
+mark32.getElementsByClassName('value')[0].innerHTML='00:10:00';
+mark32.getElementsByClassName('value')[1].innerHTML='0';
+mark32.getElementsByClassName('value')[2].innerHTML='1';
+mana32.getElementsByClassName('value')[0].innerHTML='01:10:00';
+mana32.getElementsByClassName('value')[1].innerHTML='1';
+mana32.getElementsByClassName('value')[2].innerHTML='15';
+desi32.getElementsByClassName('value')[0].innerHTML='01:45:00';
+desi32.getElementsByClassName('value')[1].innerHTML='0';
+desi32.getElementsByClassName('value')[2].innerHTML='6';
+stru32.getElementsByClassName('value')[0].innerHTML='01:20:00';
+stru32.getElementsByClassName('value')[1].innerHTML='2';
+stru32.getElementsByClassName('value')[2].innerHTML='9';
+educ32.getElementsByClassName('value')[0].innerHTML='00:35:00';
+educ32.getElementsByClassName('value')[1].innerHTML='0';
+educ32.getElementsByClassName('value')[2].innerHTML='4';
+rest32.getElementsByClassName('value')[0].innerHTML='04:55:00';
+rest32.getElementsByClassName('value')[1].innerHTML='3';
+rest32.getElementsByClassName('value')[2].innerHTML='7';
+walk32.getElementsByClassName('value')[0].innerHTML='200';
+run32.getElementsByClassName('value')[0].innerHTML='0';
+water32.getElementsByClassName('value')[0].innerHTML='47190';
+drink32.getElementsByClassName('value')[0].innerHTML='3500';
+weight32.getElementsByClassName('value')[0].innerHTML='68960';
+dsp32.getElementsByClassName('value')[0].innerHTML='125';
+dsp32.getElementsByClassName('value')[1].innerHTML='68';
+dsp32.getElementsByClassName('value')[2].innerHTML='71';
+
+function changeValue32(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 32')}
+}
+</script>
+        <span class="time">31 день</span>
+<div class="post" id="post31">
+    <div class="gallery f1x">
+        <input type="button" id="left31" value="<">
+        <div class="image" id="img31">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right31" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight31">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue31();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp31">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar31();">Пост</div>
+            <div class="statistic" onclick="toggleBar31();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Ног не чувствую. Ноги болят даже в лежачем состоянии.
+Сегодня обошел петроградскую и встретился со старым знакомым, он очень здорово рисует и любит это делать. Я сегодня опять попал на множество несуществующих коворкингов. Нашел снова 1 хорошее пространство, я бы даже сказал - лучшее, что сне довелось увидеть.
+Постараюсь сейчас организовать план на следующую неделю и реализоваться с новыми силами. Маски дорожают даже у нас, 15 руб - 1 маска; 70 руб - 3 маски; стыдоба. Сегодня поработал над отображением баз, завершил стадии типожа и перехожу к выбору критериев в поиске по базе. Постараюсь сделать все удобно и самостоятельно. Никак не удается почувствовать себя живым. Хочется думать что это только у меня в голове,</span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep31">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue31();"> (мин)</span></span>
+                    <span class="type" id="earn31">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue31();"> руб.</span></span>
+                    <span class="type" id="spend31">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue31();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog31">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark31">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana31">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi31">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru31">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ31">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest31">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk31"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue31();"> (м)</span></span> | <span id="run31"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue31();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water31"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue31();"> (мл)</span></span> | <span id="drink31"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue31();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost31=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4829.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4830.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4835.JPG`,  ], imgnow31 = 0;
+var imagepost31=imgpost31[imgnow31];
+let valpost31=[`Ккал-85|У-14|Б-3|Ж-2`, `Ккал-520|У-49|Б-5|Ж-26`, `Ккал-135|У-5|Б-15|Ж-6`, ], valnow31 = 0;
+var valuepost31=valpost31[valnow31];
+img31.style.backgroundImage="url("+imagepost31+")";
+img31.getElementsByClassName('foodvalue')[0].innerHTML=valuepost31;
+right31.onclick = function() {
+    let length = imgpost31.length-1;
+    if (imgnow31<length){imgnow31+=1;valnow31+=1}
+    else if(imgnow31==length){imgnow31=0;valnow31=0}
+    else{alert('error')}  
+    imagepost31=imgpost31[imgnow31];
+    valuepost31=valpost31[valnow31];
+    img31.style.backgroundImage="url("+imagepost31+")";
+    img31.getElementsByClassName('foodvalue')[0].innerHTML=valuepost31;
+}
+left31.onclick = function() {
+    let length = imgpost31.length-1;
+    if (imgnow31==0){imgnow31=length;valnow31=length}
+    else if(!imgnow31==0){imgnow31-=1;valnow31-=1}
+    else{alert('error')}  
+    imagepost31=imgpost31[imgnow31];
+    valuepost31=valpost31[valnow31];
+    img31.style.backgroundImage="url("+imagepost31+")";
+    img31.getElementsByClassName('foodvalue')[0].innerHTML=valuepost31;
+}
+function toggleBar31(){
+    post31.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post31.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post31.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post31.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post31.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post31.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep31.getElementsByClassName('value')[0].innerHTML='400';
+earn31.getElementsByClassName('value')[0].innerHTML='0';
+spend31.getElementsByClassName('value')[0].innerHTML='30';
+prog31.getElementsByClassName('value')[0].innerHTML='06:10:00';
+prog31.getElementsByClassName('value')[1].innerHTML='2';
+prog31.getElementsByClassName('value')[2].innerHTML='16';
+mark31.getElementsByClassName('value')[0].innerHTML='05:15:00';
+mark31.getElementsByClassName('value')[1].innerHTML='2';
+mark31.getElementsByClassName('value')[2].innerHTML='7';
+mana31.getElementsByClassName('value')[0].innerHTML='00:40:00';
+mana31.getElementsByClassName('value')[1].innerHTML='1';
+mana31.getElementsByClassName('value')[2].innerHTML='5';
+desi31.getElementsByClassName('value')[0].innerHTML='01:10:00';
+desi31.getElementsByClassName('value')[1].innerHTML='1';
+desi31.getElementsByClassName('value')[2].innerHTML='5';
+stru31.getElementsByClassName('value')[0].innerHTML='02:55:00';
+stru31.getElementsByClassName('value')[1].innerHTML='4';
+stru31.getElementsByClassName('value')[2].innerHTML='16';
+educ31.getElementsByClassName('value')[0].innerHTML='00:10:00';
+educ31.getElementsByClassName('value')[1].innerHTML='0';
+educ31.getElementsByClassName('value')[2].innerHTML='1';
+rest31.getElementsByClassName('value')[0].innerHTML='01:20:00';
+rest31.getElementsByClassName('value')[1].innerHTML='2';
+rest31.getElementsByClassName('value')[2].innerHTML='5';
+walk31.getElementsByClassName('value')[0].innerHTML='9600';
+run31.getElementsByClassName('value')[0].innerHTML='10500';
+water31.getElementsByClassName('value')[0].innerHTML='39560';
+drink31.getElementsByClassName('value')[0].innerHTML='3470';
+weight31.getElementsByClassName('value')[0].innerHTML='68960';
+dsp31.getElementsByClassName('value')[0].innerHTML='129';
+dsp31.getElementsByClassName('value')[1].innerHTML='65';
+dsp31.getElementsByClassName('value')[2].innerHTML='72';
+
+function changeValue31(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 31')}
+}
+</script>
+        <span class="time">30 день</span>
+<div class="post" id="post30">
+    <div class="gallery f1x">
+        <input type="button" id="left30" value="<">
+        <div class="image" id="img30">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right30" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight30">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue30();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp30">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar30();">Пост</div>
+            <div class="statistic" onclick="toggleBar30();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Раздал 40 визиток. Никто не написал. Сейчас работаю над препроцессором обработки данных. Заканчиваю кастомизатор базы данных и начинаю потихоньку ее наполнять организациями для дальнейшего сотрудничества и работы. Создал собственный перечень иконок и значков, обошел около 6 коворкингов, завтра нужно обойти петроградскую, а возможно послезавтра. Немного устал, но я расслаблялся по пути от одного места к другому тренируясь петь и танцевать. Вечером объелся, не думаю что это хорошо скажется на самочувствии; Банковскую карту пока восстанавливать не буду, буду искать интересные тарифы, работающие по всему миру.  </span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep30">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue30();"> (мин)</span></span>
+                    <span class="type" id="earn30">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue30();"> руб.</span></span>
+                    <span class="type" id="spend30">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue30();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog30">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark30">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana30">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi30">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru30">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ30">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest30">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk30"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue30();"> (м)</span></span> | <span id="run30"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue30();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water30"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue30();"> (мл)</span></span> | <span id="drink30"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue30();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost30=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4824.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4825.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4827.JPG`,  ], imgnow30 = 0;
+var imagepost30=imgpost30[imgnow30];
+let valpost30=[`Ккал-91|У-7|Б-3|Ж-2`, `Ккал-155|У-14|Б-12|Ж-5`, `Ккал-655|У-51|Б-29|Ж-13`, ], valnow30 = 0;
+var valuepost30=valpost30[valnow30];
+img30.style.backgroundImage="url("+imagepost30+")";
+img30.getElementsByClassName('foodvalue')[0].innerHTML=valuepost30;
+right30.onclick = function() {
+    let length = imgpost30.length-1;
+    if (imgnow30<length){imgnow30+=1;valnow30+=1}
+    else if(imgnow30==length){imgnow30=0;valnow30=0}
+    else{alert('error')}  
+    imagepost30=imgpost30[imgnow30];
+    valuepost30=valpost30[valnow30];
+    img30.style.backgroundImage="url("+imagepost30+")";
+    img30.getElementsByClassName('foodvalue')[0].innerHTML=valuepost30;
+}
+left30.onclick = function() {
+    let length = imgpost30.length-1;
+    if (imgnow30==0){imgnow30=length;valnow30=length}
+    else if(!imgnow30==0){imgnow30-=1;valnow30-=1}
+    else{alert('error')}  
+    imagepost30=imgpost30[imgnow30];
+    valuepost30=valpost30[valnow30];
+    img30.style.backgroundImage="url("+imagepost30+")";
+    img30.getElementsByClassName('foodvalue')[0].innerHTML=valuepost30;
+}
+function toggleBar30(){
+    post30.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post30.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post30.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post30.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post30.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post30.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep30.getElementsByClassName('value')[0].innerHTML='460';
+earn30.getElementsByClassName('value')[0].innerHTML='0';
+spend30.getElementsByClassName('value')[0].innerHTML='1455';
+prog30.getElementsByClassName('value')[0].innerHTML='02:10:00';
+prog30.getElementsByClassName('value')[1].innerHTML='1';
+prog30.getElementsByClassName('value')[2].innerHTML='4';
+mark30.getElementsByClassName('value')[0].innerHTML='04:50:00';
+mark30.getElementsByClassName('value')[1].innerHTML='2';
+mark30.getElementsByClassName('value')[2].innerHTML='17';
+mana30.getElementsByClassName('value')[0].innerHTML='00:40:00';
+mana30.getElementsByClassName('value')[1].innerHTML='1';
+mana30.getElementsByClassName('value')[2].innerHTML='6';
+desi30.getElementsByClassName('value')[0].innerHTML='03:30:00';
+desi30.getElementsByClassName('value')[1].innerHTML='14';
+desi30.getElementsByClassName('value')[2].innerHTML='46';
+stru30.getElementsByClassName('value')[0].innerHTML='03:50:00';
+stru30.getElementsByClassName('value')[1].innerHTML='4';
+stru30.getElementsByClassName('value')[2].innerHTML='45';
+educ30.getElementsByClassName('value')[0].innerHTML='00:10:00';
+educ30.getElementsByClassName('value')[1].innerHTML='0';
+educ30.getElementsByClassName('value')[2].innerHTML='2';
+rest30.getElementsByClassName('value')[0].innerHTML='01:20:00';
+rest30.getElementsByClassName('value')[1].innerHTML='1';
+rest30.getElementsByClassName('value')[2].innerHTML='3';
+walk30.getElementsByClassName('value')[0].innerHTML='7500';
+run30.getElementsByClassName('value')[0].innerHTML='14500';
+water30.getElementsByClassName('value')[0].innerHTML='30810';
+drink30.getElementsByClassName('value')[0].innerHTML='3420';
+weight30.getElementsByClassName('value')[0].innerHTML='68460';
+dsp30.getElementsByClassName('value')[0].innerHTML='116';
+dsp30.getElementsByClassName('value')[1].innerHTML='64';
+dsp30.getElementsByClassName('value')[2].innerHTML='72';
+
+function changeValue30(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 30')}
+}
+</script>
+        <span class="time">29 день</span>
+<div class="post" id="post29">
+    <div class="gallery f1x">
+        <input type="button" id="left29" value="<">
+        <div class="image" id="img29">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right29" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight29">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue29();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp29">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar29();">Пост</div>
+            <div class="statistic" onclick="toggleBar29();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Потерял банковскую карту. Получил военный билет. Обошел множество заведений в поисках места для работы, все было либо не доступно либо закрыто, но одно я нашел - библиотека финского университета. Тихое и приятное место, то самое для работы.
+Сегодня продолжил писать базу данных для хранения информации об организачх или личностях; в общем об объектах. Настроил разделения по типу и по характеристикам. Обрисовал идею по созданию киберспортивной команды.
+Сегодня ходил и смотрел людям в глаза, очень интересно видеть то, в каких районах люди смотрят в ответ а в каких нет. Когда я смотрю в лица людей я как будто чувствую себя живым.</span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep29">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue29();"> (мин)</span></span>
+                    <span class="type" id="earn29">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue29();"> руб.</span></span>
+                    <span class="type" id="spend29">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue29();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog29">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark29">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana29">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi29">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru29">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ29">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest29">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk29"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue29();"> (м)</span></span> | <span id="run29"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue29();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water29"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue29();"> (мл)</span></span> | <span id="drink29"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue29();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost29=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4821.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4823.JPG`,  ], imgnow29 = 0;
+var imagepost29=imgpost29[imgnow29];
+let valpost29=[`Ккал-234|У-39|Б-2|Ж-7`, `Ккал-256|У-25|Б-15|Ж-8`, ], valnow29 = 0;
+var valuepost29=valpost29[valnow29];
+img29.style.backgroundImage="url("+imagepost29+")";
+img29.getElementsByClassName('foodvalue')[0].innerHTML=valuepost29;
+right29.onclick = function() {
+    let length = imgpost29.length-1;
+    if (imgnow29<length){imgnow29+=1;valnow29+=1}
+    else if(imgnow29==length){imgnow29=0;valnow29=0}
+    else{alert('error')}  
+    imagepost29=imgpost29[imgnow29];
+    valuepost29=valpost29[valnow29];
+    img29.style.backgroundImage="url("+imagepost29+")";
+    img29.getElementsByClassName('foodvalue')[0].innerHTML=valuepost29;
+}
+left29.onclick = function() {
+    let length = imgpost29.length-1;
+    if (imgnow29==0){imgnow29=length;valnow29=length}
+    else if(!imgnow29==0){imgnow29-=1;valnow29-=1}
+    else{alert('error')}  
+    imagepost29=imgpost29[imgnow29];
+    valuepost29=valpost29[valnow29];
+    img29.style.backgroundImage="url("+imagepost29+")";
+    img29.getElementsByClassName('foodvalue')[0].innerHTML=valuepost29;
+}
+function toggleBar29(){
+    post29.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post29.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post29.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post29.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post29.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post29.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep29.getElementsByClassName('value')[0].innerHTML='426';
+earn29.getElementsByClassName('value')[0].innerHTML='0';
+spend29.getElementsByClassName('value')[0].innerHTML='25';
+prog29.getElementsByClassName('value')[0].innerHTML='03:16:00';
+prog29.getElementsByClassName('value')[1].innerHTML='1';
+prog29.getElementsByClassName('value')[2].innerHTML='5';
+mark29.getElementsByClassName('value')[0].innerHTML='05:15:00';
+mark29.getElementsByClassName('value')[1].innerHTML='4';
+mark29.getElementsByClassName('value')[2].innerHTML='23';
+mana29.getElementsByClassName('value')[0].innerHTML='00:24:00';
+mana29.getElementsByClassName('value')[1].innerHTML='1';
+mana29.getElementsByClassName('value')[2].innerHTML='6';
+desi29.getElementsByClassName('value')[0].innerHTML='00:06:00';
+desi29.getElementsByClassName('value')[1].innerHTML='0';
+desi29.getElementsByClassName('value')[2].innerHTML='1';
+stru29.getElementsByClassName('value')[0].innerHTML='02:07:00';
+stru29.getElementsByClassName('value')[1].innerHTML='3';
+stru29.getElementsByClassName('value')[2].innerHTML='7';
+educ29.getElementsByClassName('value')[0].innerHTML='00:05:00';
+educ29.getElementsByClassName('value')[1].innerHTML='0';
+educ29.getElementsByClassName('value')[2].innerHTML='2';
+rest29.getElementsByClassName('value')[0].innerHTML='04:17:00';
+rest29.getElementsByClassName('value')[1].innerHTML='2';
+rest29.getElementsByClassName('value')[2].innerHTML='6';
+walk29.getElementsByClassName('value')[0].innerHTML='6500';
+run29.getElementsByClassName('value')[0].innerHTML='10400';
+water29.getElementsByClassName('value')[0].innerHTML='27830';
+drink29.getElementsByClassName('value')[0].innerHTML='2940';
+weight29.getElementsByClassName('value')[0].innerHTML='68510';
+dsp29.getElementsByClassName('value')[0].innerHTML='124';
+dsp29.getElementsByClassName('value')[1].innerHTML='66';
+dsp29.getElementsByClassName('value')[2].innerHTML='76';
+
+function changeValue29(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 29')}
+}
+</script>
+        <span class="time">28 день</span>
+<div class="post" id="post28">
+    <div class="gallery f1x">
+        <input type="button" id="left28" value="<">
+        <div class="image" id="img28">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right28" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight28">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue28();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp28">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar28();">Пост</div>
+            <div class="statistic" onclick="toggleBar28();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Ноги зудят. Порвалась сумка. Экология пугает.
+Брат сегодня сказал что уже распустились почки и то что опять выпал снег. Почки появились и замерзли, сегодня верно подметил брат. Очень странная и непонятная ситуация.
+
+Обсудил несколько концептов, обошел 5 мест в надежде нацти коворкинг. Сейчас думаю над организацией базы по контактам и коммуникациям. 
+Завтра надо будет сделать гораздо больше. Сегодня я смог попасть только в 1 место. 
+Купил ручку и немного покурил кальян. Плохо или хорошо не мне судить, главное чтобы не мешало эффективности и работоспособности.</span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep28">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue28();"> (мин)</span></span>
+                    <span class="type" id="earn28">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue28();"> руб.</span></span>
+                    <span class="type" id="spend28">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue28();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog28">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark28">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana28">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi28">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru28">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ28">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest28">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk28"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue28();"> (м)</span></span> | <span id="run28"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue28();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water28"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue28();"> (мл)</span></span> | <span id="drink28"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue28();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost28=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4815.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4816.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4820.JPG`,  ], imgnow28 = 0;
+var imagepost28=imgpost28[imgnow28];
+let valpost28=[`Ккал-91|У-15|Б-1|Ж-3`, `Ккал-165|У-14|Б-9|Ж-4`, `Ккал-171|У-9|Б-5|Ж-7`, ], valnow28 = 0;
+var valuepost28=valpost28[valnow28];
+img28.style.backgroundImage="url("+imagepost28+")";
+img28.getElementsByClassName('foodvalue')[0].innerHTML=valuepost28;
+right28.onclick = function() {
+    let length = imgpost28.length-1;
+    if (imgnow28<length){imgnow28+=1;valnow28+=1}
+    else if(imgnow28==length){imgnow28=0;valnow28=0}
+    else{alert('error')}  
+    imagepost28=imgpost28[imgnow28];
+    valuepost28=valpost28[valnow28];
+    img28.style.backgroundImage="url("+imagepost28+")";
+    img28.getElementsByClassName('foodvalue')[0].innerHTML=valuepost28;
+}
+left28.onclick = function() {
+    let length = imgpost28.length-1;
+    if (imgnow28==0){imgnow28=length;valnow28=length}
+    else if(!imgnow28==0){imgnow28-=1;valnow28-=1}
+    else{alert('error')}  
+    imagepost28=imgpost28[imgnow28];
+    valuepost28=valpost28[valnow28];
+    img28.style.backgroundImage="url("+imagepost28+")";
+    img28.getElementsByClassName('foodvalue')[0].innerHTML=valuepost28;
+}
+function toggleBar28(){
+    post28.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post28.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post28.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post28.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post28.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post28.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep28.getElementsByClassName('value')[0].innerHTML='262';
+earn28.getElementsByClassName('value')[0].innerHTML='0';
+spend28.getElementsByClassName('value')[0].innerHTML='23';
+prog28.getElementsByClassName('value')[0].innerHTML='07:20:00';
+prog28.getElementsByClassName('value')[1].innerHTML='3';
+prog28.getElementsByClassName('value')[2].innerHTML='44';
+mark28.getElementsByClassName('value')[0].innerHTML='01:20:00';
+mark28.getElementsByClassName('value')[1].innerHTML='2';
+mark28.getElementsByClassName('value')[2].innerHTML='5';
+mana28.getElementsByClassName('value')[0].innerHTML='00:36:00';
+mana28.getElementsByClassName('value')[1].innerHTML='1';
+mana28.getElementsByClassName('value')[2].innerHTML='7';
+desi28.getElementsByClassName('value')[0].innerHTML='00:10:00';
+desi28.getElementsByClassName('value')[1].innerHTML='1';
+desi28.getElementsByClassName('value')[2].innerHTML='4';
+stru28.getElementsByClassName('value')[0].innerHTML='04:07:00';
+stru28.getElementsByClassName('value')[1].innerHTML='2';
+stru28.getElementsByClassName('value')[2].innerHTML='16';
+educ28.getElementsByClassName('value')[0].innerHTML='00:20:00';
+educ28.getElementsByClassName('value')[1].innerHTML='1';
+educ28.getElementsByClassName('value')[2].innerHTML='4';
+rest28.getElementsByClassName('value')[0].innerHTML='03:35:00';
+rest28.getElementsByClassName('value')[1].innerHTML='5';
+rest28.getElementsByClassName('value')[2].innerHTML='11';
+walk28.getElementsByClassName('value')[0].innerHTML='1400';
+run28.getElementsByClassName('value')[0].innerHTML='9700';
+water28.getElementsByClassName('value')[0].innerHTML='34080';
+drink28.getElementsByClassName('value')[0].innerHTML='3090';
+weight28.getElementsByClassName('value')[0].innerHTML='69540';
+dsp28.getElementsByClassName('value')[0].innerHTML='103';
+dsp28.getElementsByClassName('value')[1].innerHTML='67';
+dsp28.getElementsByClassName('value')[2].innerHTML='81';
+
+function changeValue28(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 28')}
+}
+</script>
+        <span class="time">27 день</span>
+<div class="post" id="post27">
+    <div class="gallery f1x">
+        <input type="button" id="left27" value="<">
+        <div class="image" id="img27">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right27" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight27">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue27();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp27">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar27();">Пост</div>
+            <div class="statistic" onclick="toggleBar27();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">Завершил мессенджер и рассмеялся, когда увидел, что всё работает.
+Сейчас как будто пусти и надо срочно искать дельные проекты, потому что думаю, что закончил, то что должен был сделать для себя.
+Хотел сегодня провести 2 встречи, но все сорвалось изза моего восстановленного режима сна. Надеюсь что я это перенесу на потом и мы продолжим сотрудничать.
+
+Вновь играю и параллельно программирую. Как то даже не хочется думать о конфиденциальности и интеллектуальной собственности, потому что кому надо всё равно возьмут что захотят не посмотря на какие либо законы морали. Жалко только что я как обычно и как всегда вообще ничего не получаю. Как будто я просто не существую, в кой то степени это обескураживает. Скрывание только все портит.</span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep27">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue27();"> (мин)</span></span>
+                    <span class="type" id="earn27">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue27();"> руб.</span></span>
+                    <span class="type" id="spend27">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue27();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog27">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark27">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana27">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi27">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru27">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ27">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest27">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk27"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue27();"> (м)</span></span> | <span id="run27"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue27();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water27"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue27();"> (мл)</span></span> | <span id="drink27"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue27();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost27=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4808.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4809.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4810.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4813.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4814.JPG`,  ], imgnow27 = 0;
+var imagepost27=imgpost27[imgnow27];
+let valpost27=[`Ккал-65|У-5|Б-1|Ж-0`, `Ккал-165|У-14|Б-2|Ж-4`, `Ккал-175|У-21|Б-7|Ж-5`, `Ккал-124|У-11|Б-3|Ж-7`, `Ккал-66|У-4|Б-7|Ж-3`, ], valnow27 = 0;
+var valuepost27=valpost27[valnow27];
+img27.style.backgroundImage="url("+imagepost27+")";
+img27.getElementsByClassName('foodvalue')[0].innerHTML=valuepost27;
+right27.onclick = function() {
+    let length = imgpost27.length-1;
+    if (imgnow27<length){imgnow27+=1;valnow27+=1}
+    else if(imgnow27==length){imgnow27=0;valnow27=0}
+    else{alert('error')}  
+    imagepost27=imgpost27[imgnow27];
+    valuepost27=valpost27[valnow27];
+    img27.style.backgroundImage="url("+imagepost27+")";
+    img27.getElementsByClassName('foodvalue')[0].innerHTML=valuepost27;
+}
+left27.onclick = function() {
+    let length = imgpost27.length-1;
+    if (imgnow27==0){imgnow27=length;valnow27=length}
+    else if(!imgnow27==0){imgnow27-=1;valnow27-=1}
+    else{alert('error')}  
+    imagepost27=imgpost27[imgnow27];
+    valuepost27=valpost27[valnow27];
+    img27.style.backgroundImage="url("+imagepost27+")";
+    img27.getElementsByClassName('foodvalue')[0].innerHTML=valuepost27;
+}
+function toggleBar27(){
+    post27.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post27.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post27.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post27.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post27.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post27.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep27.getElementsByClassName('value')[0].innerHTML='390';
+earn27.getElementsByClassName('value')[0].innerHTML='0';
+spend27.getElementsByClassName('value')[0].innerHTML='0';
+prog27.getElementsByClassName('value')[0].innerHTML='07:40:00';
+prog27.getElementsByClassName('value')[1].innerHTML='3';
+prog27.getElementsByClassName('value')[2].innerHTML='141';
+mark27.getElementsByClassName('value')[0].innerHTML='00:10:00';
+mark27.getElementsByClassName('value')[1].innerHTML='0';
+mark27.getElementsByClassName('value')[2].innerHTML='1';
+mana27.getElementsByClassName('value')[0].innerHTML='01:00:00';
+mana27.getElementsByClassName('value')[1].innerHTML='1';
+mana27.getElementsByClassName('value')[2].innerHTML='9';
+desi27.getElementsByClassName('value')[0].innerHTML='00:15:00';
+desi27.getElementsByClassName('value')[1].innerHTML='0';
+desi27.getElementsByClassName('value')[2].innerHTML='2';
+stru27.getElementsByClassName('value')[0].innerHTML='00:40:00';
+stru27.getElementsByClassName('value')[1].innerHTML='1';
+stru27.getElementsByClassName('value')[2].innerHTML='5';
+educ27.getElementsByClassName('value')[0].innerHTML='00:20:00';
+educ27.getElementsByClassName('value')[1].innerHTML='0';
+educ27.getElementsByClassName('value')[2].innerHTML='2';
+rest27.getElementsByClassName('value')[0].innerHTML='07:30:00';
+rest27.getElementsByClassName('value')[1].innerHTML='7';
+rest27.getElementsByClassName('value')[2].innerHTML='23';
+walk27.getElementsByClassName('value')[0].innerHTML='75';
+run27.getElementsByClassName('value')[0].innerHTML='0';
+water27.getElementsByClassName('value')[0].innerHTML='51510';
+drink27.getElementsByClassName('value')[0].innerHTML='3540';
+weight27.getElementsByClassName('value')[0].innerHTML='69450';
+dsp27.getElementsByClassName('value')[0].innerHTML='109';
+dsp27.getElementsByClassName('value')[1].innerHTML='67';
+dsp27.getElementsByClassName('value')[2].innerHTML='95';
+
+function changeValue27(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 27')}
+}
+</script>
+        <span class="time">26 день</span>
+<div class="post" id="post26">
+    <div class="gallery f1x">
+        <input type="button" id="left26" value="<">
+        <div class="image" id="img26">
+            <div class="foodvalue"></div>
+        </div>
+        <input type="button" id="right26" value=">">
+    </div>
+    <div class="statery f1x hidden">
+        <div class="block" id="weight26">
+            <span class="type">Вес</span> - <span class="value">67750</span><span class="valuetype" onclick="changeValue26();"> (гр)</span>
+        </div>
+        <div class="block" id="dsp26">
+            <span class="type">DIA</span> - <span class="value">110</span><span class="valuetype"> </span><br><span class="type">SYS</span> - <span class="value">70</span><span class="valuetype"> </span><br><span class="type">Pulse</span> - <span class="value">70</span><span class="valuetype"> </span>
+        </div>
+        
+    </div>
+    <div class="info">
+        <div class="togglebar">
+            <div class="textpost use" onclick="toggleBar26();">Пост</div>
+            <div class="statistic" onclick="toggleBar26();">Статистика</div>
+        </div>
+        <div class="content">
+            <div class="text">
+                <span class="blog">В ожидании нового дня, много планов на понедельник, а сегодня я занимаюсь развитием своего блога. Написал простенький мессенджер для прямой связи со мной и регистрацией. Пока что все не привязано к базам, но завтра наверное этим и займусь.
+Так много играл, что лопнули сосуды в глазе. Успокаивает только то, что все время, пока я играл я параллельно программировал на два экрана.
+День довольно спокойный и сонный. Погода вновь пугает, упал снег и буквально за пару часов растаял. Это не есть хорошо и является аномальным.</span>
+            </div>
+            <div class="stat hidden">
+                <div class="headline">
+                    <span class="type" id="sleep26">Сон<span class="value">3</span><span class="valuetype" onclick="changeValue26();"> (мин)</span></span>
+                    <span class="type" id="earn26">Заработал<span class="value">0</span><span class="valuetype" onclick="changeValue26();"> руб.</span></span>
+                    <span class="type" id="spend26">Потратил<span class="value">1135</span><span class="valuetype" onclick="changeValue26();"> руб.</span></span>
+                </div>
+                <div class="table">
+                    <div class="block" id="prog26">
+                        <span class="type">Программирование</span> - <span class="value">780</span><span class="valuetype"> </span> - <span class="value">7</span><span class="valuetypetarget">(целей)</span> - <span class="value">145</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mark26">
+                        <span class="type">Маркетинг</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">6</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="mana26">
+                        <span class="type">Менеджмент</span> - <span class="value">150</span><span class="valuetype"> </span> - <span class="value">3</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="desi26">
+                        <span class="type">Дизайн</span> - <span class="value">130</span><span class="valuetype"> </span> - <span class="value">6</span><span class="valuetypetarget">(целей)</span> - <span class="value">92</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="stru26">
+                        <span class="type">Структуризация</span> - <span class="value">20</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">14</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="educ26">
+                        <span class="type">Обучение</span> - <span class="value">15</span><span class="valuetype"> </span> - <span class="value">1</span><span class="valuetypetarget">(целей)</span> - <span class="value">5</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block" id="rest26">
+                        <span class="type">Отдых</span> - <span class="value">155</span><span class="valuetype"> </span> - <span class="value">2</span><span class="valuetypetarget">(целей)</span> - <span class="value">13</span><span class="valuetypetask">(задач)</span>
+                    </div>
+                    <div class="block">
+                        <span id="walk26"><span class="type">Прошел</span> - <span class="value"></span><span class="valuetype" onclick="changeValue26();"> (м)</span></span> | <span id="run26"><span class="type">Пробежал</span> - <span class="value"></span> <span class="valuetype"  onclick="changeValue26();"> (м)</span></span>
+                    </div>
+                    <div class="block">
+                        <span id="water26"><span class="type">Потратил воды</span> - <span class="value"></span><span class="valuetype" onclick="changeValue26();"> (мл)</span></span> | <span id="drink26"><span class="type">Выпил воды</span> - <span class="value"></span><span class="valuetype"  onclick="changeValue26();"> (мл)</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let imgpost26=[`https://diarium.info/admin/dayler/webdoc/image/IMG_4803.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4804.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4806.JPG`, `https://diarium.info/admin/dayler/webdoc/image/IMG_4807.JPG`,  ], imgnow26 = 0;
+var imagepost26=imgpost26[imgnow26];
+let valpost26=[`Ккал-83|У-5|Б-2|Ж-0`, `Ккал-465|У-55|Б-7|Ж-25`, `Ккал-105|У-13|Б-4|Ж-1`, `Ккал-109|У-14|Б-5|Ж-1`, ], valnow26 = 0;
+var valuepost26=valpost26[valnow26];
+img26.style.backgroundImage="url("+imagepost26+")";
+img26.getElementsByClassName('foodvalue')[0].innerHTML=valuepost26;
+right26.onclick = function() {
+    let length = imgpost26.length-1;
+    if (imgnow26<length){imgnow26+=1;valnow26+=1}
+    else if(imgnow26==length){imgnow26=0;valnow26=0}
+    else{alert('error')}  
+    imagepost26=imgpost26[imgnow26];
+    valuepost26=valpost26[valnow26];
+    img26.style.backgroundImage="url("+imagepost26+")";
+    img26.getElementsByClassName('foodvalue')[0].innerHTML=valuepost26;
+}
+left26.onclick = function() {
+    let length = imgpost26.length-1;
+    if (imgnow26==0){imgnow26=length;valnow26=length}
+    else if(!imgnow26==0){imgnow26-=1;valnow26-=1}
+    else{alert('error')}  
+    imagepost26=imgpost26[imgnow26];
+    valuepost26=valpost26[valnow26];
+    img26.style.backgroundImage="url("+imagepost26+")";
+    img26.getElementsByClassName('foodvalue')[0].innerHTML=valuepost26;
+}
+function toggleBar26(){
+    post26.getElementsByClassName('textpost')[0].classList.toggle('use');
+    post26.getElementsByClassName('statistic')[0].classList.toggle('use');
+    post26.getElementsByClassName('text')[0].classList.toggle('hidden');
+    post26.getElementsByClassName('statery')[0].classList.toggle('hidden');
+    post26.getElementsByClassName('gallery')[0].classList.toggle('hidden');
+    post26.getElementsByClassName('stat')[0].classList.toggle('hidden');
+}
+sleep26.getElementsByClassName('value')[0].innerHTML='360';
+earn26.getElementsByClassName('value')[0].innerHTML='0';
+spend26.getElementsByClassName('value')[0].innerHTML='0';
+prog26.getElementsByClassName('value')[0].innerHTML='06:50:00';
+prog26.getElementsByClassName('value')[1].innerHTML='3';
+prog26.getElementsByClassName('value')[2].innerHTML='45';
+mark26.getElementsByClassName('value')[0].innerHTML='00:10:00';
+mark26.getElementsByClassName('value')[1].innerHTML='0';
+mark26.getElementsByClassName('value')[2].innerHTML='1';
+mana26.getElementsByClassName('value')[0].innerHTML='00:40:00';
+mana26.getElementsByClassName('value')[1].innerHTML='1';
+mana26.getElementsByClassName('value')[2].innerHTML='5';
+desi26.getElementsByClassName('value')[0].innerHTML='00:00:00';
+desi26.getElementsByClassName('value')[1].innerHTML='0';
+desi26.getElementsByClassName('value')[2].innerHTML='0';
+stru26.getElementsByClassName('value')[0].innerHTML='01:01:00';
+stru26.getElementsByClassName('value')[1].innerHTML='2';
+stru26.getElementsByClassName('value')[2].innerHTML='10';
+educ26.getElementsByClassName('value')[0].innerHTML='00:15:00';
+educ26.getElementsByClassName('value')[1].innerHTML='0';
+educ26.getElementsByClassName('value')[2].innerHTML='3';
+rest26.getElementsByClassName('value')[0].innerHTML='09:50:00';
+rest26.getElementsByClassName('value')[1].innerHTML='11';
+rest26.getElementsByClassName('value')[2].innerHTML='44';
+walk26.getElementsByClassName('value')[0].innerHTML='50';
+run26.getElementsByClassName('value')[0].innerHTML='0';
+water26.getElementsByClassName('value')[0].innerHTML='39030';
+drink26.getElementsByClassName('value')[0].innerHTML='3170';
+weight26.getElementsByClassName('value')[0].innerHTML='69340';
+dsp26.getElementsByClassName('value')[0].innerHTML='130';
+dsp26.getElementsByClassName('value')[1].innerHTML='70';
+dsp26.getElementsByClassName('value')[2].innerHTML='62';
+
+function changeValue26(e){
+    var elem=e ? e.target : window.event.srcElement;
+    var val = elem.textContent;
+    var par = elem.parentNode;
+    if (val===' (мин)'){elem.textContent=' (ч)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/60).toFixed(2);}
+    else if (val===' (ч)'){elem.textContent=' (мин)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*60).toFixed();}
+    else if (val===' руб.'){elem.textContent=' $';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/61).toFixed(2);}
+    else if (val===' $'){elem.textContent=' €';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*0.9).toFixed(2);}
+    else if (val===' €'){elem.textContent=' руб.';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*(61/0.9)).toFixed(2);}
+    else if (val===' (км)'){elem.textContent=' (м)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (м)'){elem.textContent=' (км)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (л)'){elem.textContent=' (мл)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (мл)'){elem.textContent=' (л)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    else if (val===' (кг)'){elem.textContent=' (гр)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)*1000).toFixed();}
+    else if (val===' (гр)'){elem.textContent=' (кг)';par.getElementsByClassName('value')[0].innerHTML=((par.getElementsByClassName('value')[0].innerHTML)/1000).toFixed(2);}
+    
+    else{console.log('ERROR 26')}
+}
+</script>
+    </div>
+    </body>
+</html>

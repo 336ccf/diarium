@@ -1,4 +1,6 @@
 <?php
+ini_set(‘session.gc_maxlifetime’, 2592000);
+ini_set(‘session.cookie_lifetime’, 2592000);
 session_start();
 $conn = new mysqli("31.31.196.251", "u0703038_admin", "diariumCc366", "u0703038_dayler");
 if (!$conn) {

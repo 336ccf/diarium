@@ -1,13 +1,7 @@
 # Allies refer
 User-agent: *
-Disallow: /LQ
-Disallow: /JS
-Disallow: /JPG
-Disallow: /PNG
-Disallow: /PDF
-Disallow: /style
-Disallow: /SVG
-Disallow: /ICO
-Disallow: /annie
+Disallow: /admin
+Disallow: /message
+Disallow: /profile
 Sitemap: https://diarium.info/sitemap.xml
 Crawl-delay: 16

@@ -1,3 +1,8 @@
+<?php 
+ini_set(‘session.gc_maxlifetime’, 2592000);
+ini_set(‘session.cookie_lifetime’, 2592000);
+session_start(); 
+?>
 <html>
     <title>Diarium</title>
     <head>
@@ -21,7 +26,7 @@
     a:any-link{text-decoration: none; color: rgba(0,0,0,1);}
     a:focus{ outline: 0.3vmax solid rgba(255,0,0,0.5);}
 
-mysteria{display: block; position: fixed; top: 0;}
+mysteria{display: block; position: fixed; top: 0; left: 0;}
     .valuetype:hover{cursor:pointer; text-decoration: underline;}
     .search{width: 100vw; background-color: rgba(0, 0, 0, 0.123);}
     .search>form{width: 80%; height: 10vmin; display: flex; justify-content: space-around; align-items: center;}

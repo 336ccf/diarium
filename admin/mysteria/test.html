@@ -1,0 +1,114 @@
+<html>
+    <title>Mysteria admin</title>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="author" content="suicvairduCConstantinius">
+        <meta name="format-detection" content="telephone=no">
+    </head>
+    <style>
+        *{margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1.4vmax;}
+        .f1x{display: flex; justify-content: space-around; align-items: center;}.fdc{flex-direction: column;}.fdrc{flex-direction: column-reverse;}
+        .hidden{display: none;}
+
+    .title{width:100%;height: auto; text-align: center; margin-top: 10vmin;}
+    .backlink{width:100%;height: auto; text-align: left;}
+    .checkdata{width:100%;height: auto; text-align: right;}
+
+    .create{width: 100%; height: auto; background-color: rgba(0, 0, 0, 0.033); display: flex; justify-content: space-around; align-items: center; }
+    .addsite,.setnew,.setnews{width: 80vw; height: auto; background-color: rgba(0, 0, 0, 0.033); display: flex; flex-direction: column;margin-bottom: 10vmin;}
+
+    .addsite>form>input{width: 100%; height: 5vmin; text-indent: 1.5vw; margin-top: 2vmin; margin-bottom: 2vmin;}
+    .addsite>form>textarea{resize: vertical; width: 100%; height: 25vmin; text-indent: 1.5vw;}
+    #list{list-style: none; width: 100%; height: auto; display: flex; justify-content: space-around; align-items: center; }
+
+    .setnew>form{display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; background-color: rgba(0, 0, 0, 0.033);}
+    .setnew>form>input{width: 10vw; font-size: 1vmax;background-color: transparent; outline: none; border: 0.1vmax solid rgba(0, 0, 0, 0.9); margin-bottom: 1vmin;}
+    #identification{background-color: transparent; outline: none; border: none; font-weight: 1000; text-align: center;}
+    .setnew>form>input[type="file"]{width: 20vw;border: none;}
+    .setnew>form>input[type="submit"]{width: 50vw;}
+    .setnew>form>input[type="submit"]:hover{background-color: rgba(0, 0, 0, 0.033);width: 60vw;}
+
+    .setnews>form{display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; background-color: rgba(0, 0, 0, 0.033);}
+    .setnews>form>input{width: 100%; text-indent: 2vw;}
+    .setnews>form>textarea{width: 100%; margin-bottom: 5vmin; text-indent: 2vw;}
+
+    #delete{color:red;background-color:transparent; cursor:not-allowed;}
+    #update{color:black;background-color:rgba(0,0,0,0.3)}#update:hover{background-color:rgba(0,0,0,0.5); cursor: pointer;}
+    </style>
+    <body>
+        <div class="title">
+            Panel for redacting MYSTERIA.SPACE
+        </div>
+        <div class="backlink">
+            <a href="../">Back to admin panel HOME page</a>
+        </div>
+        <div class="checkdata">
+            <a href="sql/">Go to DAYLER sql redactor</a>
+        </div>
+        <div class="create f1x fdc">
+            <div class="addsite">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <input type="text" name="name" id="name" required placeholder="Name">
+                    <input type="file" id="files" name="files[]" required/>
+                    <ul id="list"></ul>
+                    <input type="url" name="link" id="link" required placeholder="Link">
+                    <input type="text" name="version" id="version" required placeholder="Version">
+                    <input type="email" name="mail" id="mail" required placeholder="E-mail">
+                    <textarea name="rutext" id="rutext" cols="30" rows="10" required placeholder="RU"></textarea>
+                    <textarea name="entext" id="entext" cols="30" rows="10" required placeholder="EN"></textarea>
+                    <input type="date" name="date" id="date" required placeholder="date">
+                    <input type="submit" value="Add_">
+                </form>
+                <script>
+                function showFile(e) {
+    var files = e.target.files;
+    for (var i = 0, f; f = files[i]; i++) {
+      if (!f.type.match('image.*')) continue;
+      var fr = new FileReader();
+      fr.onload = (function(theFile) {
+        return function(e) {
+          var li = document.createElement('li');
+          li.innerHTML = "<img src='" + e.target.result + "' />";
+          document.getElementById('list').insertBefore(li, null);
+        };
+      })(f);
+      fr.readAsDataURL(f);
+    }
+    }
+    document.getElementById('files').addEventListener('change', showFile, false);
+                </script>
+            </div>
+            <div class="setnews">
+                <form action="news.php" method="post" enctype="multipart/form-data">
+                    <input type="text" name="rutitle" id="rutitle" required placeholder="Заголовок">
+                    <textarea name="rupostnews" id="rupostnews" cols="30" rows="10" required placeholder="Текст"></textarea>
+
+                    <input type="text" name="entitle" id="entitle" required placeholder="Title">
+                    <textarea name="enpostnews" id="enpostnews" cols="30" rows="10" required placeholder="Text"></textarea>
+
+                    <input type="file" name="docs[]" id="docs">
+
+                    <input type="submit" value="POST">
+
+                </form>
+            </div>
+            <div class="setnew">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <input type="text" name="identification" id="identification" readonly value="1">
+                    <input type="text" name="rename" id="rename" placeholder="Name">
+                    <input type="url" name="relink" id="renlink" placeholder="Link">
+                    <input type="text" name="reversion" id="reversion" placeholder="Version">
+                    <input type="email" name="remail" id="remail" placeholder="E-mail">
+                    <input type="text" name="reruxt" id="reruxt" placeholder="RU">
+                    <input type="text" name="reenxt" id="reenxt" placeholder="EN">
+                    <input type="date" name="redate" id="redate">
+                    <input type="file" id="files" name="files[]" required/>
+                    <ul id="list"></ul>
+                    <input type="submit" name="updater" value="UPDATE" id="update">
+                    <input type="submit" name="deleter" value="DELETE" id="delete">
+                </form>
+            </div>
+            
+        </div>
+    </body>
+</html>
