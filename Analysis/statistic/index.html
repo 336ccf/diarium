@@ -1,0 +1,746 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="suicvairduCConstantinius">
+	<meta name="description" content="Statistic">
+	<link rel="shortcut icon" href="../analys.png" type="image/png">
+	<meta charset="UTF-8">
+	<meta name="keywords" content="diarium, Statistic, analysis, improvement, manage, analytics">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../const.css">
+	<script type="text/javascript" src="../../script.js"></script>
+	<script type="text/javascript" src="../../onload.js"></script>
+	<script type="text/javascript" src="analytic.js"></script>
+	<title>Statistic</title>
+</head>
+<img class="close" src="../open.svg" onclick="show(h.block);show(f.block);show(o.block)">
+<div class="fix">
+   <div class="mail">
+      <a href="mailto:constantinius@diarium.info" id="mail" title="Send message">constantinius@diarium.info</a>
+   </div>
+   <img class="i-clck" src="../click.svg">
+   <div class="share">
+      <a class="link" id="link" onclick="copyToClipboard()" title="Copy page URL"></a>
+   </div>
+</div>
+<header id="hide">
+	<div class="hl1">
+		<div class="hc1">
+			<div>
+				<a href="javascript:history.back()" class="back">
+    				 <img class="mb" src="https://diarium.info/menu/back.svg" alt="back"/>
+				</a>
+				<a href="javascript:history.forward()" class="towa">
+    				 <img class="mb" src="https://diarium.info/menu/toward.svg" alt="back"/>
+				</a>
+				<div class="lmb" >
+					<div class="dd">
+					<img src="https://diarium.info/menu/logo.png" onclick="myFunction()" class="mlb" alt="logotype">
+					 	<div id="myDd" class="dd-c">
+					 		<div class="column">
+					 			<p id="done">Done</p>
+					 			<li id="share" onclick="location.href = 'https://diarium.info/Shortstories/index.html'">Share</li>
+					 			<li id="critic" onclick="location.href = 'https://diarium.info/Critic/index.html'">Critic</li>
+						 		<li id="openfiles" onclick="location.href = 'https://diarium.info/Openfiles/index.html'">OpenFiles</li>
+						 		<li id="autobiography" onclick="location.href = 'https://diarium.info/Autobiography/index.html'">Autobiography</li>
+								<li id="achievements" onclick="location.href = 'https://diarium.info/Achievements/index.html'">Achievements</li>
+					 			<li id="portfolio" onclick="location.href = 'https://diarium.info/Portfolio/index.html'">Portfolio</li>
+					 		</div>
+					 		<div class="column">
+					 			<p id="think">Think</p>
+					 			<li id="ideas" onclick="location.href = 'https://diarium.info/Idea/index.html'">Ideas</li>
+								<li id="dream" onclick="location.href = 'https://diarium.info/Dream/index.html'">Dream</li>
+								<li id="cooperatet" onclick="location.href = 'https://diarium.info/Cooperate/index.html'">Cooperate</li>
+								<li id="chat">Chat</li>
+								<li id="quiz">Quiz</li>
+					 			<li id="blog" onclick="location.href = 'https://diarium.info/Blog/index.html'">Blog</li>
+					 		</div>
+					 		<div class="column">
+					 			<p id="do">Do</p>
+					 			<li id="cooperated" onclick="location.href = 'https://diarium.info/Cooperate/index.html'">Cooperate</li>
+					 			<li id="team" onclick="location.href = 'https://diarium.info/Team/index.html'">Team</li>
+						 		<li id="deposit" onclick="location.href = 'https://diarium.info/Deposit/index.html'">Deposit</li>
+						 		<li id="work" onclick="location.href = 'https://diarium.info/Work/index.html'">Work</li>
+								<li id="analysis" onclick="location.href = 'https://diarium.info/Analysis/index.html'">Analysis</li>
+					 			<li id="passion" onclick="location.href = 'https://diarium.info/Passion/index.html'">Passion</li>
+					 		</div>
+						</div>
+					</div>
+				</div>
+				<p class="buttol" id="white">
+					You may open fullscreen by "F11"
+				</p>
+			</div>
+		</div>
+	</div>
+</header>
+<img id="hide" class="open" src="../close.svg" onclick="hide(h.block);hide(f.block);hide(o.block);show(c.none)">
+<body>
+	<div class="content">
+		<div class="row">
+			<div class="cell"></div>
+			<div class="cell"><p>Life analysis of Constantinius Cudriavcius (Creator of this site)</p></div>
+			<div class="cell"></div>
+		</div>	
+		<div class="row" >
+			<div class="cell"></div>
+			<div class="cell"><img src="image006.png"></div>
+			<div class="cell"></div>
+		</div>
+		<div class="row">
+			<div class="cell"></div>
+			<div class="cell">
+				<table border=0 cellpadding=0 cellspacing=0 style='border-collapse:collapse;table-layout:fixed;width:480pt; width:100% '>
+               <col width=64 span=10 style='width:48pt'>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  width=64 style='height:15.0pt;width:48pt'>&nbsp;</td>
+               <td  width=64 style='width:48pt'>Jan</td>
+               <td  width=64 style='width:48pt'>Feb</td>
+               <td  width=64 style='width:48pt'>Mar</td>
+               <td  width=64 style='width:48pt'>Apr</td>
+               <td  width=64 style='width:48pt'>May</td>
+               <td  width=64 style='width:48pt'>Jun</td>
+               <td  width=64 style='width:48pt'>Jul</td>
+               <td  width=64 style='width:48pt'>Aug</td>
+               <td  width=64 style='width:48pt'>Sep</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>TimeInMo<span
+               style='display:none'>nth</span></td>
+               <td>44640</td>
+               <td>40320</td>
+               <td>44640</td>
+               <td>43200</td>
+               <td>44640</td>
+               <td>43200</td>
+               <td>44640</td>
+               <td>44640</td>
+               <td>43200</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Sleep</td>
+               <td>13545</td>
+               <td>12060</td>
+               <td>12150</td>
+               <td>11310</td>
+               <td>13202</td>
+               <td>11511</td>
+               <td>13104</td>
+               <td>12345</td>
+               <td>11647,8</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Game</td>
+               <td >&nbsp;</td>
+               <td>60</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td>430</td>
+               <td>340</td>
+               <td>2575</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Study</td>
+               <td>3336</td>
+               <td>13110</td>
+               <td>18930</td>
+               <td>21875</td>
+               <td>18968,6</td>
+               <td>15544,5</td>
+               <td>4144,84</td>
+               <td>1203,8</td>
+               <td>1200</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Other</td>
+               <td>27759</td>
+               <td>15150</td>
+               <td>13560</td>
+               <td>7010,5</td>
+               <td>4340</td>
+               <td>0</td>
+               <td>1930</td>
+               <td>2540</td>
+               <td>4146</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Work</td>
+               <td>0</td>
+               <td>0</td>
+               <td>0</td>
+               <td>3004,5</td>
+               <td>8129,4</td>
+               <td>15544,5</td>
+               <td>25461,16</td>
+               <td>28891,2</td>
+               <td>26246,2</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Watch Rat<span
+               style='display:none'>ing</span></td>
+               <td>7,95</td>
+               <td>8,281</td>
+               <td>8,25</td>
+               <td>7,65</td>
+               <td>7,77</td>
+               <td>8,966</td>
+               <td>7,2025</td>
+               <td>6,996</td>
+               <td>6,6539</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Water</td>
+               <td>39000</td>
+               <td>42360</td>
+               <td>67270</td>
+               <td>81620</td>
+               <td>75450</td>
+               <td>74150</td>
+               <td>56895,8</td>
+               <td>62580</td>
+               <td>79159</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>SavedW</td>
+               <td>0</td>
+               <td>0</td>
+               <td>0</td>
+               <td>0</td>
+               <td>60100</td>
+               <td>78700</td>
+               <td>100068</td>
+               <td>106050</td>
+               <td>138150</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Weight</td>
+               <td>66,7</td>
+               <td>65,49</td>
+               <td>63,96</td>
+               <td>63,62</td>
+               <td>65,15</td>
+               <td>64,06</td>
+               <td>62,892</td>
+               <td>63,8933</td>
+               <td>63,68333</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>d</td>
+               <td >&nbsp;</td>
+               <td>119,14</td>
+               <td>120,7</td>
+               <td>124,57</td>
+               <td>121,09</td>
+               <td>116,8</td>
+               <td>118,28</td>
+               <td>116,5</td>
+               <td>111,667</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>s</td>
+               <td >&nbsp;</td>
+               <td>73,5</td>
+               <td>77,2</td>
+               <td>74,37</td>
+               <td>75,61</td>
+               <td>76,66</td>
+               <td>74,32</td>
+               <td>72,87</td>
+               <td>70,47</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>p</td>
+               <td >&nbsp;</td>
+               <td>75,75</td>
+               <td>84,9</td>
+               <td>77,37</td>
+               <td>78,22</td>
+               <td>78,1</td>
+               <td>70,36</td>
+               <td>66,322</td>
+               <td>73,3</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Target</td>
+               <td>3</td>
+               <td>114</td>
+               <td>322</td>
+               <td>97</td>
+               <td>115</td>
+               <td>58</td>
+               <td>19</td>
+               <td>267</td>
+               <td>918</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Task</td>
+               <td>12</td>
+               <td>40</td>
+               <td>1052</td>
+               <td>1950,2</td>
+               <td>1618</td>
+               <td>4074</td>
+               <td>943</td>
+               <td>4073</td>
+               <td>8587</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Money -</td>
+               <td>0</td>
+               <td>5800</td>
+               <td>2626</td>
+               <td>3974</td>
+               <td>11485,13</td>
+               <td>18244,09</td>
+               <td>2038</td>
+               <td>2446</td>
+               <td>2601</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>Money +</td>
+               <td>0</td>
+               <td>2808</td>
+               <td>2500</td>
+               <td>3000</td>
+               <td>14500</td>
+               <td>15500</td>
+               <td>1200</td>
+               <td>2200</td>
+               <td>200</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  colspan=2 style='height:15.0pt'>Users*Pages/Hits</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td>108,7863</td>
+               <td>88,42781</td>
+               <td>57,27315</td>
+               <td>98,66265</td>
+               <td>66,66773</td>
+               <td>33,665</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  colspan=2 style='height:15.0pt'>kcal/(s+f+ch)</td>
+               <td>8,003597</td>
+               <td>9,461967</td>
+               <td>5,242512</td>
+               <td>5,635813</td>
+               <td>6,019231</td>
+               <td>5,672476</td>
+               <td>5,783076</td>
+               <td>5,208243</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               <td >&nbsp;</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>M^3</td>
+               <td>391,7</td>
+               <td>541</td>
+               <td>519</td>
+               <td>317,78</td>
+               <td>510,15</td>
+               <td>526,7</td>
+               <td>409</td>
+               <td>647,7</td>
+               <td>472,3</td>
+               </tr>
+               <tr height=20 style='height:15.0pt'>
+               <td height=20  style='height:15.0pt'>KW</td>
+               <td>93,7</td>
+               <td>115,05</td>
+               <td>101,62</td>
+               <td>134,015</td>
+               <td>104,5</td>
+               <td>95,6</td>
+               <td>90,6</td>
+               <td>144,65</td>
+               <td>79,572</td>
+               </tr>
+               <tr height=0 style='display:none'>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               <td width=64 style='width:48pt'></td>
+               </tr>
+            </table>
+			</div>
+			<div class="cell"></div>
+		</div>
+		<div class="row">
+			<div class="cell"></div>
+			<div class="cell">
+            <button style="display:inline; margin: 1vh; width: 8.12vw; height: 3vh; font-size: 1.2em; font-family: 'Times New Roman', Times, serif; color: #1d1e20; border-radius: 1.2vh;" id="month" onclick="location.href = 'February2019.htm'">February</button>
+            <button style="display:inline; margin: 1vh; width: 8.12vw; height: 3vh; font-size: 1.2em; font-family: 'Times New Roman', Times, serif; color: #1d1e20; border-radius: 1.2vh;" id="month" onclick="location.href = 'March2019.html'">March</button> 
+            <button style="display:inline; margin: 1vh; width: 8.12vw; height: 3vh; font-size: 1.2em; font-family: 'Times New Roman', Times, serif; color: #1d1e20; border-radius: 1.2vh;" id="month" onclick="location.href = 'April2019.html'">April</button>
+            <button style="display:inline; margin: 1vh; width: 8.12vw; height: 3vh; font-size: 1.2em; font-family: 'Times New Roman', Times, serif; color: #1d1e20; border-radius: 1.2vh;" id="month" onclick="location.href = 'May2019.html'">May</button>
+            <button style="display:inline; margin: 1vh; width: 8.12vw; height: 3vh; font-size: 1.2em; font-family: 'Times New Roman', Times, serif; color: #1d1e20; border-radius: 1.2vh;" id="month" onclick="location.href = 'June2019.html'">June</button>
+            <button style="display:inline; margin: 1vh; width: 8.12vw; height: 3vh; font-size: 1.2em; font-family: 'Times New Roman', Times, serif; color: #1d1e20; border-radius: 1.2vh;" id="month" onclick="location.href = 'July2019.html'">July</button>
+            <button style="display:inline; margin: 1vh; width: 8.12vw; height: 3vh; font-size: 1.2em; font-family: 'Times New Roman', Times, serif; color: #1d1e20; border-radius: 1.2vh;" id="month" onclick="location.href = 'August2019.html'">August</button> 
+            <button style="display:inline; margin: 1vh; width: 8.12vw; height: 3vh; font-size: 1.2em; font-family: 'Times New Roman', Times, serif; color: #1d1e20; border-radius: 1.2vh;" id="month" onclick="location.href = 'September.htm'">September</button> 
+         </div>
+			<div class="cell"></div>
+		</div>
+		<div class="row">
+			<div class="cell"></div>
+			<div class="cell" style="display: block; margin:auto; text-align:center; width:100%;">
+            <p>Average/month (for last 9 months)</p>
+            <table style="width:100%">
+                  <tr>
+                     <td style="text-align: right">Time in month </td>
+                     <td style="text-align: left">43680(min)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Sleep </td>
+                     <td style="text-align: left">12314(min)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Game </td>
+                     <td style="text-align: left">378,333(min)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Study </td>
+                     <td style="text-align: left">10923,64(min)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Other </td>
+                     <td style="text-align: left">8206,722(min)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Work </td>
+                     <td style="text-align: left">11919,75(min)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Watch rating </td>
+                     <td style="text-align: left">7,7466/10</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Water </td>
+                     <td style="text-align: left">64276(ml)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Saved water </td>
+                     <td style="text-align: left">53669(ml)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Weight </td>
+                     <td style="text-align: left">63,38318(kg)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Sys</td>
+                     <td style="text-align: left">105,4163</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Dia</td>
+                     <td style="text-align: left">64,99444</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Pulse</td>
+                     <td style="text-align: left">67,14689</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Food </td>
+                     <td style="text-align: left">5,669657(kcal/(s+f+ch))</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Target</td>
+                     <td style="text-align: left">212,6667</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Task</td>
+                     <td style="text-align: left">2483,244</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Money+ </td>
+                     <td style="text-align: left">3685,03(RUB)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Money- </td>
+                     <td style="text-align: left">4463,136(RUB)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Site </td>
+                     <td style="text-align: left">50,38696(User*Page/Hit)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Water supply </td>
+                     <td style="text-align: left">481,7033(m^3)</td>
+                  </tr>
+                  <tr>
+                     <td style="text-align: right">Electricity </td>
+                     <td style="text-align: left">106,678(KW)</td>
+                  </tr>
+            </table>
+         </div>
+			<div class="cell"></div>
+      </div>
+      <div class="row">
+         <div class="cell"></div>
+         <div class="cell">
+            <p>Events for 2019 year</p>
+            <ul>
+               <li>Free student SPbGU MathMech; SPbGU EarthScience, ITMo, RANEPA, Veterinarian University 2 times</li>
+               <li>Education Events for study abroad 10 different places</li>
+               <li>Science conferention from Germany</li>
+               <li>Museum Night</li>
+               <li>National Library 5 times</li>
+               <li>EducationUSARussia meetings 4 times</li>
+               <li>Orators courses 2 times</li>
+               <li>Business meeting in LenEXPO</li>
+               <li>Rammstein concert in Gazprom Arena (Build it)</li>
+               <li>Play football in LenEXPO 2 times</li>
+            </ul>  
+         </div>
+         <div class="cell"></div>
+      </div>
+      <div class="row">
+         <div class="cell"></div>
+         <div class="cell">
+            <p style="text-align: right">Books that I read for 2019 year</p>
+            <p style="text-align: right">Art of War,<br>
+            Искусство Войны,<br>
+            Жесткий Менеджмент,<br>
+            Jeff Bezos,<br>
+            Биль о правах,<br>
+            Настоящая жизнь,<br>
+            History of America,<br>
+            Homo Deus !,<br>
+            Elon Musk ,<br>
+            Биография Булгакова,<br>
+            Биография Гоголя,<br>
+            Биография Эйнштейна ,<br>
+            Теория гениальности ,<br>
+            Sapiens!,<br>
+            Кратчайшая история времени Stephen Hawking,<br>
+            Гитлер,<br>
+            Величайшие завоеватели древности,<br>
+            Gaius Julius Ceasar ,<br>
+            Amodeus Mozart,<br>
+            Art of War,<br> 
+            Noam Homskii,<br>
+            Terrence W.Deacon,<br>
+            Innovators Aisecson,<br>
+            Autobiography "Jeff Bezos",<br>
+            Autobiography "Marc Zuckerberg",<br>
+            "7 ways efficient marketing" Stiven Kovi,<br>
+            Autobiography "Steve Jobs",<br>
+            "Маркетинг от А до Я",<br>
+            "From 0 to 1",<br>
+            A fare-weil to arms Ernest Hemingway,<br>
+            The symbolic species,<br>
+            Tom dispatch, deterning democracy,<br></p>
+
+         </div>
+         <div class="cell"></div>
+      </div>
+      <div class="row">
+         <div class="cell"></div>
+         <div class="cell">
+            <p>Watch Films for 2019 year</p>
+            <p>
+               Steve Jobs,<br>
+               Founder,<br>
+               Star Wars Episode 5 ,<br>
+               Nat Geo From born to die,<br>
+               Dancer ,<br>
+               Han Solo,<br>
+               HBO Chernobyl 9,6,<br>
+               1.	ПЕРВОМУ ИГРОКУ ПРИГОТОВИТСЯ 8.8,<br>
+               2.	ЧЕРНАЯ ПАНТЕРА 6,<br>
+               3.	ВАЛЕРИАН И ГОРОД ТЫСЯЧИ ПЛАНЕТ 5,<br>
+               4.	ЗЕМЛЯ БУДУЩЕГО 6,<br>
+               5.	СУПЕРБОБРОВЫ И НАРОДНЫЕ МСТИТЕЛИ 3,<br>
+               6.	МЕЧ КОРОЛЯ АРТУРА 7,<br>
+               7.	ФАНТАСТИЧЕСКИЕ ТВАРИ И ГДЕ ОНИ ОБИТАЮТ 7.2,<br>
+               8.	ЛИГА СПРАВЕДЛИВОСТИ 4,<br>
+               9.	БОЛЬШАЯ ИГРА 6,<br>
+               10.	КНИГА ГЕНРИ 6.5,<br>
+               11.	ЧУДО 7,<br>
+               12.	ВРЕМЯ ПЕРВЫХ 5,<br>
+               13.	8 ПОДРУГ ОУШЕНА 5,<br>
+               14.	ШПИОН КОТОРЫЙ МЕНЯ КИНУЛ 5.5,<br>
+               15.	КИЛИМАНДЖАРА 4,<br>
+               16.	СОЦИАЛЬНАЯ СЕТЬ 7,<br>
+               17.	РЕМПЕЙДЖ 7.6,<br>
+               18.	В ПОГОНЕ ЗА СЧАСТЬЕМ 6.5,<br>
+               19.	СЛОВА 7.7,<br>
+               20.	ГАРРИ ПОТТЕР 6.5,<br>
+               21.	ГАРРИ ПОТТЕР 2 8,<br>
+               22.	ГАРРИ ПОТТЕР И КУБОК ОГНЯ 8.3,<br>
+               23.	ГАРРИ ПОТТЕР И ОРДЕН ФЕНИКСА 6.8,<br>
+               24.	ГАРРИ ПОТТЕР И ПРИНЦ ПОЛУКРОВКА 7.6,<br>
+               25.	ГАРРИ ПОТТЕР И ДАРЫ СМЕРТИ 1 7.9,<br>
+               26.	ГАРРИ ПОТТЕР И ДАРЫ СМЕРТИ 8,<br>
+               27.	ДЕДПУЛ 2 6.2,<br>
+               28.	ФАНТАСТИЧЕСКИЕ ТВАРИ ПРЕСТУПЛЕНИЯ ГРИН ДЕ ВАЛЬДА 8.2,<br>
+               29.	ДЖЕНТЕЛЬМЕНЫ УДАЧИ 7.9,<br>
+               30.	АПГРЕЙД 6.8,<br>
+               31.	АПОКАЛЬПСИС 8.1,<br>
+               32.	ТОНЯ ПРОТИВ ВСЕХ 7.3,<br>
+               33.	ПО СООБРАЖЕНИЯМ СОВЕСТИ 8.3,<br>
+               34.	ВОЛК С УОЛЛ СТРИТ 8.5,<br>
+               35.	ОБЛАЧНЫЙ АТЛАС 8.1,<br>
+               36.	1+1 9,<br>
+               37.	7 ЖИЗНЕЙ 8,<br>
+               38.	ПОБЕГ ИЗ ШОУШЕНКА 9.3,<br>
+               39.	КРЕСТНЫЙ ОТЕЦ 8.7,<br>
+               40.	ТЕМНЫЙ РЫЦАРЬ 7.8,<br>
+               41.	ЧЕЛОВЕК ПАУК ЧЕРЕЗ ВСЕЛЕННЫЕ 8.1,<br>
+               42.	FOREST GAMP 9,<br>
+               43.	FIGHT CLUB 8.3,<br>
+               44.	BEFORE THE FLOOD 9.3,<br>
+               45.	GENIUS BY STEPHEN HAWKING 6.3,<br>
+               46.	ИНТЕРСТЕЛЛАР 8.7,<br>
+               47.	LEON 8.4,<br>
+               48.	INTERSTELLAR 8.8,<br>
+               49.	LORD OF THE RING KING RETURN 8.2,<br>
+               50.	HOW TO TRAIN DRAGON 8.2,<br>
+               51.	HOW TO TRAIN DRAGON 2 7.9,<br>
+               52.	SNATCH 7.3,<br>
+               53.	A BEAUTIFUL MIND 8.9,<br>
+               54.	OIL 7.5,<br>
+               55.	STEVE JOBS 9,<br>
+               56.	GAMES OF THRONES 8 SEASON 8.4,<br>
+               57.	TIM THAILER 8.9,<br>
+               58.	BARRY SEASON 1 6.1,<br>
+               59.	BARRY SEASON 2 7.9,<br>
+               60.	ROBIN HOOD 7.1,<br>
+               61.	PIRATES OF THE CARIBEAN THE CURSE OF THE BLACK PEARL 8.1,<br>
+               62.	PIRATES OF THE CARIBEAN DEAD MAN'S CHEST 8.5,<br>
+               63.	PIRATES OF THE CARIBEAN AT WORLD'S END 8,<br>
+               64.	PIRATES OF THE CARIBEAN ON STRANGE TIDES 7.6,<br>
+               65.	PIRATES OF THE CARIBEAN DEAD MEN TELL NO TALES 7.1,<br>
+               66.	AVATAR LEGEND ABOUT KORA SEASON 1 7.9,<br>
+               67.	AVATAR LEGEND ABOUT KORA SEASON 2 8.1,<br>
+               68.	AVATAR LEGEND ABOUT KORA SEASON 3 8.2,<br>
+               69.	AVATAR LEGEND ABOUT KORA SEASON 4 8.4,<br>
+               70.	ADVENTURE TIME SEASON 7 6.4,<br>
+               71.	ADVENTURE TIME SEASON 8 7,<br>
+               72.	ADVENTURE TIME SEASON 9 7.9,<br>
+
+            </p>
+         </div>
+         <div class="cell"></div>
+      </div>
+      <div class="row">
+         <div class="cell"></div>
+         <div class="cell" style="text-align: center" >
+            <p style="text-align: center; margin-top:5vh;">Social networks - subscriptions</p>
+            <a href="https://www.youtube.com/channel/UCQPfybZ3IyA7YXw1myXozWg?view_as=subscriber">YouTube</a>
+            <a href="https://www.instagram.com/the.richest.build/">Instagram</a>
+            <a href="https://vk.com/k8kudryavtsev">VKontakte   </a>
+         </div>
+         <div class="cell"></div>
+      </div>
+	</div>
+</body>
+<footer id="hide">
+	<div class="hc2">
+		<div class="hc3">
+			<div class="time"><span class="time" id="doc_time">Tempus</span> <br> <span id="doc_date">Diem</span><script type="text/javascript">clock();</script>
+				<div class="hc4">
+					<div class="hc5">
+						<img class="omb" onclick="myFunction()" src="https://diarium.info/menu/doc.svg" alt="options">
+						<div id="myO" class="op-c">
+							<div class="column" onclick="location.href = 'https://diarium.info/profile/index.html'" style="cursor: pointer">
+								<a>Profile</a>
+								<img src="https://diarium.info/menu/1.svg">
+							</div>
+							<div class="column" onclick="location.href = 'https://diarium.info/Send/index.html'" style="cursor: pointer">
+								<a>Send</a>
+								<img src="https://diarium.info/menu/2.svg">
+							</div>
+							<div class="column" onclick="location.href = 'https://diarium.info/interest/index.html'" style="cursor: pointer">
+								<a>Interest</a>
+								<img src="https://diarium.info/menu/3.svg">
+							</div>
+							<div class="column" onclick="location.href = 'https://diarium.info/document/index.html'" style="cursor: pointer">
+								<a>Documents</a>
+								<img src="https://diarium.info/menu/4.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="money"><p id="money"></p><script type="text/javascript">money();</script></div>
+		</div>
+	</div>
+</footer>
+</html>

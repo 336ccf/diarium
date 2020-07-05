@@ -1,0 +1,88 @@
+body {
+	height: 100%;
+    background-color: #e1e0e0;
+    padding-bottom: 18vh;
+}
+.block {
+	display: block;
+	position: relative;
+	height: 100%;
+	left: 50%;
+}
+div.content {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+div.content > .row {
+	display: table-row;
+    height: 20%;
+}
+div.content > .row > .cell {
+	display: table-cell;
+    width: 33.33%;
+}
+div.bar {
+    width: 100vw;
+    margin-top: 20vh;
+    margin-bottom: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.progress{
+    display: block;
+    margin: auto;
+    background-color: #121221;
+    border-radius: 50%;
+}
+.target {
+    display: block;
+    margin: auto;
+    background-color: #366ce1;
+    border-radius: 50%;
+}
+@media screen and (min-device-width: 1920px) and (min-device-height: 1000px){
+	body {
+		padding-bottom: 18vh;
+    }
+    
+}
+@media screen and (device-width: 1280px) {
+
+}
+@media screen and (device-width: 1366px) {
+	body {
+		padding-bottom: 18vh;
+	}
+}
+@media screen and (min-device-width: 360px) and (max-device-width: 700px) {
+	body {
+		padding-bottom: 18vh;
+    }
+    
+}
+@media screen and (device-width: 320px) {
+	body {
+		padding-bottom: 20vh;
+	}
+}
+@media screen and (device-width: 1024px) and (device-height: 1366px) {
+	body {
+		padding-bottom: 18vh;
+	}
+}
+@media screen and (min-device-width: 700px) and (max-device-width: 800px) {
+	body {
+		padding-bottom: 300px;
+	}
+}
+@media screen and (device-width: 1024px) {
+	body {
+		padding-bottom: 140px;
+	}
+}
+@media screen and (device-width: 1440px) {
+	body {
+		padding-bottom: 140px;
+	}
+}

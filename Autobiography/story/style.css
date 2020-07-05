@@ -1,0 +1,76 @@
+body {
+	padding-top: 19vh;
+	padding-bottom: 19vh;
+	height: 100%;
+	background-color: #E1E0E0;
+}
+.block {
+	display: block;
+	position: relative;
+	height: 100%;
+	left: 50%;
+}
+div.content {
+	display: table;
+	height: 100%;
+	width: 100%;
+	 
+}
+div.content > .row {
+	display: table-row;
+	height: 20%;
+	border-left: 1px;
+}
+div.content > .row > .cell {
+	display: table-cell;
+	width: 33.33%;
+	border-left: 1px;
+	text-align: center;
+}
+body {
+	width: 80vw;
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+p {
+	line-height: 1.5;
+}
+button {
+	width: 100%;
+	display: block;
+	margin: auto;
+	font: 2em TimesNewRoman ;
+	color: #1d1e20;
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+}
+.transparent {
+	color: transparent;
+}
+@media screen and (min-device-width: 1920px) and (min-device-height: 1000px){
+	
+}
+@media screen and (device-width: 1280px) {
+	
+}
+@media screen and (device-width: 1366px) {
+	
+}
+@media screen and (min-device-width: 360px) and (max-device-width: 700px) {
+	
+}
+@media screen and (device-width: 320px) {
+	
+}
+@media screen and (device-width: 1024px) and (device-height: 1366px) {
+	
+}
+@media screen and (min-device-width: 700px) and (max-device-width: 800px) {
+	
+}
+@media screen and (device-width: 1024px){
+	
+}
+@media screen and (device-width: 1440px) {
+	
+}

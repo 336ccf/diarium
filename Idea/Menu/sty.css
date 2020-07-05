@@ -1,0 +1,745 @@
+body {
+	height: 100%;
+	background-color: #E1E0E0;
+	color: #1D1E20;
+}
+div.content {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+div.content > .row {
+	display: table-row;
+	height: 20%;
+	border-left: 1px;
+}
+div.content > .row > .cell {
+	display: table-cell;
+	width: 33.33%;
+	border-left: 1px;
+	border-radius: 50px;
+	background-color: transparent;
+	vertical-align: middle;
+}
+div.content > .row > .cell > img{
+	display: block;
+	height: 300px;
+	margin: 0 auto;
+}
+p.title {
+	font-family: Simplexy;
+	font-size: 6em;
+}
+div.row-text {
+	margin-right: 6%;
+	margin-left: 6%;
+}
+p.text {
+	text-align: justify;
+	line-height: 1.8;
+	text-indent: 36px;
+	font-family: Times New Roman;
+	font-size: 1em;
+}
+p.start-text {
+	text-align: center;
+	text-decoration: underline;
+}
+p.text-end {
+	text-align: center;
+	font-size: 1.5em;
+}
+ul.right {
+	text-align: left;
+}
+img.logo {
+	height: 1em;
+}
+p.value {
+	text-align: center;
+	font-size: 1em;
+}
+img.button {
+	height: 7em;
+}
+div.content > .row > .cell:nth-child(2) {
+	display: table-cell;
+	width: 33.33%;
+	border-left: 1px;
+	border-radius: 50px;
+	background-color: transparent;
+	vertical-align: middle;
+	text-align: center;
+}
+p.date {
+	 text-align: center;
+}
+@media screen and (min-device-width: 1920px) and (min-device-height: 1000px){
+	body {
+		padding-top: 12%;
+		padding-bottom: 12%;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 12em;
+	}
+	div.row-text {
+		margin-right: 6%;
+		margin-left: 6%;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.8;
+		text-indent: 36px;
+		font-family: Times New Roman;
+		font-size: 1.5em;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: underline;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 1em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.1em;
+	}
+	img.button {
+		height: 7em;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+	p.pdf {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+}
+@media screen and (device-width: 1280px) {
+	body {
+		padding-top: 12%;
+		padding-bottom: 12%;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 8em;
+	}
+	div.row-text {
+		margin-right: 6%;
+		margin-left: 6%;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.8;
+		text-indent: 36px;
+		font-family: Times New Roman;
+		font-size: 1.5em;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: underline;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 1em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.1em;
+	}
+	img.button {
+		height: 7em;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+	p.pdf {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+}
+@media screen and (device-width: 1366px) {
+	body {
+		padding-top: 12vh;
+		padding-bottom: 18vh;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 12em;
+	}
+	div.row-text {
+		margin-right: 6%;
+		margin-left: 6%;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.8;
+		text-indent: 36px;
+		font-family: Times New Roman;
+		font-size: 1.5em;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: underline;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 1em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.1em;
+	}
+	img.button {
+		height: 7em;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+	p.pdf {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+}
+@media screen and (min-device-width: 360px) and (max-device-width: 700px) {
+	body {
+		padding-top: 12vh;
+		padding-bottom: 18vh;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 12em;
+	}
+	div.row-text {
+		margin-right: 6%;
+		margin-left: 6%;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.85;
+		text-indent: 3.1em;
+		font-family: Times New Roman;
+		font-size: 1.6em;
+		word-spacing: 3px;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: none;
+		font-size: 1.5em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 1.9em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.8em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 3em;
+	}
+	img.button {
+		height: 12em;
+	}
+	div.content > .row > .cell:first-child {
+		display: none;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	div.content > .row > .cell:nth-child(3) {
+		display: none;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+	p.pdf {
+		display: none;
+	}
+}
+@media screen and (device-width: 320px) {
+	body {
+		padding-top: 12vh;
+		padding-bottom: 18vh;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 12em;
+	}
+	div.row-text {
+		margin-right: 6%;
+		margin-left: 6%;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.85;
+		text-indent: 3.1em;
+		font-family: Times New Roman;
+		font-size: 3em;
+		word-spacing: 3px;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: none;
+		font-size: 2.4em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.4em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 1.9em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.4em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 3.8em;
+	}
+	img.button {
+		height: 12em;
+	}
+	div.content > .row > .cell:first-child {
+		display: none;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	div.content > .row > .cell:nth-child(3) {
+		display: none;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+	p.pdf {
+		display: none;
+	}
+}
+@media screen and (device-width: 1024px) and (device-height: 1366px) {
+	body {
+		padding-top: 12vh;
+		padding-bottom: 18vh;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 12em;
+	}
+	div.row-text {
+		margin-top: 3vh;
+		margin-right: 6%;
+		margin-left: 6%;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.8;
+		text-indent: 36px;
+		font-family: Times New Roman;
+		font-size: 1.5em;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: underline;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 1em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.1em;
+	}
+	img.button {
+		height: 7em;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1.2em;
+	}
+	p.pdf {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1.2em;
+	}
+}
+@media screen and (min-device-width: 700px) and (max-device-width: 800px) {
+	body {
+		padding-top: 12vh;
+		padding-bottom: 18vh;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 12em;
+	}
+	div.row-text {
+		margin-right: 6%;
+		margin-left: 6%;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.85;
+		text-indent: 3.1em;
+		font-family: Times New Roman;
+		font-size: 3em;
+		word-spacing: 3px;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: none;
+		font-size: 2.4em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.4em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 1.9em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.4em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 3.8em;
+	}
+	img.button {
+		height: 12em;
+	}
+	div.content > .row > .cell:first-child {
+		display: none;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	div.content > .row > .cell:nth-child(3) {
+		display: none;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1em;
+	}
+	p.pdf {
+		display: none;
+	}
+}
+@media screen and (device-width: 1024px) {
+	body {
+		padding-top: 12vh;
+		padding-bottom: 18vh;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 12em;
+	}
+	div.row-text {
+		margin-top: 3vh;
+		margin-right: 6vw;
+		margin-left: 6vw;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.8;
+		text-indent: 36px;
+		font-family: Times New Roman;
+		font-size: 1.5em;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: underline;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 1em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.1em;
+	}
+	img.button {
+		height: 7em;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1.2em;
+	}
+	p.pdf {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1.2em;
+	}
+}
+@media screen and (device-width: 1440px) {
+	body {
+		padding-top: 12vh;
+		padding-bottom: 18vh;
+	}
+	p.title {
+		font-family: Simplexy;
+		font-size: 10em;
+	}
+	div.row-text {
+		margin-top: 3vh;
+		margin-right: 6vw;
+		margin-left: 6vw;
+	}
+	p.text {
+		text-align: justify;
+		line-height: 1.8;
+		text-indent: 36px;
+		font-family: Times New Roman;
+		font-size: 1.5em;
+	}
+	p.start-text {
+		text-align: center;
+		text-decoration: underline;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.text-end {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+		color: #E10C0D;
+	}
+	ul.right {
+		text-align: left;
+	}
+	img.logo {
+		height: 0.9em;
+	}
+	p.value {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 1.5em;
+	}
+	p.number {
+		text-align: center;
+		line-height: 1.8;
+		font-size: 2.1em;
+	}
+	img.button {
+		height: 7em;
+	}
+	div.content > .row > .cell:nth-child(2) {
+		display: table-cell;
+		width: 33.33%;
+		border-left: 1px;
+		border-radius: 50px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: center;
+	}
+	p.date {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1.2em;
+	}
+	p.pdf {
+		text-align: center;
+		line-height: 1.8;
+		font-family: Times New Roman;
+		font-size: 1.2em;
+	}
+}

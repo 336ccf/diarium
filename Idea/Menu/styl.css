@@ -1,0 +1,106 @@
+@font-face{
+	font-family: Simplexy;
+  src: url(Simplex.ttf);
+}
+@font-face {
+	font-family: Code con;
+	src: url(Codecon.ttf); 
+}
+body {
+	height: 100%;
+	background-color: #E1E0E0;
+}
+.block {
+	display: block;
+	position: relative;
+	height: 100%;
+	left: 50%;
+}
+#redb{
+	color: #220C0D;
+}
+#blueb {
+	color: #121221;
+}
+#yellowb {
+	color: #222312;
+}
+#black {
+	color: #1D1E20;
+}
+#white {
+	color: #E1E0E0;
+}
+#red {
+	color: #E10C0D;
+}
+#yellow {
+	color: #E1E123;
+}
+#blue {
+	color: #366CE1;
+}
+div.content {
+	display: table;
+	height: 100%;
+	width: 100%;
+	border-collapse: collapse;
+}
+div.content > .row {
+	display: table-row;
+	height: 20%;
+	border-left: 1px;
+}
+div.content > .row > .cell {
+	display: table-cell;
+	width: 33.33%;
+	border-left: 1px;
+	border-radius: 50px;
+	background-color: transparent;
+
+}
+div.row > div.cell > figure {
+	text-align: center;
+}
+div.row > div.cell > figure > img {
+	height: 180px;
+}
+div.row > div.cell > figure > p.title {
+	text-align: center;
+	font-family: Simplexy;
+	color: #1D1E20;
+	font-size: 31pt;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+div.row > div.cell > figure > p.description {
+	text-align: center;
+	font-size: 18pt;
+}
+div.row> div.cell > figure > button {
+	height: 100%;
+	width: 180px;
+	display: block;
+	margin: 0 auto;
+	background-color: transparent; 
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 36px;
+	color: #1D1E20;
+	font-family: Times New Roman;
+	font-size: 18pt;
+	border: none;
+	box-shadow: 0px 1px 1vh 1px #1D1E20;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+div.row> div.cell > figure > button:hover {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #E10C0D; 
+	font-family: Times New Roman;
+	font-size: 18pt;
+	box-shadow: 0px 0px 5px 1px #1D1E20 inset;
+}
