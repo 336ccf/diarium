@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #e1e0e0;
+}
+header {
+    background-color: #ffffff;
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+footer {
+    background-color: #ffffff;
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+p {
+    background-color: transparent;
+    color: #222222;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.7vh;
+}
+.center {
+    height: 84vh;
+    width: 100%;
+    position: absolute;
+    margin-top: 8vh;
+}
+/* .message {
+    height: 16vh;
+    margin-bottom: 8vh;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: none;
+} */
+#chat1 {
+    width: 100%;
+    height: 25vh;
+}
+#chat2 {
+    width: 100%;
+    height: 25vh;
+}
+#chat3 {
+    width: 100%;
+    height: 25vh;
+}
+.avatar {
+    width: 8vh;
+    height: 100%;
+    background-color: #e1e0e0;
+}
+.message {
+    width: 61%;
+    height: 100%;
+    background-color: #e1e0e0;
+}
+#left {
+    float: left;
+}
+#right {
+    float: right;
+}
+.ava {
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    margin-top: 8vh;
+}
+#co{
+    background-image: url(../0.JPG);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+#an{
+    background-image: url(../annie.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+div#chat1 > div.message#right > p {
+padding-top: 10vh;
+text-align: right;
+}
+div#chat2 > div > p, div#chat3 > div > p {
+padding-top: 9vh;
+text-align: left;
+}
+</style>
+
+<body>
+<div class="center">
+    <div id="chat1">
+        <div class="avatar" id="right">
+            <div class="ava" id="an"></div>
+        </div>
+        <div class="message" id="right">
+            <p>1.2.3</p>
+        </div>
+    </div>
+    <div id="chat2">
+        <div class="avatar" id="left">
+            <div class="ava" id="co"></div>
+        </div>
+        <div class="message" id="left">
+            <p>Надеюсь, ты себя хорошо чувствуешь</p>
+        </div>
+    </div>
+    <div id="chat3">
+        <div class="avatar" id="left">
+            <div class="ava" id="co"></div>
+        </div>
+        <div class="message" id="left">
+            <p>Попытаюсь приехать первый</p>
+        </div>
+    </div>
+</div>
+<!-- <div class="message">
+
+</div> -->
+</body>
+<style>
+.column {
+    width: 33.33%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+}
+.icon {
+    width: 8vh;
+    height: 8vh;
+    background-color: #ffffff;
+}
+#message {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+</style>
+<header>
+<p style="text-align: center; padding-top:2vh;">anastasia_morozova</p>
+<img class="icon" id="message" src="../svg/1c.svg" alt="message">
+</header>
+<footer>
+<figure class="column">
+    <a href="../home/index.html"><img class="icon" src="../svg/4.svg" alt="home"></a>
+</figure>
+<figure class="column">
+    <a href="../add/index.html"><img class="icon" src="../svg/5.svg" alt="add"></a>
+</figure>
+<figure class="column">
+    <a href="../index.html"><img class="icon" src="../svg/6.svg" alt="profile"></a>
+</figure>
+</footer>
+</html>

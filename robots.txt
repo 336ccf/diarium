@@ -1,0 +1,39 @@
+﻿# Яндекс
+User-agent: Yandex
+Disallow: /2love/*
+Disallow: /love/*
+Disallow: /shop
+Disallow: /social
+Disallow: /ICO
+Disallow: /menu
+Disallow: /SVG
+Disallow: /document
+Disallow: /interest
+Disallow: /video
+Sitemap: https://diarium.info/sitemap.xml
+Crawl-delay: 16
+
+# Google
+User-agent: Googlebot
+Disallow: /2love/*
+Disallow: /love/*
+Disallow: /shop
+Disallow: /social
+Disallow: /ICO
+Disallow: /menu
+Disallow: /SVG
+Disallow: /document
+Disallow: /interest
+Disallow: /video
+Sitemap: https://diarium.info/sitemap.xml
+Crawl-delay: 16
+
+# Allies refer
+User-agent: *
+Disallow: /2love/*
+Disallow: /love/*
+Disallow: /shop
+Disallow: /social
+Disallow: /am
+Sitemap: https://diarium.info/sitemap.xml
+Crawl-delay: 16

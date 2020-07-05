@@ -286,7 +286,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	.buttol {
 		position: fixed;
 		right: 30px;
-		top: 30px;
+		top: 20px;
 	}
 	.lmb:hover {
 		box-shadow: 0 8px 16px 0 rgba(250,250,250,250), 0 6px 20px 0 rgba(250,250,250,250);
@@ -315,7 +315,8 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		border-radius: 60px;
 	}
 	div.op-c{
-		width: 100% 
+		width: 100%
+		 
 	}
 	div.op-c > .column{
 		display: table-cell;
@@ -331,10 +332,12 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		font-family: Simplexy;
 		display: table;
 		font-size: 36pt;
-		width: 100% 
+		width: 100%
+		 
 	}
 	div.dd-c {
 		width: 100%
+		 
 	}
 	div.dd-c > .column {
 		display: table-cell;
@@ -354,7 +357,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	div.column > p {
 		font-size: 123pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
     	padding: 10px;
 	}
@@ -365,12 +368,13 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		height: 300px;
 		width: 300px;
 		padding-top: 51.6px;
+
 	}
 }
 @media screen and (device-width: 1280px) {
 	.hl1 {
 		height: 24px;
-		top: 85px;
+		top: 65px;
 	}
 	.hc1 {
 		height: 88px;
@@ -427,7 +431,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	.buttol {
 		position: fixed;
 		right: 30px;
-		top: 33px;
+		top: 20px;
 	}
 	.omb:hover {
 		width: 63px;
@@ -443,7 +447,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	.dd-c {
 		top: 120px;
 		min-width:1000px;
-		height: 300px;
+		height: 500px;
 		right: -440px;
 		overflow: auto;
 		z-index: 1;
@@ -460,6 +464,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	}
 	div.op-c{
 		width: 100%
+		 
 	}
 	div.op-c > .column{
 		display: table-cell;
@@ -474,11 +479,13 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		text-align: center;
 		font-family: Simplexy;
 		display: table;
-		font-size: 25pt;
+		font-size: 20pt;
 		width: 100%
+		 
 	}
 	div.dd-c {
 		width: 100%
+		 
 	}
 	div.dd-c > .column {
 		display: table-cell;
@@ -496,11 +503,11 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		background-color: #366CE1;
 	}
 	div.column > p {
-		font-size: 120pt;
+		font-size: 50pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
-    	padding: 10px;
+    	padding: 6px;
 	}
 	div.column > a {
 		font-size: 30pt;
@@ -604,6 +611,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	}
 	div.op-c{
 		width: 100%
+		 
 	}
 	div.op-c > .column{
 		display: table-cell;
@@ -618,8 +626,9 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		text-align: center;
 		font-family: Simplexy;
 		display: table;
-		font-size: 24pt;
+		font-size: 22pt;
 		width: 100%
+		 
 	}
 	div.dd-c {
 		width: 100%
@@ -643,9 +652,9 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	div.column > p {
 		font-size: 80pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
-    	padding: 12px;
+    	padding: 8px;
 	}
 	div.column > a {
 		font-size: 30pt;
@@ -790,7 +799,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	div.column > p {
 		font-size: 100pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
     	padding: 24px;
 	}
@@ -815,10 +824,10 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		border-radius: 50px;
 	}
 	.hc2 {
-		height: 190px;
+		height: 180px;
 		width: 1200px; 
 		border-radius: 50px;
-		bottom: -3px;
+		bottom: 1px;
 	}
 	.hc3 {
 		height: 100px;
@@ -835,7 +844,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	.hc5 {
 		height: 180px;
 		width: 180px;
-		bottom: 1px; 
+		bottom: -5px; 
 		border-radius: 100px;
 	}
 	.lmb {
@@ -942,7 +951,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	div.column > p {
 		font-size: 100pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
     	padding: 24px;
 	}
@@ -967,7 +976,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		border-radius: 50px;
 	}
 	.hc2 {
-		height: 180px;	
+		height: 180px;
 		width: 1200px; 
 		border-radius: 50px;
 		bottom: 1px;
@@ -1098,7 +1107,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	div.column > p {
 		font-size: 100pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
     	padding: 14px;
 	}
@@ -1219,7 +1228,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		text-align: center;
 		font-family: Simplexy;
 		display: table;
-		font-size: 36pt;
+		font-size: 23pt;
 		width: 100%
 		 
 	}
@@ -1243,11 +1252,11 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 		background-color: #366CE1;
 	}
 	div.column > p {
-		font-size: 100pt;
+		font-size: 80pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
-    	padding: 21px;
+    	padding: 14px;
 	}
 	div.column > a {
 		font-size: 24pt;
@@ -1318,7 +1327,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	.buttol {
 		position: fixed;
 		right: 30px;
-		top: 30px;
+		top: 20px;
 	}
 	.omb:hover {
 		width: 63px;
@@ -1392,9 +1401,9 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	div.column > p {
 		font-size: 80pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
-    	padding: 12px;
+    	padding: 8px;
 	}
 	div.column > a {
 		font-size: 30pt;
@@ -1465,7 +1474,7 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	.buttol {
 		position: fixed;
 		right: 30px;
-		top: 30px;
+		top: 20px;
 	}
 	.omb:hover {
 		width: 63px;
@@ -1539,9 +1548,9 @@ option::-webkit-selection {background: #ccc; color:#fff;}
 	div.column > p {
 		font-size: 80pt;
 	}
-    div.dd-c > div.column > li{
+	li {
     	list-style-type: none;
-    	padding: 12px;
+    	padding: 8px;
 	}
 	div.column > a {
 		font-size: 30pt;

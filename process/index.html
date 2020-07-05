@@ -8,6 +8,16 @@
    <meta charset="UTF-8">
    <meta name="keywords" content="diarium, future, projects, интернет-обменник, платформа для коммуникаций, софт для составления статистик, информационный портал, образовательная игра, проекты, в процессе, сейчас, портрет, искусствоб креативное агентство, маркетинговые компании, раздача листовок,imagine service,">
    <title>Проекты в процессе</title>
+   <script type="text/javascript" src="../value.js"></script>
+   <script type="text/javascript" src="script.js"></script>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138677726-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+ 		function gtag(){dataLayer.push(arguments);}
+ 		gtag('js', new Date());
+
+ 		gtag('config', 'UA-138677726-1');
+	</script>
 </head>
 <style>
 * {
@@ -182,41 +192,43 @@ div.block > figure > img {
 </header>
 <body>
    <div class="block">
-      <figure  onclick="location.href='diarium/'">
+      <figure  onclick="location.href='diarium/'" id="diarium">
          <figcaption>Diarium.info</figcaption>
          <img src="https://diarium.info/menu/logo.png" alt="diarium">
          <figcaption>Информационный портал</figcaption>
-         <figcaption>0.1 version - готово на 21%</figcaption>
-         <progress value="21" max="100" title="Release 0.1" style="border-radius:10px; margin-top:3%;"></progress>
+         <figcaption class="version"></figcaption>
+         <progress value="" max="100" title="Release 0.1" style="border-radius:10px; margin-top:3%;"></progress>
          <br>
          <button style="margin-top:10%;">Подробнее</button>
       </figure>
    </div>
    <div class="block">
-      <figure  onclick="location.href='paint/'">
+      <figure  onclick="location.href='paint/'" id="portrait">
          <figcaption>Портрет</figcaption>
          <img src="../SVG/paint.svg">
          <figcaption>Моё любимое искусство</figcaption>
+         <figcaption class="version"></figcaption>
          <br>
          <button>Подробнее</button>
       </figure>
    </div>
    <div class="block">
-      <figure  onclick="location.href='promo/'">
+      <figure  onclick="location.href='promo/'" id="promotion">
          <figcaption>Маркетинговые компании</figcaption>
          <img src="../SVG/promo.svg">
          <figcaption>Раздача листовок</figcaption>
+         <figcaption class="version"></figcaption>
          <br>
          <button>Подробнее</button>
       </figure>
    </div>
    <div class="block">
-         <figure onclick="location.href='https://diarium.info/service/'">
+         <figure onclick="location.href='https://diarium.info/service/'" id="agency">
             <figcaption>Креативное агентство</figcaption>
             <img src="../SVG/imagine.svg">
             <figcaption>Imagine service</figcaption>
-            <figcaption>Alpha version - готово на 20%</figcaption>
-            <progress value="20" max="100" title="Alpha version" style="border-radius:10px; margin-top:3%;"></progress>
+            <figcaption class="version"></figcaption>
+            <progress value="" max="100" title="Alpha version" style="border-radius:10px; margin-top:3%;"></progress>
             <br>
             <button style="margin-top:10%; cursor: pointer;">Подробнее</button>
          </figure>
@@ -224,39 +236,40 @@ div.block > figure > img {
          <a href="mailto:imagineunity@yandex.ru">Написать: imagineunity@yandex.ru</a>
       </div>
    <div class="block">
-      <figure>
+      <figure id="shop" onclick="location.href='https://diarium.info/shop'">
          <figcaption>Интернет-обменник</figcaption>
          <img src="../SVG/barter.svg">
-         <figcaption>В процессе - 3% alpha version</figcaption>
-         <progress value="3" max="100" title="Alpha version" style="border-radius:10px; margin-top:10%;"></progress>
+         <figcaption class="version"></figcaption>
+         <progress value="" max="100" title="Alpha version" style="border-radius:10px; margin-top:10%;"></progress>
+         <button>Подробнее</button>
       </figure>
    </div>
    <div class="block">
-      <figure>
+      <figure id="game">
          <figcaption>Образовательная игра</figcaption>
          <img src="../SVG/study.svg">
-         <figcaption>В процессе - concept stage</figcaption>
-         <progress value="98" max="100" title="Concept stage" style="border-radius:10px; margin-top:10%;"></progress>
+         <figcaption class="version"></figcaption>
+         <progress value="" max="100" title="Concept stage" style="border-radius:10px; margin-top:10%;"></progress>
       </figure>
    </div>
    <div class="block">
-      <figure>
+      <figure id="statistic">
          <figcaption>Софт для составления статистик</figcaption>
          <img src="../SVG/soft.svg">
-         <figcaption>В процессе - 5% alpha version</figcaption>
-         <progress value="5" max="100" title="Alpha version" style="border-radius:10px; margin-top:10%;"></progress>
+         <figcaption class="version"></figcaption>
+         <progress value="" max="100" title="Alpha version" style="border-radius:10px; margin-top:10%;"></progress>
       </figure>
    </div>
    <div class="block">
-      <figure>
+      <figure id="social" onclick="location.href='https://diarium.info/social'">
          <figcaption>Платформа для коммуникации</figcaption>
          <img src="../SVG/communication.svg">
-         <figcaption>В процессе - 1% alpha version</figcaption>
-         <progress value="1" max="100" title="Alpha version" style="border-radius:10px; margin-top:10%;"></progress>
+         <figcaption class="version"></figcaption>
+         <progress value="" max="100" title="Alpha version" style="border-radius:10px; margin-top:10%;"></progress>
+         <button>Подробнее</button>
       </figure>
    </div>
 </body>
 <footer>
-
 </footer>
 </html>

@@ -1,7 +1,7 @@
 <?php
 
-if(isset($_POST['submit'])){
-$to = "constantinius@diarium.info";
+
+$to = "cudriavtsec@yandex.ru";
 $to2 = "art.omm@yandex.ru";
 $from = "no-reply@diarium.info";
 $name = $_POST['name'];
@@ -29,7 +29,6 @@ mail($to2,$subject2,$message2,$headers2);
 echo "Message send. Thank You," . $name . "! I am, Constantinius, personally contact with You";
 echo "<br><a href='https://diarium.info'>Back to site</a>";
 
-}
 
 ?>
 

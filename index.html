@@ -7,6 +7,7 @@
 	<title></title>
 	<meta name="keywords" content="Earth, Ecology, Changes, Ars, Humanity, Richest, Person, Business">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="value.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="onload.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138677726-1"></script>
@@ -21,6 +22,7 @@
 <style>
 	* {
 		color: #1c1d20;
+		margin: 0;
 	}
 div.col {
 	top: 0;
@@ -54,6 +56,13 @@ div.body {
 	z-index: -99999;
 }
 div#row{
+	height: 33.33%;
+	width: 100%;
+	position: relative;
+	background-color: transparent;
+}
+div#row:nth-child(3){
+	margin-top: 7vh;
 	height: 33.33%;
 	width: 100%;
 	position: relative;
@@ -100,7 +109,7 @@ button {
 		font-size: 1.7vh;
 	}
 	button {
-		font-size: 1.9vh;
+		font-size: 1.5vh;
 		width: 90%;
 		border-radius: 50px;
 		background-color: #e1e0e0;
@@ -130,51 +139,72 @@ button {
 </div>
 <div class="body">
 		<div id="row">
-			<div class="block"></div>
 			<div class="block">
-				<figure onclick="location.href='promotion/'">
+				<figure onclick="location.href='social/'" style="cursor: pointer;">
+					<img src="SVG/communication.svg" alt="social_network" title="Сеть">
+					<figcaption>Прототип</figcaption>
+					<figcaption>Платформа для коммуникаций</figcaption>
+					<button onclick="location.href='social/'">Посмотреть</button>
+				</figure>
+			</div>
+			<div class="block">
+				<figure onclick="location.href='promotion/'" style="cursor: pointer;">
 					<img src="SVG/bant.svg" alt="promo" title="Сайт за копейку">
 					<figcaption>Акция</figcaption>
 					<figcaption>"Сайт за копейку"</figcaption>
-					<button>Заказать</button>
+					<button onclick="location.href='promotion/'">Заказать</button>
 				</figure>
 			</div>
-			<div class="block"></div>
+			<div class="block">
+				<figure onclick="location.href='shop/'" style="cursor: pointer;">
+					<img src="SVG/barter.svg" alt="shop" title="Магазин">
+					<figcaption>Прототип</figcaption>
+					<figcaption>Интернет магазин</figcaption>
+					<button onclick="location.href='shop/'">Посмотреть</button>
+				</figure>
+			</div>
 		</div>
 		<div id="row">
 			<div class="block">
-				<figure onclick="location.href='event/'">
+				<figure onclick="location.href='service/'" style="cursor: pointer;">
+					<img src="SVG/imagine.svg" alt="Imagine_">
+					<figcaption>Imagine_</figcaption>
+					<figcaption>Агентство по программированию</figcaption>
+					<button onclick="location.href='service/'" style="cursor: pointer;">Подробнее...</button>
+				</figure>
+				<!-- <figure onclick="location.href='event/'" style="cursor: pointer;">
 					<img src="SVG/event.svg" alt="promo" title="Сайт за копейку">
 					<figcaption>Мероприятия</figcaption>
 					<figcaption>Проведенные мероприятия</figcaption>
-					<button>Подробнее...</button>
-				</figure>
+					<button onclick="location.href='event/'" style="cursor: pointer;">Подробнее...</button>
+				</figure> -->
 			</div>
 			<div class="block">
-				<figure onclick="location.href='process/'">
+				<figure onclick="location.href='process/'" style="cursor: pointer;">
 					<img src="SVG/project.svg" alt="promo" title="Сайт за копейку">
 					<figcaption>Проекты</figcaption>
 					<figcaption>Запущенные проекты</figcaption>
-					<button>Подробнее...</button>
+					
 				</figure>
+				<button onclick="location.href='process/'" style="cursor: pointer;">Подробнее...</button>
 			</div>
 			<div class="block">
-				<figure onclick="location.href='transit/'">
+				<!-- <figure onclick="location.href='transit/'" style="cursor: pointer;">
 					<img src="SVG/transit.svg" alt="promo" title="Сайт за копейку">
 					<figcaption>Транзакции</figcaption>
 					<figcaption>Финансовая отченость</figcaption>
-					<button>Подробнее...</button>
-				</figure>
+					<button onclick="location.href='transit/'" style="cursor: pointer;">Подробнее...</button>
+				</figure> -->
 			</div>
 		</div>
 		<div id="row">
 			<div class="bloc"></div>
-			<div class="blo" onclick="location.href='profileru/'">
+			<div class="blo">
 				<p style="font-size: 2vh">
 					Создатель данного проекта - Константин Кудрявцев 
 				</p>
 				<img src="profile/1.JPG" alt="profile_image" style="border-radius:100%; height: 51.2%;">
-				<button>Подробнее...</button>
+				<button onclick="location.href='profileru/'" style="cursor: pointer;">Подробнее...</button>
 			</div>
 			<div class="bloc"></div>
 		</div>

@@ -29,23 +29,20 @@
 </head>
 <style>
 * {
-   text-decoration: none;
-   color: black;
    margin: 0;
    padding: 0;
 }
 html {
-   background-color: black;
    margin: 0;
    padding-left: 25px;
    padding-right: 25px;
 }
 .private {
    overflow: auto;
-   width: 80vw;
-   height: 30vh;
+   width: 77vw;
+   height: 23vh;
    margin-left: 10vw;
-   margin-top: 10vh;
+   margin-top: 2vh;
    background-color: white;
    display: block;
 
@@ -56,81 +53,116 @@ font-size: 14pt;
 float: left;
 color: transparent;
 }
-div.buttons {
-   width: 80vw;
-   margin-left:10vw;
-   margin-top:5vh;
-   display: block;
-   text-align: center;
-   font-size: 2vh;
-}
-div.agree {
-   color: black; 
-   background-color: white; 
-   width: 39vw; 
-   float: left;
-   cursor: pointer;
-   border-radius: 10px;
-}
-div.disagree {
-   color: black; 
-   background-color: white; 
-   width: 39vw; 
-   float:right;
-   cursor: not-allowed;
-   border-radius: 10px;
-}
-.action {
-color: aqua;
-font-size: 16pt;
-float: left;
-color: transparent;
-}
-div.site {
-color: white;
-font-size: 15pt;
-float: left;
-color: transparent;
-}
 div.title {
    width: 100%;
-   height: 35vh;
+   height: auto;
    text-align: center;
 }
 div.title > p {
-   color: white;
+   color: black;
    font-size: 3vh;
 }
-.cheap {
-font-size: 12pt;
-float: left;
-color: thistle;
-color: transparent;
+div.image {
+   width: 100%;
+   height: 30vh;
+   margin-top: 5vh;
+}
+.lang {
+   height: 20vh;
+   display: block;
+   margin: auto;
+}
+#lang {
+   width: 100%; 
+   height: auto; 
+   padding-top: 5vh;
+}
+div.fixed {
+   position: fixed;
+   left: 1vw;
+   bottom: 1vh;
+}
+@media screen and (min-width:140px) and (max-width:699px){
+   #email {
+      height: 5vh;
+      width:50%;
+      font-size: 1em;
+   }
+   #submit {
+      height: 5vh;
+      width:30%;
+      font-size: 1em;
+   }
+   form{
+      font-size: 2em;
+      padding-top: 2vh;
+   }
+   div.image {
+      margin-top:1vh;
+   }
+   #lang {
+   padding-top: 2vh;
+   display: none;
+}
+   div.fixed > a > p {
+      font-size: 3em;
+   }
+   #promosend {
+      padding-top:6vh;
+   }
+}
+@media screen and (min-width:700px) and (max-width:1099px){
+   #email, #submit {
+      height: 5vh;
+      width:50%;
+      font-size: 1em;
+   }
+   #submit {
+      height: 5vh;
+      width:30%;
+      font-size: 1em;
+   }
+   form{
+      font-size: 2em;
+      padding-top: 2vh;
+   }
+   div.image{
+      margin-top:1vh;
+   }
+   #lang {
+   padding-top: 1.5vh;
+   display: none;
+}
+   div.fixed > a > p {
+      font-size: 3em;
+   }
+   #promosend {
+      padding-top:6vh;
+   }
 }
 </style>
 <header>
-
+   <div class="image">
+      <img class="landing" src="1.png" style="height: 80%; display: block; margin: 0 auto;">
+   </div>
 </header>
 <body>
 <div class="title">
-   <p style="padding-top: 10vh;">
-   Данная акция предоставляет создания сайта за 1 копейку <sup style="color: white;">1</sup>
-   </p>
-   <br><br><br>
-   <p style="font-size: 2vh;">
-      <sup style="color: white;">1</sup> - копейка является фактической стоимостью, но вы можете дать чаевые.<br>   
-      <sup style="color: white;">1</sup> - в акцию входят только одностраничные сайты написанные на коде.<br>
-         
-   
+   <p style="padding-top: 5vh;">
+   Услуга "Создание сайта за 1 копейку"
    </p>
 </div>
 <div class="private">
-   <p style="margin-top: 3vh; margin-left: 2vw; margin-right: 2vw;margin-bottom:3vh;">
-         1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ<br>
+   <p style="width: 100%;">
+      0. Описание акции<br><br>
+      0.1 Данная акция предоставляет исключительно одностраничник написанный на языке программирования HyperText Markup Language 4-5, Cascading Style Sheets, JavaScript, JavaScript Object Notation, Hypertext Preprocessor.<br><br>
+      0.2 Программы для создания дизайна Adobe Photoshop, Adobe InDesign, AdobeIllustrator, AdobeLightroom; CorelDraw.<br> <br>
+      0.3 Данная акция создает исключительно 1 страницу.   <br><br>
+      1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ<br>
 <br>
          1.1 В настоящей Политике конфиденциальности используются следующие термины:<br>
          <br>
-         1.1.1. «Администрация сайта Интернет-магазина (далее – Администрация сайта) » – уполномоченные сотрудники на управления сайтом, действующие от имени Название организации, которые организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.<br>
+         1.1.1. «Администрация сайта diarium.info » – уполномоченные сотрудники на управления сайтом, действующие от имени diarium.info, которые организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.<br>
          <br>
          1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).<br>
          <br>
@@ -198,7 +230,7 @@ color: transparent;
          5.2 Данный сайт не имеет создателя.<br>
          5.3 Данный сайт не является личным делом.<br>
          5.4 Данный сайт не является подконтрольным.<br>
-         6.1 Лица, выполняющие заказы никак не связанны с сайтом и его правообладателем.<br>
+         6.1 Заказчик должен выплатить чаевые, работнику выполняющему заказ, размер чаевых устанавливается произвольно заказчиком.<br>
          6.2 Работники сайта не являются лицами выполняющими заказ.<br>
          6.3 Работники, которые с Вами связались работают по этой документации.<br>
          6.4 Работники, имеют право последнего решения по заказу.<br>
@@ -218,7 +250,7 @@ color: transparent;
          6.18 Работники, не имеют пола или возраста.<br>
          6.19 Работники, не имеют права работать после завершения заказа. <br>
          6.20 Работники, являются первостепенным звеном в заказе.<br>
-         6.21 Работники, имеют право быть искуственным интелектом или алгоритмом.<br>
+         6.21 Заказ может быть выполнен алгоритмом.<br>
          7.1 Данные хранящиеся на сайте являются конфиденциальными.<br>
          7.2 Данные хранящиеся на сайте могут быть переданны только после разрешения от Constantinius.<br>
          7.3 Данные хранящиеся на сайте после их бесконтрольного использования могут быть использованны сайтом.<br>
@@ -258,12 +290,25 @@ color: transparent;
          8.16 Заказчик несет ответственность за нарушение любого из 8.1-8.15 пунктов.<br>
    </p>
 </div>
-<div class="buttons">
-<div class="agree" onclick="location.href='https://diarium.info/promotion/send/'">Согласен</div>
-<div class="disagree">Не согласен</div>
+<div style="text-align: center;" id="promosend">
+   <p >Отправляя сообщение Вы соглашаетесь с уставом выполнения данной акции.</p>
+   <form action="subscribe.php" method="post">
+		E-mail: <input type="email" name="email" required id="email" size="39">
+		<input type="submit" name="submit" value="Сделать заказ" id="submit">
+	</form>	
 </div>
 </body>
+<div id="lang">
+   <img src="../SVG/html_js_css.svg" alt="html_js_css" title="HTML,JS,CSS" class="lang">
+   <!-- <img src="../SVG/php.svg" alt="" title="" class="lang">
+   <img src="../SVG/mysql.svg" alt="" title="" class="lang">
+   <img src="../SVG/.net.svg" alt="" title="" class="lang"> -->
+</div>
 <footer>
-   <a href="https://diarium.info/promotion/order/"></a>
+   <div class="fixed">
+      <a href="https://diarium.info/service/ru/site/">
+         <p> Узнать подробности предоставления услуг</p>
+      </a>
+   </div>
 </footer>
 </html>

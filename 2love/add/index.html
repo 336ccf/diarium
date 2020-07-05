@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #e1e0e0;
+}
+header {
+    background-color: #ffffff;
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+footer {
+    background-color: #ffffff;
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+p {
+    background-color: transparent;
+    color: #222222;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.7vh;
+}
+form {
+    margin-top: 27vh;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    text-align: center;
+}
+input[type="file"]{
+    height: 38vh;
+    width: 100%;
+    border: 1px solid #222222;
+    border-radius: 1vh;
+    font-size: 0.01pt;
+color: transparent;
+    background-image: url(../svg/5.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 62%;
+    outline: unset;
+}
+button{
+    font-size: 3.8vh;
+    border-radius: 2vh;
+    padding: 1.7vh;
+    width: 100%;
+    margin-top: 1vh;
+}
+</style>
+
+<body>
+<form action="functions.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="upload"><br>
+    <button>Загрузить</button>
+</form>
+</body>
+<style>
+.column {
+    width: 33.33%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+}
+.icon {
+    width: 8vh;
+    height: 8vh;
+    background-color: #ffffff;
+}
+#message {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+</style>
+<header>
+<p style="text-align: center; padding-top:2vh;">anastasia_morozova</p>
+<a href="../send/index.html"><img class="icon" id="message" src="../svg/1.svg" alt="message"></a>
+</header>
+<footer>
+<figure class="column">
+    <a href="../home/index.html"><img class="icon" src="../svg/4.svg" alt="home"></a>
+</figure>
+<figure class="column">
+    <img class="icon" src="../svg/5c.svg" alt="add">
+</figure>
+<figure class="column">
+    <a href="../index.html"><img class="icon" src="../svg/6.svg" alt="profile"></a>
+</figure>
+</footer>
+</html>

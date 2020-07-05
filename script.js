@@ -1,21 +1,6 @@
-let m = 747, dol = 63.479; 
-let projectprogress = 21;
-let nonwork = 1490;
-
-let programming = 37;
-let design = 23;
-let management = 40;
-
-let tm = 100;
-
-let plus = 1500;
-let minus = 730;
-
-let version = 0.1;
-
 let mon = (m / dol).toFixed(2);
 function money() {
-  document.getElementById("money").innerHTML = m+'&#8381;';
+  document.getElementById("money").innerHTML = mon+'$';
   var score = (mon-tm);
   document.querySelector('.progress').style.width = tm*3 + 'px';
   document.querySelector('.progress').style.height = tm*3 + 'px';

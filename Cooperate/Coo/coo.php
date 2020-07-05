@@ -30,7 +30,7 @@ $mysqli->close();
 }
 
 if(isset($_POST['submit'])){
-    $to = "constantinius@diarium.info";
+    $to = "cudriavtsec@yandex.ru";
     $to2 = "art.omm@yandex.ru";
     $from = "no-reply@diarium.info";
     $name = htmlspecialchars($name);

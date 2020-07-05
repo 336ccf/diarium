@@ -1,4 +1,4 @@
-* {
+s* {
 	margin: 0;
 	padding: 0;
 }
@@ -85,8 +85,8 @@ html {
 .money {
 	position: fixed;
 	right: 8%;
-	top: 28%;
-	font-size: 18pt;
+	top: 37%;
+	font-size: 25pt;
 	font-family: code con;
 	text-align: center;
 }
@@ -304,7 +304,7 @@ body {
 @media screen and (device-width: 1280px) {
 	.hl1 {
 		height: 24px;
-		top: 85px;
+		top: 65px;
 	}
 	.hc1 {
 		height: 88px;
@@ -409,7 +409,7 @@ body {
 		text-align: center;
 		font-family: Simplexy;
 		display: table;
-		font-size: 25pt;
+		font-size: 20pt;
 		width: 100%
 		 
 	}
@@ -433,11 +433,11 @@ body {
 		background-color: #366CE1;
 	}
 	div.column > p {
-		font-size: 120pt;
+		font-size: 50pt;
 	}
 	li {
     	list-style-type: none;
-    	padding: 10px;
+    	padding: 6px;
 	}
 	div.column > a {
 		font-size: 30pt;
@@ -556,7 +556,7 @@ body {
 		text-align: center;
 		font-family: Simplexy;
 		display: table;
-		font-size: 24pt;
+		font-size: 22pt;
 		width: 100%
 		 
 	}
@@ -662,8 +662,8 @@ body {
 		display: none;
 	}
 	.money {
-		font-size: 41pt;
-		transform: translate(-10px, -16px);
+		font-size: 30pt;
+		transform: translate(-10px, -20px);
 	}
 	.time {
 		font-size: 23pt;
@@ -705,7 +705,6 @@ body {
 		display: table;
 		font-size: 36pt;
 		width: 100%
-		 
 	}
 	div.dd-c {
 		width: 100%
@@ -727,14 +726,14 @@ body {
 		background-color: #366CE1;
 	}
 	div.column > p {
-		font-size: 100pt;
+		font-size: 80pt;
 	}
 	li {
     	list-style-type: none;
-    	padding: 24px;
+    	padding: 20px;
 	}
 	div.column > a {
-		font-size: 24pt;
+		font-size: 32pt;
 	}	
 	div.column > img {
 		height: 180px;
@@ -815,7 +814,7 @@ body {
 	}
 	.money {
 		font-size: 41pt;
-		transform: translate(-10px, -16px);
+		transform: translate(-10px, -36px);
 	}
 	.time {
 		font-size: 23pt;
@@ -855,7 +854,7 @@ body {
 		text-align: center;
 		font-family: Simplexy;
 		display: table;
-		font-size: 36pt;
+		font-size: 30pt;
 		width: 100%
 		 
 	}
@@ -883,7 +882,7 @@ body {
 	}
 	li {
     	list-style-type: none;
-    	padding: 24px;
+    	padding: 19px;
 	}
 	div.column > a {
 		font-size: 24pt;
@@ -1158,7 +1157,7 @@ body {
 		text-align: center;
 		font-family: Simplexy;
 		display: table;
-		font-size: 36pt;
+		font-size: 23pt;
 		width: 100%
 		 
 	}
@@ -1182,7 +1181,7 @@ body {
 		background-color: #366CE1;
 	}
 	div.column > p {
-		font-size: 100pt;
+		font-size: 80pt;
 	}
 	li {
     	list-style-type: none;
