@@ -4,7 +4,7 @@ Project Diarium.info
 This is ended project that I want to share on this GIT account to show, what am I doing in my past times. I am not advanced or professional programmer. But actually I love it and want to be better in future. 
 For being honest I need to embeed moments in time when I am dong all of this versions. 
 
-Start this project: 04.2019
+Start of this project: 04.2019
 
 First ALPHA version: 08.2019
 Second BETA version: 09.2019
