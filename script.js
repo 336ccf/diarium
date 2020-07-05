@@ -1,12 +1,28 @@
-let m = 47, dol = 65.20; 
-let projectprogress = 90;
-let nonwork = 4650;
+let m = 747, dol = 63.479; 
+let projectprogress = 21;
+let nonwork = 1490;
 
-let programming = 80;
-let design = 8;
-let management = 12;
+let programming = 37;
+let design = 23;
+let management = 40;
 
 let tm = 100;
+
+let plus = 1500;
+let minus = 730;
+
+let version = 0.1;
+
+let mon = (m / dol).toFixed(2);
+function money() {
+  document.getElementById("money").innerHTML = m+'&#8381;';
+  var score = (mon-tm);
+  document.querySelector('.progress').style.width = tm*3 + 'px';
+  document.querySelector('.progress').style.height = tm*3 + 'px';
+  document.querySelector('.target').style.width = mon*3 + 'px';
+  document.querySelector('.target').style.height = mon*3 + 'px';
+  document.getElementById("percent").innerHTML = score+'$';
+}
 
 function requestFullScreen() {
 
@@ -28,6 +44,21 @@ function requestFullScreen() {
     }
   }
 }
+
+let january = 31
+let february = 29
+let march = 31
+let april = 30
+let may = 31
+let june = 30
+let july = 31
+let august = 31
+let september = 30
+let october = 31
+let november = 30
+let december = 31
+
+
 function clock() {
 var d = new Date();
 var month_num = d.getMonth()
@@ -81,16 +112,7 @@ window.onclick = function(event) {
 }
 }
 }
-let mon = (m / dol).toFixed(2);
-function money() {
-  document.getElementById("money").innerHTML = mon+'$';
-  var score = (mon-tm);
-  document.querySelector('.progress').style.width = tm*3 + 'px';
-  document.querySelector('.progress').style.height = tm*3 + 'px';
-  document.querySelector('.target').style.width = mon*3 + 'px';
-  document.querySelector('.target').style.height = mon*3 + 'px';
-  document.getElementById("percent").innerHTML = score+'$';
-}
+
 
 function getRealDisplay(elem) {
 	if (elem.currentStyle) {
@@ -162,10 +184,17 @@ function copyToClipboard() {
 	document.execCommand('copy')
 	document.body.removeChild(copytext)
 }
-
+let start_date = new Date(2019,9,7,19,05,03,33);
+let startBeta_date = new Date(2019,3,12,19,31,12,33);
 function nowproject() {
 	let now = new Date();  
-	let sec = (now-start_date)/1000;
+	let s = (now-start_date)/1000;
+	s = s.toFixed();
+	let m = s/60;
+	m = m.toFixed();
+	let h = m/60;
+	h = h.toFixed();
+	let sec = (start_date-startBeta_date)/1000;
 	sec = sec.toFixed();
 	let min = sec/60;
 	min = min.toFixed();
@@ -209,6 +238,7 @@ function nowproject() {
 	let spme=116;
 	let spse=386;
 	let spds=2.8;
+	let non=24910;
 	let target = (artt+mitt+jntt+jltt+agtt+sptt).toFixed();
 	let task = (arts+mits+jnts+jlts+agts+spts).toFixed();
 	let money_s = (arms+mims+jnms+jlms+agms+spms);
@@ -217,10 +247,14 @@ function nowproject() {
 	let disciplines = ((ards+mids+jnds+jlds+agds+spds)/6).toFixed(2); 
 	document.getElementById("ce").innerHTML = (task/target).toFixed(2) + ' efficiency coefficient';
 	document.getElementById("profit").innerHTML = ((money_e-money_s)/dol).toFixed(2) + '$ profit';
-	document.getElementById("work_time").innerHTML = ((min*(((24*60-sleep)*0.85)/(24*60)))-nonwork).toFixed() + ' work time in minutes';
-	document.getElementById("project_start").innerHTML = 'Project start date:' + start_date.getDate() + ' April ' + start_date.getFullYear();
+	document.getElementById("work_time").innerHTML = ((min*((24*60-sleep)/(24*60)))-non).toFixed() + ' work time in minutes';
 	document.getElementById('project_progress').value = projectprogress;
 	document.getElementById("prjct").innerHTML = 'Complete to ' + projectprogress + '%';
+
+	document.getElementById("project_start").innerHTML = 'Project version ' + version + ' start - ' + start_date.getDate() + ' October ' + start_date.getFullYear();
+	document.getElementById("efficiency").innerHTML = ((task/target)*1.12).toFixed(2) + ' efficiency coefficient';
+	document.getElementById("pro_mon").innerHTML = ((plus-minus)/dol).toFixed(2) + '$ profit';
+	document.getElementById("wor_tim").innerHTML = (((h)*0.62)*1.12).toFixed(2) + ' work time in hours';
 }
 
 function project(){
@@ -231,8 +265,9 @@ function project(){
 	document.getElementById('desig').innerHTML = design + '%';
 	document.getElementById('manage').innerHTML = management + '%';
 }
-let start_date = new Date(2019,4,12,19,31,12,33);
+
+console.log(startBeta_date + 'Beta version'); 
 console.log(start_date); 
 function settitle(){
-	document.title = projectprogress+'%';
+	document.title = projectprogress+'%'+'version'+version;
 }

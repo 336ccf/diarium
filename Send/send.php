@@ -35,6 +35,6 @@ echo "<br><a href='https://diarium.info'>Back to site</a>";
 
 
 <script language="JavaScript" type="text/javascript">
-function changeurl(){eval(self.location="https://diarium.info/Send/index.html");}
+function changeurl(){eval(self.location="https://diarium.info/Send/");}
 window.setTimeout("changeurl();",3000);
 </script>

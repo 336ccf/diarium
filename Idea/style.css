@@ -93,7 +93,7 @@ div#interactive> div.cell > a > img {
 	div#button> div.cell > button {
 		display: block;
 		height: 100px;
-		width: 120px;
+		width: 10vw;
 		margin: 0 auto;
 		background-color: #E10C0D; 
 		margin-top: 30px;

@@ -24,13 +24,11 @@ html {
 }
 .mlb {
 	position: fixed;
-	background-image: url(logo.png);
 	cursor: crosshair;
 	top: 3%;
  }
 .omb {
 	position: fixed;
-	background-image: url(doc.svg);
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);

@@ -2,15 +2,184 @@
 <head>
 	<meta name="author" content="suicvairduCConstantinius">
 	<meta name="description" content="Change world pre-realise">
-	<link rel="shortcut icon" href="https://diarium.info/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="menu/logo.png" type="image/png">
 	<meta charset="UTF-8">
 	<title></title>
 	<meta name="keywords" content="Earth, Ecology, Changes, Ars, Humanity, Richest, Person, Business">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="onload.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138677726-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+ 		function gtag(){dataLayer.push(arguments);}
+ 		gtag('js', new Date());
+
+ 		gtag('config', 'UA-138677726-1');
+	</script>
 </head>
-<header>
+<style>
+	* {
+		color: #1c1d20;
+	}
+div.col {
+	top: 0;
+	height: 19vh;
+	width: 100%;
+	background-color: transparent;
+	position: fixed;
+}
+div#open{
+	background-color: transparent;
+	margin: 0 auto;
+	display: block;
+	width: 7vh;
+	height: 7vh;
+	border-radius:50%;
+	margin-top: 7vh;
+}
+div#open > img { 
+	width: 100%;
+}
+#header, #footer{
+	display: none;
+	z-index: 99999;
+}
+div.body {
+	width: 90%;
+	height: 62%;
+	margin-top: 19vh;
+	margin-left: 5%;
+	background-color: transparent	;
+	z-index: -99999;
+}
+div#row{
+	height: 33.33%;
+	width: 100%;
+	position: relative;
+	background-color: transparent;
+}
+div#row > div.block {
+	width: 33.1%;
+	height: 100%;
+	background-color: transparent;
+	margin:0.1%;
+	float: left;
+	text-align: center;
+}
+div#row > div.bloc {
+	width: 19%;
+	height: 100%;
+	background-color: transparent;
+	margin:0.1%;
+	float: left;
+	text-align: center;
+}
+div#row > div.blo {
+	width: 61.3%;
+	height: 100%;
+	background-color: transparent;
+	margin:0.1%;
+	float: left;
+	text-align: center;
+}
+div#row > div.block > figure > img {
+	height: 50%;
+	margin-top:3%;
+}
+button {
+	width: 80%;
+	border-radius: 3px;
+	background-color: #e1e0e0;
+	border: 1px solid #1c1d20;
+	color: #1c1d20;
+	font-size: 1.9vh;
+}
+@media screen and (max-width: 991px){
+	figcaption {
+		font-size: 1.7vh;
+	}
+	button {
+		font-size: 1.9vh;
+		width: 90%;
+		border-radius: 50px;
+		background-color: #e1e0e0;
+		border: 1px solid #1c1d20;
+		color: #1c1d20;
+	}
+}
+</style>
+<script type="text/javascript">
+	function viewdiv(id){
+	var el=document.getElementById(id);
+	var header=document.getElementById("header");
+	var footer=document.getElementById("footer");
+	if(el.style.display=="block"){
+	el.style.display="none";
+	header.style.display="block";
+	footer.style.display="block";
+	} else {
+	el.style.display="block";
+	}
+	}
+	</script>
+<div class="col">
+<div id="open" onmousemove="viewdiv('open');">
+	<img src="Sizeu.png" alt="">
+</div>
+</div>
+<div class="body">
+		<div id="row">
+			<div class="block"></div>
+			<div class="block">
+				<figure onclick="location.href='promotion/'">
+					<img src="SVG/bant.svg" alt="promo" title="Сайт за копейку">
+					<figcaption>Акция</figcaption>
+					<figcaption>"Сайт за копейку"</figcaption>
+					<button>Заказать</button>
+				</figure>
+			</div>
+			<div class="block"></div>
+		</div>
+		<div id="row">
+			<div class="block">
+				<figure onclick="location.href='event/'">
+					<img src="SVG/event.svg" alt="promo" title="Сайт за копейку">
+					<figcaption>Мероприятия</figcaption>
+					<figcaption>Проведенные мероприятия</figcaption>
+					<button>Подробнее...</button>
+				</figure>
+			</div>
+			<div class="block">
+				<figure onclick="location.href='process/'">
+					<img src="SVG/project.svg" alt="promo" title="Сайт за копейку">
+					<figcaption>Проекты</figcaption>
+					<figcaption>Запущенные проекты</figcaption>
+					<button>Подробнее...</button>
+				</figure>
+			</div>
+			<div class="block">
+				<figure onclick="location.href='transit/'">
+					<img src="SVG/transit.svg" alt="promo" title="Сайт за копейку">
+					<figcaption>Транзакции</figcaption>
+					<figcaption>Финансовая отченость</figcaption>
+					<button>Подробнее...</button>
+				</figure>
+			</div>
+		</div>
+		<div id="row">
+			<div class="bloc"></div>
+			<div class="blo" onclick="location.href='profileru/'">
+				<p style="font-size: 2vh">
+					Создатель данного проекта - Константин Кудрявцев 
+				</p>
+				<img src="profile/1.JPG" alt="profile_image" style="border-radius:100%; height: 51.2%;">
+				<button>Подробнее...</button>
+			</div>
+			<div class="bloc"></div>
+		</div>
+	</div>
+<header id="header">
 	<div class="hl1">
 		<div class="hc1">
 			<div>
@@ -23,50 +192,57 @@
 				<div class="lmb" >
 					<div class="dd">
 					<img src="https://diarium.info/menu/logo.png" onclick="myFunction()" class="mlb" alt="logotype">
-					 	<div id="myDd" class="dd-c">
+					 	<div id="myDd" class="dd-c" style="z-index: 9999;">
 					 		<div class="column">
 					 			<p id="done">Done</p>
-					 			<li id="share" onclick="location.href = 'Shortstories/index.html'">Share</li>
-					 			<li id="critic" onclick="location.href = 'Critic/index.html'">Critic</li>
-						 		<li id="openfiles" onclick="location.href = 'Openfiles/index.html'">OpenFiles</li>
-						 		<li id="autobiography" onclick="location.href = 'Autobiography/index.html'">Autobiography</li>
-								<li id="achievements" onclick="location.href = 'Achievements/index.html'">Achievements</li>
-					 			<li id="portfolio" onclick="location.href = 'Portfolio/index.html'">Portfolio</li>
+					 			<li id="share" onclick="location.href = 'Shortstories/'">Share</li>
+					 			<li id="critic" onclick="location.href = 'Critic/'">Critic</li>
+						 		<li id="openfiles" onclick="location.href = 'Openfiles/'">OpenFiles</li>
+						 		<li id="autobiography" onclick="location.href = 'Autobiography/'">Autobiography</li>
+								<li id="achievements" onclick="location.href = 'Achievements/'">Achievements</li>
+					 			<li id="portfolio" onclick="location.href = 'Portfolio/'">Portfolio</li>
 					 		</div>
 					 		<div class="column">
 					 			<p id="think">Think</p>
-					 			<li id="ideas" onclick="location.href = 'Idea/index.html'">Ideas</li>
-								<li id="dream" onclick="location.href = 'Dream/index.html'">Dream</li>
-								<li id="cooperatet" onclick="location.href = 'Cooperate/index.html'">Cooperate</li>
+					 			<li id="ideas" onclick="location.href = 'Idea/'">Ideas</li>
+								<li id="dream" onclick="location.href = 'Dream/'">Dream</li>
+								<li id="cooperatet" onclick="location.href = 'Cooperate/'">Cooperate</li>
 								<li id="chat">Chat</li>
 								<li id="quiz">Quiz</li>
-					 			<li id="blog" onclick="location.href = 'Blog/index.html'">Blog</li>
+					 			<li id="blog" onclick="location.href = 'Blog/'">Blog</li>
 					 		</div>
 					 		<div class="column">
 					 			<p id="do">Do</p>
-					 			<li id="cooperated" onclick="location.href = 'Cooperate/index.html'">Cooperate</li>
-					 			<li id="team" onclick="location.href = 'Team/index.html'">Team</li>
-						 		<li id="deposit" onclick="location.href = 'Deposit/index.html'">Deposit</li>
-						 		<li id="work" onclick="location.href = 'Work/index.html'">Work</li>
-								<li id="analysis" onclick="location.href = 'Analysis/index.html'">Analysis</li>
-					 			<li id="passion" onclick="location.href = 'Passion/index.html'">Passion</li>
+					 			<li id="cooperated" onclick="location.href = 'Cooperate/'">Cooperate</li>
+					 			<li id="team" onclick="location.href = 'Team/'">Team</li>
+						 		<li id="deposit" onclick="location.href = 'Deposit/'">Deposit</li>
+						 		<li id="work" onclick="location.href = 'Work/'">Work</li>
+								<li id="analysis" onclick="location.href = 'Analysis/'">Analysis</li>
+					 			<li id="passion" onclick="location.href = 'Passion/'">Passion</li>
 					 		</div>
 						</div>
 					</div>
 				</div>
-				<a type="button" class="buttol" onclick="requestFullScreen()">
-					<img class="mb" src="sizeu.svg" alt="full screen" title="Full screen mode">
+				<script type="text/javascript">
+					function view(){
+					var header=document.getElementById("header");
+					var footer=document.getElementById("footer");
+					var open=document.getElementById("open");
+					header.style.display="none";
+					footer.style.display="none";
+					open.style.display="block";
+					}
+				</script>
+				<a type="button" class="buttol" onclick="view();">
+					<img id="close" class="mb" src="S
+			ized.png" alt="full screen" title="Full screen mode">
 				</a>
 			</div>
 		</div>
 	</div>
 </header>
-<body>
-	<div>
-		<img class="start-image" src="Start.jpg">
-	</div>
-</body>
-<footer>
+	
+<footer id="footer">
 	<div class="hc2">
 		<div class="hc3">
 			<div class="time"><span class="time" id="doc_time">Tempus</span> <br> <span id="doc_date">Diem</span><script type="text/javascript">clock();</script>
@@ -74,19 +250,19 @@
 					<div class="hc5">
 						<img class="omb" onclick="myFunction()" src="https://diarium.info/menu/doc.svg" alt="options">
 						<div id="myO" class="op-c">
-							<div class="column" onclick="location.href = 'profile/index.html'" style="cursor: pointer">
+							<div class="column" onclick="location.href = 'profile/'" style="cursor: pointer">
 								<a>Profile</a>
 								<img src="menu/1.svg">
 							</div>
-							<div class="column" onclick="location.href = 'Send/index.html'" style="cursor: pointer">
+							<div class="column" onclick="location.href = 'Send/'" style="cursor: pointer">
 								<a>Send</a>
 								<img src="menu/2.svg">
 							</div>
-							<div class="column" onclick="location.href = 'interest/index.html'" style="cursor: pointer">
+							<div class="column" onclick="location.href = 'interest/'" style="cursor: pointer">
 								<a>Interest</a>
 								<img src="menu/3.svg">
 							</div>
-							<div class="column" onclick="location.href = 'document/index.html'" style="cursor: pointer">
+							<div class="column" onclick="location.href = 'document/'" style="cursor: pointer">
 								<a>Documents</a>
 								<img src="menu/4.svg">
 							</div>

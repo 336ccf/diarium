@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta name="author" content="suicvairduCConstantinius">
+   <meta name="description" content="Painting">
+   <link rel="shortcut icon" href="../../ICO/paint.ico" type="image/png">
+   <meta charset="UTF-8">
+   <meta name="keywords" content="портрет">
+   <title>Портрет</title>
+</head>
+<style>
+* {
+   margin: 0;
+   padding: 0;
+}
+html {
+   background-color: #e1e0e0;
+}
+header {
+   width: 100%;
+}
+div.menu {
+   width: 100%;
+   height: 24vh;
+   display: block;
+}
+div.point {
+   float: left;
+   height: 100%;
+   display: block;
+   width: 20%;
+   margin: 0 auto;
+   cursor: pointer;
+}
+div.menu > div.point > div.big {
+   height: 62%;
+   text-align: center;
+}
+div.menu > div.point > div.small {
+   height: 38%;
+   text-align: center;
+}
+div.menu > div.point > div.big > a > img {
+   height: 80%;
+   margin-top: 5%;
+}
+@media screen and (max-width: 991px) {
+div.menu > div.point > div.big > a > img {
+   height: 50%;
+   margin-top: 25%;
+}
+}
+p.title {
+   background-color:#1c1d20;
+   color: #e1e0e0;
+}
+p.title:hover {
+   background-color:#e1e0e0;
+   color: #1c1d20;
+}
+body {
+   width: 100%;
+}
+div.row, div.row2, div.row3 {
+   width: 100%;
+   background-color: transparent;
+}
+div.block {
+   float: left;
+   width: 33.33%;
+   height: 100%;
+   background-color: transparent;
+   text-align: justify;
+}
+div.row > div.block > img {
+   display: block;
+   margin: 0 auto;
+   height: 27vh;
+   margin-top: 5%;
+}
+.image {
+   
+   width: 32vw;
+   height: 100%;
+   display: inline-block;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input + label {
+  display: block;
+  height: 100%;
+  width: 32vw;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-size: 27vh;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+input:checked + label {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(10,10,10,.9);
+  background-size: 72vh;
+  background-position: center;
+}
+div.row{
+   height: 35vh;
+}
+@media screen and (max-width: 991px) {
+div.row{
+   height: 38vh;
+}
+input + label {
+  display: block;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-size: 27vh;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+}
+</style>
+<header>
+   <div class="menu">
+         <div class="point" onclick="location.href='../'">
+            <div class="big" style="background-color:#1c1d20;">
+               <a><img src="../../SVG/project.svg" alt="project"></a>
+            </div>
+            <div class="small"><p class="title">Обратно</p></div>
+         </div>
+         <div class="point" onclick="location.href='../diarium/'">
+            <div class="big">
+               <a><img src="https://diarium.info/menu/logo.png" alt="diarium"> </a>
+            </div>
+            <div class="small"><p class="title">Diarium</p></div>
+         </div>
+         <div class="point" style="cursor:none;">
+            <div class="big">
+               <a><img src="../../SVG/paint.svg" alt="paint"></a>
+            </div>
+            <div class="small"><p class="title" style="background-color:#e1e0e0; color: #1c1d20;">Портрет</p></div>
+         </div>
+         <div class="point" onclick="location.href='../promo/'">
+            <div class="big">
+               <a><img src="../../SVG/promo.svg" alt="promo"></a>
+            </div>
+            <div class="small"><p class="title">Маркетинговая компания</p></div>
+         </div>
+         <div class="point" onclick="location.href='https://diarium.info/service/'">
+            <div class="big">
+               <a><img src="../../SVG/imagine.svg" alt="imagine"></a>
+            </div>
+            <div class="small"><p class="title">Imagine service</p></div>
+         </div>
+   </div>
+</header>
+<body>
+<div class="row">
+   <div class="block">
+      <div class="image">
+      <input id="pic01" type="checkbox">
+         <label for="pic01" style="background-image: url('1.JPG');">
+         </label>
+      </div>
+   </div>
+   <div class="block" style="text-align: center;">
+      <div class="image">
+      <input id="pic02" type="checkbox">
+         <label for="pic02" style="background-image: url('2.JPG');">
+         </label>
+      </div>
+   </div>
+   <div class="block">
+      <div class="image">
+      <input id="pic03" type="checkbox">
+         <label for="pic03" style="background-image: url('3.JPG');">
+         </label>
+      </div>
+   </div>
+</div>
+<div class="row" style="height: 10vh;">
+   <div class="block"></div>
+   <div class="block">
+      <p style="text-align: center; font-size: 2em;">my < moannie</p>
+   </div>
+   <div class="block"></div>
+</div>
+<div class="row" style="height: 51vh;">
+   <div class="block"></div>
+   <div class="block"><p style="text-align: justify; font-size: 1em;">На этой картине я изображаю, единственное, что - я, люблю.</p>
+      <p>Я не могу сказать что я рисую гениально или красиво, но я стараюсь передать эту невероятную красоту.</p>
+      <br>
+      <p>Сложно перечислить все вещи которые я нарисовал, потому что каждый новый слой создаёт свои картину и свои смыслы. Окончательный результат можно узнать только закончив</p>
+      <br>
+      <p>То что я точно здесь изобразил:</p>
+      <ol>
+         <li>Анастасию</li>
+         <li>3 дерева</li>
+         <li>2 течения</li>
+         <li>Луг</li>
+         <li>Туман</li>
+         <li>Венок</li>
+         <li>Вулкан</li>
+         <li>2 звезды</li>
+         <li>2 тории</li>
+         <li>Символический цветок</li>
+         <li>Кот и пантера</li>
+         <li>Корни</li>
+         
+      </ol>
+   </moannie></div>
+   <div class="block"></div>
+</div>
+</body>
+<footer>
+
+</footer>
+</html>

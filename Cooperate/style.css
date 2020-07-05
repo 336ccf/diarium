@@ -141,7 +141,7 @@ p.front {
 
 @media screen and (min-device-width: 1920px) and (min-device-height: 1000px){
 	body {
-		padding-top: 6%;
+		padding-top: 10vh;
 		padding-bottom: 18vh;
 	}
 	div#text > div.cell > p{
@@ -162,7 +162,7 @@ p.front {
 	div#button> div.cell > button {
 		display: block;
 		height: 100px;
-		width: 120px;
+		width: 16vw;
 		margin: 0 auto;
 		background-color: #E10C0D; 
 		margin-top: 30px;

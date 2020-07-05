@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta name="author" content="suicvairduCConstantinius">
+   <meta name="description" content="projects now">
+   <link rel="shortcut icon" href="../ICO/event.ico" type="image/png">
+   <meta charset="UTF-8">
+   <meta name="keywords" content="diarium, future, организованные, мероприятия">
+   <title>Организованные мероприятия</title>
+</head>
+<style>
+* {
+   margin: 0;
+   padding: 0;
+}
+html {
+   background-color: #e1e0e0;
+   color: #1c1d20;
+}
+header {
+   width: 100%;
+}
+div.l {
+   width: 100%;
+   height: 24vh;
+   display:block;
+}
+div.li {
+   height: 33.33%;
+   width: 100%;
+   display: block;
+   margin: 0 auto;
+   float: left;
+}
+div.lin {
+   width: 25%;
+   height: 100%;
+   float: left;
+   border-radius: 10px;
+}
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 5vw;
+   border-radius: 50%;
+}
+p {
+   font-size: 2.4vh;
+   text-align:center;
+}
+div.button > img { 
+   height: 80%;
+   display: block;
+   margin: 0 auto;
+   margin-top:10%;
+   background-color: transparent;
+}
+@media screen and (min-width: 1200px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 39%;
+   border-radius: 50%;
+}
+p {
+   font-size: 2.5vh;
+   text-align:center;
+}
+}
+/* Portrait tablets and medium desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 12vw;
+   border-radius: 50%;
+}
+p {
+   font-size: 2.66vh;
+   text-align:center;
+}
+}
+/* Portrait tablets and small desktops */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 7vw;
+   border-radius: 50%;
+}
+p {
+   font-size: 2vh;
+   text-align:center;
+}
+}
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 9vw;
+
+   border-radius: 50%;
+}
+p {
+   font-size: 1em;
+   text-align:center;
+}
+}
+/* Landscape phones and smaller */
+@media screen and (max-width: 480px) {
+div.button {
+   width: 8vh;
+   height: 8vh;
+   display: block;
+   margin-left: 8.5vw;
+   border-radius: 50%;
+}
+p {
+   font-size: 2em;
+   text-align:center;
+}
+}
+div.l> div.li:nth-child(2) > div.lin:hover {
+   box-shadow:0px 0px 5px 2px#1c1d20 inset;
+}
+div.row {
+   height:33vh;
+   width:100%;
+   background-color:transparent;
+}
+div.block {
+   float: left;
+   display: block;
+   height: 100%;
+   width: 33.33%;
+   background-color:transparent;
+   text-align: center;
+}
+div.row > div.block > a {
+   text-align: center;
+}
+div.row > div.block > a > img {
+   width: 60%;
+   margin: 0;
+}
+</style>
+<header>
+   <div class="l">
+      <div class="li">
+         <div class="li"></div>
+         <div class="li">
+            <div class="lin"><p>Мероприятия</p></div>
+            <div class="lin"><p>Проекты</p></div>
+            <div class="lin"><p>Транзакции</p></div>
+            <div class="lin"><p>Домой</p></div>
+         </div>
+         <div class="li"></div>
+      </div>
+      <div class="li">
+         <div class="lin" style="background-color: #1c1d20;">
+            <div class="button">
+               <img src="../SVG/event.svg">
+            </div>
+         </div>
+         <div class="lin" onclick="location.href='../process/'">
+            <div class="button">
+               <img src="../SVG/project.svg">
+            </div>
+         </div>
+         <div class="lin" onclick="location.href='../transit/'">
+            <div class="button">
+               <img src="../SVG/transit.svg">
+            </div>
+         </div>
+         <div class="lin" onclick="location.href='../'">
+            <div class="button">
+               <img src="../SVG/home.svg">
+            </div>
+         </div>
+      </div>
+      <div class="li"></div>
+   </div>
+</header>
+<body>
+   <div class="row">
+      <div class="block">
+         <a><img src="football.jpg" alt="football"></a>
+         <p>Футбольный турнир</p>
+         <p>25.01.2019</p>
+      </div>
+      <div class="block">
+         <a><img src="ecology.JPG" alt="waste"></a>
+         <p>Сдача мусора собранного за год</p>
+         <p>11.11.2019</p>
+      </div>
+      <div class="block">
+         <a><img src="../process/promo/promo3.jpg" alt=""></a>
+         <p>Маркетинговая акция</p>
+         <p>"Сайт за копейку"</p>
+         <p>07,08,09.11.2019</p>
+      </div>
+   </div>
+   <div class="row">
+      <div class="block">
+         <img src="" alt="">
+         <p></p>
+         <p></p>
+      </div>
+      <div class="block">
+         <img src="" alt="">
+         <p></p>
+         <p></p>
+      </div>
+      <div class="block">
+         <img src="" alt="">
+         <p></p>
+         <p></p>
+      </div>
+   </div>
+   <!-- <div class="row">
+      <div class="block">
+         <img src="" alt="">
+         <p></p>
+         <p></p>
+      </div>
+      <div class="block">
+         <img src="" alt="">
+         <p></p>
+         <p></p>
+      </div>
+      <div class="block">
+         <img src="" alt="">
+         <p></p>
+         <p></p>
+      </div>
+   </div> -->
+</body>
+<footer>
+
+</footer>
+</html>

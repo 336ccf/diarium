@@ -141,7 +141,7 @@ p.front {
 
 @media screen and (min-device-width: 1920px) and (min-device-height: 1000px){
 	body {
-		padding-top: 6%;
+		padding-top: 10vh;
 		padding-bottom: 18vh;
 	}
 	div#text > div.cell > p{
@@ -162,12 +162,12 @@ p.front {
 	div#button> div.cell > button {
 		display: block;
 		height: 100px;
-		width: 120px;
+		width: 16vw;
 		margin: 0 auto;
 		background-color: #E1E123; 
 		margin-top: 30px;
 		margin-bottom: 30px;
-		border-radius: 100%;
+		border-radius: 10vh;
 		color: #1D1E20;
 		font-family: Times New Roman;
 		font-size: 36pt;
@@ -320,7 +320,7 @@ p.front {
 		height: 120px;
 		width: 360px;
 		margin: 0 auto;
-		background-color: #1D1E20; 
+		background-color: #E1E123; 
 		margin-top: 39px;
 		margin-bottom: 39px;
 		border-radius: 80px;
@@ -374,7 +374,7 @@ p.front {
 		height: 123px;
 		width: 366px;
 		margin: 0 auto;
-		background-color: #1D1E20; 
+		background-color: #E1E123; 
 		margin-top: 25px;
 		margin-bottom: 25px;
 		border-radius: 80px;
@@ -434,7 +434,7 @@ p.front {
 		height: 100px;
 		width: 300px;
 		margin: 0 auto;
-		background-color: #1D1E20; 
+		background-color: #E1E123; 
 		margin-top: 39px;
 		margin-bottom: 39px;
 		border-radius: 80px;
@@ -489,7 +489,7 @@ p.front {
 		height: 80px;
 		width: 300px;
 		margin: 0 auto;
-		background-color: #1D1E20; 
+		background-color: #E1E123; 
 		margin-top: 39px;
 		margin-bottom: 39px;
 		border-radius: 80px;
@@ -543,7 +543,7 @@ p.front {
 		height: 80px;
 		width: 300px;
 		margin: 0 auto;
-		background-color: #1D1E20; 
+		background-color: #E1E123; 
 		margin-top: 18px;
 		margin-bottom: 12px;
 		border-radius: 80px;
@@ -597,7 +597,7 @@ p.front {
 		height: 80px;
 		width: 300px;
 		margin: 0 auto;
-		background-color: #1D1E20; 
+		background-color: #E1E123; 
 		margin-top: 18px;
 		margin-bottom: 12px;
 		border-radius: 80px;
