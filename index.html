@@ -1,62 +1,405 @@
-<html>
-    <title>Diarium</title>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="author" content="suicvairduCConstantinius"><link rel="shortcut icon" href="logo.ico" type="image/x-icon">   
-        <meta name="format-detection" content="telephone=no">
-    </head>
-    <style>
-    *{ color: rgba(0, 0, 0, 1); margin: 0; padding: 0; -webkit-appearance: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1.4vmax;}
-    body{display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; flex-direction: column;}.f1x{display: flex; justify-content: space-around; align-items: center;}
-    .hidden{display: none;}
-
-    .langs{display: flex; width: auto; height: auto;}
-    .lang{width: 30vmin;height:30vmin;background-color: rgba(0,0,0,0.123); margin: 5vmin; border-radius: 0.5vmax;} 
-    .lang:hover{font-weight: 500 ;background-color: rgba(0,0,0,0.321); cursor: pointer; border-radius: 1vmax;box-shadow: 0vmin 0vmin 3vmin 1vmin rgba(255, 0, 0, 0.044);}
-
-    .message{width: 70vmin; height: 30vmin; background-color: rgba(0, 0, 0, 0.123);border-radius: 0.5vmax;}
-    .message:hover{font-weight: 500 ;background-color: rgba(0,0,0,0.321); cursor: pointer; border-radius: 1vmax;box-shadow: 0vmin 0vmin 3vmin 1vmin rgba(255, 0, 0, 0.044);}
-
-    a{width: 100%; height: 100%;}
-    a:any-link{text-decoration: none; color: rgba(0,0,0,1);}
-    a:focus{ outline: 0.3vmax solid rgba(255,0,0,0.5);}
-
-mysteria{display: block; position: fixed; top: 0;}
-    .valuetype:hover{cursor:pointer; text-decoration: underline;}
-    .search{width: 100vw; background-color: rgba(0, 0, 0, 0.123);}
-    .search>form{width: 80%; height: 10vmin; display: flex; justify-content: space-around; align-items: center;}
-    #submit{display: none;}
-    #search{color: rgba(0, 0, 0, 0.93);font-size: 3vmin ;height: 5vmin; width: 80%; display: inline-flex; outline: none; text-indent: 2.4vw; background-color: white; border:none; border-radius: 0.5vmin; border-top-left-radius: 3vmin; border-bottom-left-radius: 3vmin; }
-    #search:focus{box-shadow: 0vmin 0vmin 3vmin 1vmin rgba(255, 0, 0, 0.033);}
-    .search>form>label{width: 7vmin; height: 7vmin; border-radius: 50%; margin-left: 5vmin; background-color: rgba(255,255,255,1);}
-    .search>form>label:hover{box-shadow: 0vmin 0vmin 1.2vmin 0.3vmin rgba(0,0,0,0.099);}
-    #logotype1, #search1{fill: rgba(255,255,255,0.62);}
-    #logotype1:hover, #search1:hover{fill: rgba(255,255,255,1);}
-    #logotype2, #search2{fill: rgba(0,0,0,0.62)}
-    #logotype2:hover, #search2:hover{fill: rgba(0,0,0,1)}
-    </style>
-    <mysteria>
-        <div class="f1x search">
-            <form action="http://mysteria.space/search/index.php" method="get">
-            <input type="text" name="search" id="search" placeholder="mysteria_" required>
-            <label for="submit" title="Искать"><svg version="1.1" id="search_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7vmin" height="7vmin" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><g id="search"><circle id="search1" cx="125" cy="125" r="85"/><path id="search2" d="M89.645,89.645c-19.523,19.523-19.523,51.188,0,70.711c18.328,18.328,47.362,19.445,66.999,3.359l24.818,24.818 c1.238-1.096,2.454-2.241,3.643-3.43c1.188-1.188,2.333-2.403,3.429-3.642l-24.819-24.819c16.087-19.636,14.97-48.67-3.358-66.998 C140.832,70.121,109.168,70.121,89.645,89.645z M160.157,153.086c-1.025,1.295-2.143,2.539-3.338,3.734 c-1.194,1.194-2.439,2.313-3.733,3.337c-17.663,14.156-43.529,13.039-59.905-3.337c-17.572-17.572-17.572-46.068,0-63.64 c17.57-17.571,46.067-17.572,63.639,0C173.196,109.557,174.313,135.423,160.157,153.086z"/></g></svg>
-            </label><input type="submit" id="submit">
-            </form>
-            <svg version="1.1" id="mysteria" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="7vmin" height="7vmin" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><switch><g i:extraneous="self"><g><circle id="logotype1" cx="125" cy="125" r="95"/><polygon id="logotype2" points="198,153 180,162 153,89.38 136.13,117.89 144,180 126,189 108,180 115.87,117.93 99,89.5 72,162 54,153 90,72 126,107.75 162,72"/></g></g></switch></svg>
-        </div>
-        <script>mysteria.onclick = function(){location.href="http://mysteria.space/"}</script>
-    </mysteria>
-    <body>
-        <div class="langs">
-            <div class="lang">
-                <a class="f1x" href="en/">English</a> 
-            </div>
-            <div class="lang">
-                <a class="f1x" href="ru/">Русский</a class="f1x"> 
-            </div>
-        </div>
-        <div class="message">
-            <a class="f1x" href="https://diarium.info/reg/">Write message</a>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="EN">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><title>days</title></head>
+<style>
+html{font-size: 2vmax; border: double 1vmin rgba(5, 5, 5, 0.5); color: rgb(5, 5, 5);}
+h1,h2,h3,h4,h5{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center; }
+p{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: justify; padding: 0.5vmax;}
+h1{ padding: 5vmax;}
+h2{ padding: 3vmax;}
+h3{ padding: 2vmax;}
+article{ padding: 1.5vmax; line-height: 2;}
+</style>
+<body>
+<section>
+<h1 title="143 day">a day</h1>
+<p>
+This was a really long day without writing something to my blog. I created it differently, and want to make everything much simplier, than it had been before. From this moment I will write it only by the one language, really I am getting a little nervous to write for everyone, because I feel myself stupid, I always have a zeal to use technologies of translation to find out new words from the global dictionaries. Usually it is not by the reason, that I do not know how to explain my thoughts, always it become by the tremor of lose beauty in words. I love the English language more than other languages barely because the most part of humanity describe ownselves by using these ancient-rome-family of language. For addition to this expression need to add, that it is not my first-spoken language and I awe to be misundrerstood (I am using "first-spoken" definition, that I believe had no in the English language before, because I feel that it is my main language and ordinary, but I do not start to speak from this one). Something I am able to narrate about this language that it is the most simple in The United States Of America, and the strongest one in The Great Britain (I think that whole the Solar system speaks on this language, but now cannot agree with it)
+</p>
+<div>•</div>
+<p>
+aday's topics: (1 ― Like and love), (2 ― Genome), (3 ― Power), (4 ― Conscience), (5 ― Vibe)
+</p>
+<div>•</div>
+<h2>Like and love</h2>
+<p>
+First of all in these couple of the word is transcription and sound. When I was pupil of the Gymnazium number 11, it was with an advanced English language researching and we had been using brackets to define transcription of the words. I am very disappointed by the fact that pupils, that was a couple years older than me have lessons of the Latin language, but our grade have not them.
+</p>
+<h3>Like</h3>
+<p>
+I will start from describing word "like". In latin language the most recent pair "simile" and "simulo", therefore we can approve the meaning the similarity of an object to the object, also this is sounds like: smile, simulation and symmetrical. Transcription of the words closely connected to the pronunciation. Laik, L-AI-K: to pronounce "L" we are scrubbing back side of top teeth row by the tongue and drop it fast from the mouth, to pronounce "AI" we are opening mouth widely and till the end and stop it by pushing up the bottom teeth row by the tongue, to pronounce "K" we are falling back tongue and sharply move it forward. ("G" and "K" very similar, but "K" pronouncing a little bit sharper than "G") For conclusion of this dissection of word the most interesting that I was highlighted ― similarity with pronouncing "I" that we are usually explain as an ownselves or the ego. 
+</p>
+<p>
+Personally I am prefer to said that it is reflection to the recieved information, but it is not work with thoughts that you had been recieved and could not able to accept. Therefore we have own rules and morals, if it is out of them we can not be like it. The depth of the possible acceptance compared to the average usage of this word. Usually usage formed from the situation and always it have maximum and minimum that we had been defined automatically without thinking about. For example: we could said something 100 times normally, once scream it and once whisper it. Therefore the value of a whisper and a scream will be equal. It should work with everything. Presume that it works relatively to the average value and include whole neural web of the brain. Everytime we are using something, it creates new semantics in mind, therefore it have additional connections to other thoughts, therefore there are greater chance to remind it through the process. Usually much easier to increase something vice versa to decrease it. The process of increasing thoughts only need an acceptance and a thought. The process of decrease thoughts might able to be by the increasing other ones, therefore decrease whole percentage, else by the process of the degradation of a brain, when you do not think at all. The problem, why creating a new rule to decrease other thoughts is not work, because you cannot delete something you already had been created. Everything could able to become something different and cannot disappear. To create a new rule to decrease one another. First of all you need to answer, why not? ("not" defined as "rule") In addition to it you cannot accept the rule that approved more than a half. Approving is the length till the object of the decreasing and connected object. The length might able to be defined as values (mm, point or etc) For the conclusion of this expression, much easier to find out other factors to decrease or connect with. Also if a rule was not defined it has no limits at all, except an own one. It might able to be not vulnerable at all because the connection that you defined before is not the same as you think for. Only one thing can decrease a neurons, it is removing the objects that create them. For example if it is a thought: we could able to cut up a part of the brain or we could able to destroy the thing that remind it. 
+</p>
+<h3>Love</h3>
+<p>
+Love. In Latin it was in several interpritations as amo,amore,amoris in addition there were similar description of fire of love as flamma. Amo: similar to ammo, -re similar to adore and more, -ris similar to amorous. Flamma as flame of fire. Every of these examples use morpheme ― ʌ, that is the loudest one in speech of any animal, it is widely opened mouth and hiden tongue to the bottom of mouth. Lʌv, l-ʌ-v: "l" scrub back side of the top teeth row and take back down without drop out from mouth, because the next is "ʌ" that include mouth that put down to the bottom of the mouth, after this becomes small bite from the top row teeth ― front side of the bottom lip and rubbing to outside till it back to normal. Presume that pronouncing of this word closely connected to the flirt manner to bite bottom lip. Presume that it is the bottom lip for the reason of human kind evolution. In which process the jowl becomes less prominent forward. In which result we became different above chimpanzee and feels ownselves more beautiful the reason of difference. May be it is such more simple and it only because the bottom teeth row inside the top teeth row and it much easier to do than vice versa. For conclusion of these expressions want to highlight the similarity with word "life" and "laught", but "love" sharper in pronounciation.
+</p>
+<p>
+In my personal explanation of the word "love", I am deeply assured that it is positive emotions to the object. Additionally I am believing that it is not attract to the negative emotion like hate, it is absolutely different phenomenons and they do not change themselves by increasing each one's. You can love through hating, but only if the negative as "hate", more than positive as "love", you will be negative to the person. The power and magic of words closely connected to the usage into lexics, therefore if community usually use words powerful in the source, it will reduce the power each of them. Every usage contains the characteristic of an object and environment, like everything around. Object as pronounciation and environment as situation. For example: you can said it loud to ownself 5 times and once loud for the object therefore to the object will be more powerful. In addition to, object can be alive (alive>animal>mammal>homo) or not alive (element>material>product), each of them have different levels in mind, when we are using it for example to a person, it becomes and fill everything in group of alive. Actually we might able to do it to pets and it will have different power except humans. Therefore we should ask: How you said?, Whom you said? To know the value of the pronounciation. Every word is in language and therefore new language ― new thought semantics. Language builds on the muscle's memory of pronounciation of words, it include the muscules of the chest (power of an air stream), larynx's parts (modifing the air stream), jowl's muscles + tongue muscle + lip's muscles (last modifing of the air stream) in the result of it becomes an articulate speech. Therefore if we learn a new language we add and combine the muscle's memory associative row, it might be similar to muscle>language>mean. The power of words closely connected to the other people that know it, my good inhabit to think that everyone know everything I have been done. Especially in the Internet. Therefore you have no chance to lie for the reason to show your power differently for a different groups of people. We often change our words and thoughts, less often we are give back the apologieses for them, but it becomes critical only for the words that you feel strong or want to feel them strong about. The statement that I will assume with my full reflection, that every thought equal, therefore every word equal in the determinition of words. Vice versa if we want to separate words by sounds it become different, therefore we have equal sounds in equal words. It will work with everything, because everything we as humans have ― thoughts, that we are explain by our words. Only people whom trying to mix definitions of words with letters with sounds with pronounciations, therefore pre-pre-group>pre-group>group and etc. It becomes unequal because we mix an own differently grouped definitions in one group. For the conclusion of this subjective desctiption I want to add about love ― it is simple and loud word that should have more energy if use it less often, but it is only the word.
+</p>
+<h3>Definition</h3>
+<p>
+The usual forms of use the word "like" explain similarity to the object of use. Object always defines by the nouns and pronouns. Object able to include adverb and adjective. "Like" is a preposition, prepositions connect an objects to the object or an object to the actions. Action defines by a verb or an interjections. 
+The usual forms of use the word "love". It has multiple definitons for every part of speech: verb, noun and sometimes interjection by the strong sound "ʌ". Therefore it is inside three groups: object, action, characteristic. Characteristic defines by adjectives, adverbs and interjections. For example: Love! Love my love. It is [Characteristic+Action+Object].
+</p>
+<h4>Love! ― Characteristic</h4>
+<p>Expression of strong feeling in the moment.</p>
+<h4>Love ― Action</h4>
+<p>Process of feeling the biggest positive interest to an object, therefore express the biggest positive action to an object that you can imagine.</p>
+<h4>my love ― Object</h4>
+<p>Object which always connected to defined prevously noun with greater feeling of positive interest. (it cannot be independent expression of object, because it is always connected to prevously defined noun, usually first love is mother because it is the most recent object with whom you are build your own mind. When the feelings was reduced it change the main object of interest to another one and it is flowing definition that never becomes independent) When love have no defined noun as an object it becomes to egoism because love is defined as the ego. Usually we can define whom we love more and in moment it cannot be a multiple noun, if your ― "the love" as a noun defined as a multiple nouns you have a big problems.</p>
+<h3>Comparison</h3>
+<p>
+I find one interesting feature to a word ― "wife", it is waif, it is similar to words ― "like" and "life", but nothing from the love. w and v such closely in pronounciation, but v the sharpest of f,w,v row of a similar sounds. Therefore v becomes w and becomes f, as a sounds. Therefore interesting feature, that if to pronounce "love wife" it becomes this row ― v-w-f. Will be cool to pronounce waif as vʌv, but it is the an audio encoding format. 
+</p>
+<div>•</div>
+<h2>Genome</h2>
+<p>
+Attribute of the genome closely connected to everyone's life for the main reason of the theory of an evolution. Therefore it is the main subject which contain an explanation of the human development. The personal genome is only one thing that we have from the birth from our parents and cannot choose it. It is everything we had have before, we have been seen the first light.
+</p>
+<h3>Research improvement</h3>
+<p>
+Personal genomics just starting to develop as the trend of a science. It is byway that only starts to growth. For making deep results there are needs only a time. The main possible notion to study genomics faster it is to research development stage by stage. The main reason of it is, that genome changes through life and if there possibility to track one genome through several years or even decades it will give for us the full image of the own genome development. The best way to include more people to the research and once in every selected time period check research genome to catch difference before and after. Collect the full genome history of the families, only if they accept it. Moreover in this type of research there are several main attributes to scale the knowledge in the science of genomics. It is computing power that needs to increase the speed of the processing and the time to increase knowledge and catch the differences between before and after. Therefore in the future we are able to have genomic's centers that contain genome of an every human, to reduce illnesses and deseases. It will be in every hospital and every health card will include full decomposed genome of the person. For example: it might able to be inside an every house environment as a personal health care tool and usual as a simple water dispenser. Presume that it is the data, that cannot affect someone or something personally, but definitely should improve an entire society. Every year it will become cheaper. Assume that genomic's main task is not to change or create something into genome, but it is to catch something and learn regularity from the difference. For the conclusion ― research must not to be violent, vice versa it must creates possibilities to have better health desease diagnosis and save the time of people around the globe.  
+</p>
+<h3>Real life</h3>
+<p>
+To include a genome studies to the everyone's life we need to have tools to research it with spending minimum time and save much more. First of all it must be more predictable and accurate. First of all it needs to be inside any culture. Therefore it needs to be more understandable for people. People need to start understand that everything except the genome in their own control through life, because they create ownselves. People need to stop underestimate own possibilities and start to believe that they could do everything. People need to stop dream about second or past life and start to understand that the past life it is only the combination of the mother&father's genome, that usually does not matter in the live at all. To achieve a real changes in community, except of creating culture of "genome knowledge" we need to improve value in a real life. It needs to be more comfortable and possible everyday. For that moment we have no reliable understanding how to use this information, except comparison. To make it more understandable it need to be scaled, therefore everyone need to have a possibility to get cheap, fast and simple full decomposing of their genome. In the result of which the data becomes more different and comparable. For example: to find the perfect sexual partner will become smarter and easier. There are main example, that we are already had been achieved ― a plant selection studies. Plants that was genetically modified are still unknown and damageful, the best way to create better plants is to combine couple. Usually it becomes better if science helps to research it and make predictions to the future. One of the biggest and most vulnerable groups of people ― humans with congenital deseases. Genomics could able to solve this problems by making them more predictable, therefore have possibility to prevent this accidents or prepare for them before. If there are no way to prevent it before conceiving there are way to predict a possible scenario and prepare for future notion. Therefore for the conclusion of the personal subjective view, I predict that the biggest breakthrough in the science of genomics will be into prediction the future generation and finding out the best partner, therefore it might able to rebuild an idea from dating apps to a family or generative apps.
+</p>
+<h3>Information</h3>
+<p>
+Genome is the genetic material of an organism. It consists of DNA or RNA. The genome includes both the genes and the noncoding DNA, as well as mitochondrial and chloroplast DNA's. The study of the genome is called ― genomics. The most common forms RNA (RiboNucleic Acid) and DNA (DeoxyriboNucleic Acid). RNA - consists from C (cytosine), G (guanine), A (adenine) and U (uracile), it is a polymeric molecule essential in various biological roles in coding, decoding, regulation and expression of genomes, consists from the one polynucleotide single straned and folded onto itself as a chain, that contains information about organism, that seems to a line of the symbols C,G,A,U (For example: CGAUACCAGUCG...) DNA consists from C (cytosine), G (guanine), A (adenine) and T (thymine), it is molecule of composed of two polynucleotides chains that coil around each other to form a double helix carrying genetic instructions for the development, functioning, growth and reproduction that contains information about organism, that seems to a line of the symbols C,G,A,T (For example: CGATACCAGTCG...) DNA builds by the atoms: Hydrogen (H), Oxygen (O), Nitrogen (Ni), Carbon (C), Phosphorus (P). There are most important actions with genetic information: mRNA, tRNA and rRNA. mRNA is a messenger RNA that conveys the genetic information that directs a synthesis of specific proteins. tRNA is a transfer RNA process to deliver an amino acids to the ribosomes, where rRNA is ribosomal RNA links amino acids together to form encoded proteins. All animals are consisting a lot of different types of cells. The most common types of cells: stem, intenstinals, blood, muscle, liver, nerve. Cell of any animal contains: plasma membrane (a border of an environment, that protects it from outside impact), cytoplasma (substance, which fulfill entire cell), nucleus (contain information about the cell), endoplasmic reticulum (Rough ER and sometimes Smooth ER. Studded by ribosomes and give them rough appearence to protein transfer) + ribosome (mRNA translaton: perform biological protein synthesis), golgi apparatus (packages protein into vesicles before vesicles are sent them to the own destination), lysosome (split up many kinds of biomolecules), mitochondria (provide a cell breath, transfer or accumulate energy, contains all RNA and some DNA) and more, that vary from the cell to a cell. (these are the most important parts from an animal cell type) Chromosomes are located in a chromatin in its turn located in the nucleus. The process of forming from DNA's chromosome is: DNA wrapped onto the histomes to create a nucleosomes, nucleosomes condensing and forming a chromatin fibre, chromatin fibre condensing and add scaffold proteins to create a chromosome. More than 99% of a human DNA similar from the human to a human, for researchments at the moment of writing this article. Human have 23 pair of chromosomes, female has "XX" last pair of an additional chromosomes, vice versa male has "XY" last pair of an additional chromosomes. Why it is "Y" because of its form, X is 4 tail, Y is 3 tail form. Therefore female has 92 tails, male has 91 tails (it is only if we are counting every chromosome pair as X, and count both parts), for real "X" is 2 "|" therefore female has 46-"|" and male has 45-"|" and one that combine 2-"|" to 1-"|". For the joke might able to said that it is 45.5 chromosomes, or 45 and a tail. 
+</p>
+<h3>Basics</h3>
+<p>
+Genome is the unique characteristic of an alive object. Genome might able to defined by DNA, DNA is a long row of a symbols that consist from 4 digits. DNA might able to find the difference between species. Genome might able to define only an inborn differences. Inborn differences includes differences between cells from the one organism to an another. The quility of the cell might able to decrease or increase chance of an inborn desease. The genome sets the main attributes of a cell, as strength (membrane), action (cytoplasma), generation (nucleus) and others. A human as an organism conatain much more than 30 trillions cells and more than 200 types. Every cell is a very small piece of a human. Decomposed human genome contains 4,179,183,426 symbols it is only from one cell! To find difference from a human to the human need to compare same types, therefore it will answer for a structure of types between the compared humans. (only area with this types will be comparable) The main reason why it will answer for a structure of types, because in the process of an organism growth one type simply duplicates, therefore first created type will be same to the other ones. The difference between cells might able to differ through a life process, because an environment affects to the cells. For example the simple chemical reaction as a concentrated acids (detergents) might able to burn a part of the skin, therefore one area of them will be a newborn, other will be damaged and other will be an unmodified. One type of cells might able to be defined as environment, that creates by a small other parts of environment. Therefore human environment, consist more than 200 a different environments, and every environment of an environment consist object that also could able to be defined as environment. (For example: human>liver>cell) Human is an environment and also the object, it might able to be differently defined only by the circumstances. If it is sociology ― human=object, if it is medicine human=environment and organs=objects into environment, if it is biology human=environment for organs=environment and cells=objects into environment. (it is only for example) Actually cells able to be environment also as nutreous or chromatin, for sure chromosomes also environment for the DNA. For conclusion, genome ― is simple information about organism, but to find relativities between objects or even environments, to use it further, we need to be clear about the similarity of the types and do not turn a science of genetics into unknown, endless, unreasonable and unfounded science of an astrology.
+</p>
+<h3>Combinatorics</h3>
+<p>
+Combination of two genomes. I am not a biologist or even scientist. I do not know every type of reproductive functions and do not need to know it. I want to describe only my subjective view of combination of two genomes of the human species. Althought it might able to work for most part of the mammal kind. The combination of two genomes includes female and male genders. Therefore it is sexual type of reproductive function. Two parent DNA rows combine into the child one. The main regularity in this merging use dominants. The main question for me personally, how to define dominants? Actually, I think that there are algorythm, that at the moment no one able to determine and it calls as chance. But actually, there are no chance as everywhere in this world. Presume that if inherit rows have the same symbol on the one place, child will take this one. Everything above it becomes the algebraitic formule. Presume that this algebraic formule interconnected with number of a possible symbols - 4. Presume that there are remainder of an expression that gradually summ everything one by one, therefore from the start of the symbols row it rewrite everything that is not similar and save the remainder, afterall add to the next not similar merge to create a new symbol. For the conclusion of this subjective a semi-scientific opinion, we are not able to predict something precisely for a long time, to prevent an inborn deseases, but one thing that I can assume more likely ― difference between two species solve everything, this statement justified by the fact that the likelihood of a congenital disease with incest is higher. Therefore if two more different species will have child it prevent the chance of the congenital desease more often.
+</p>
+<div>•</div>
+<h2>Power</h2>
+<p>
+Definition that always everyone tried to find or get to achieve something onto the own mind. Usually it ravens to have own place. If we are looking forward to physics, it is power per time period, therefore, we are trying to get maximum impact throught minimal period of time.
+</p>
+<h3>Pronounciation</h3>
+<p>
+Power ― pʌʊə transcrption that exclude the last r as usual after a vowel. It becomes from latin lingua where it was, as potestas, vires, potentia, imperium, numen, auctoritas, manus. "Potestas" and "potentia" seems to potential, potent (patent as power+potent), potency, statistics and status (because potestas pronouncing as potestatis). Vires pronouncing as virium both root "vir", in latin language vira, in english virgo, virile, vrility, veer. Imperium - imperator, imperative, imperium, empire, emperor, impetus. Numen in latin nomen, in english name, numeral, numerous also it similar to lumen. Auctoritas ― autoritet, authoritarian, author, auction, authentic. Manus - manuscript, manual, manufacture, manure, man. "p" - holding an air stream with a closed up mouth, fulfill mouth and open it to make a clap, "ʌ" a widely opened mouth and lips with a straw, to pronounce next sound "ʊ", stretch to the width corners of mouth to pronounce vowel "ə" and smoothly moving back tongue to make inaudible sound of letter "r". For conclusion of this dissection of the word there are powerful start that weakens in ending of the word.
+</p>
+<h3>Magic</h3>
+<p>
+This is the main attribute of the most part of the literary works. Imagination to create an unknown previously power. Power is something that makes an every imaginative work more beautiful. Everyone wants to have a power, but sometimes it becomes very boring into a real life. Usually it is by the reason of a small knowledge about physics, therefore we could not able to imagine it to make it real. Games, books, cinematography, paintings and more other kinds of an art trying to imagine the power. Technologies make power more real, therefore we are able to imagine something new. Usually it calls as superpowers that easy to use and give you a lot of power. The internet one of a technologies, that we truly could able to count as a superpower. For example: ancient civilizations builds a light-houses or earlier fume-houses to translate information through long distances. (usually it prevents an enemy's attacks) In the art&literature it usually gives power to a person and do not share it for a big amount of people, sacred skill or god's gift. The main rule in the imagination of superpowers to make it simple to use and complex to realise. For example: magic wand. (simple stick but it might able to do everything if you know a right spell) Restriction to empower a characters into the author's imagination as usual need to be more realistic and understandable, because only in this terms people able to reflect on them. Therefore than more people able to understand it, than more it becomes popular. For example of badly imagined character's empower in a fairy tale invented by me on the text: (I use unknown phraseologism ― "on the text", similar with "on the go", that describe something that was created in the moment of doing this. P.S.Phraseologism ― "on the text", I was created on the text.) character need to dig a room by nails into the mud and when he will sleep onto the bed that was maden from mud, he will achieve ability to sleep as a snail. (it is the bad example of superpower. Because everyone can do it, but it is very hard and no one need this ability, therefore it is possible for everyone, very complex to achieve and no one interested to achieve it.) The best examples of the character's empower usually opposite: only selected by the chance or by an algorythm able to have ability (family, knowledge, skill, accident etc.), it is easy to have or use (learn, buy, achieve etc.), it gives interesting ability (advantage above others, not omnipotent, removable, real, imaginable etc.) For conclusion everything we are creating need to be reflectable by the others, therefore than more people could able to understand it, than it will be a more popular.
+</p>
+<h3>Theory of everything</h3>
+<p>
+Force upon when object with more power try to push object with less power into own direction. 
+</p>
+<p>
+To achieve a general goal, first of all we needed to find primary idea that makes us stronger as a leader. This is the main route or way that able to name as a goal direction. Therefore direction that was chosen only direct, we need to have any point on it to make it more understandable and real. Therefore every direction need to have a goals, any direction need to push people in people’s better side and do not be opposing in own vision of these direction. For example god and science, if you are always talking that in this world no chances and everything we have is approved by science, you cannot said in one moment there are no science, there are simple god’s chance. Actually, everything opposite need to have compromise to find middle between two opposite values. For an example: we know theory of “Big boom”, that describes how universe was created after enormous explosion, but we did not know yet how elements was there to create this explosion, therefore we are not able to answer for the question of an origin of the elements there and can accept theory of the god as an origin. Always, when we are finding out something new, we are finding a lot more that we are do not know, and everything that we do not know is god.
+</p>
+<p>
+For everyone we are able only presume something, there are main theories that anybody from the kind able to approve. For example - unacceptability of a killing of a human, anybody from the kind agree with these unacceptability. The main reason for that considering own selves to the same group of the Homo sapiens. Actually, no one want to watch to the unacceptability of killing mammals or animals, because we even cannot translate it to them to have conversation. Therefore, if we are not able to communicate, we cannot be part of these groups of people. (languages is the best example of this investigation) To be clear to the accessibility of a human potential of a communicative abilities, we can translate something to every alive organism by a body language. Even if we are can communicate we need to have fullness of the activities, with animals we cannot be fully active, because every everytime we are leaving of an ideas of animals by communicating and sharing thoughts by new and new ways. For conclusion, I am really accept and agree with idea of that I am an animal and not even the mammal or the Homo sapiens, but only with the Homo sapiens I able to leave my own limits to achieve a new highs.
+</p> 
+<p>
+The best interest had achieved if target meets the requirements: does not contradict the masses rules (most popular rule – do not kill), if it uses the most powerful sources (infinite or close to infinity. For an example: power of the Sun’s nucleus or the Earth’s environment), do not create new problems (dying resources, environment pollution, exaggeration of chaos or etc.). 
+</p>
+<p>
+To achieve an interest firstly, we need to understand what the value of the interest is. Find the middle value of the interest. Answer for two questions: is it good if the value more than half? is it bad if the value less than half? Secondary we need to scale these answers to masses, by deduction methods or quizzing them. Therefore, it becomes a countable value, that even machina could able to understand.
+</p>
+<p>
+A leader need to neglect an own interest to the interest of the other people. A good leader tries to satisfy the interest of the maximum number of people.
+</p>
+<p>
+Usually there are question how to be opened for everyone and do not lose own. Personally, I am want to say that it is requirement to be an activist and a protector for 50/50. Actually, it is not possible to define activism and protectionism clearly, but we must try to find the middle between both sides. There are millions of examples in everything, but I want to describe two of them, it is the wife and a women and the own territory and an unexplored territory. Wanted to add that the beauty usually creates on the middle between both sides. The protector’s task is to defend, save, fix, regenerate, etc. Therefore, the protector’s task is to order. The activist’s task is to make, research, develop, recreate, etc. Therefore, the activist’s task is to chaos.
+</p>
+<p>
+Unite of the groups is the main process of scale. The objects group themselves into one bigger group to become more organized and more powerful as one object or it might able to be defined as the group of objects. For an example: The United States of America, The United Kingdom, The European Union and etc. (these is examples of grouping political objects). For an example: anthill when become bigger increase the zone of an influence therefore might able to find another anthill in zone of an influence. If it happens, anthills combine themselves usually in a certain order: define the biggest anthill; move the smaller one to the closest side of the biggest anthill, therefore the newborn anthill will be bigger in the direction of the smaller one.
+</p>
+<p>
+To defend own and do not miff others usually it becomes by the exchanging acceptable values between both sides.
+For example of the disagreement and compromise: on the children’s playground, two kids did not share the toy or some object of interest. The parents of kids become to solve the disagreement; therefore, they are trying to find compromise by the children's perception, because they are responsible for them. Usually it becomes critical, because children have a smaller perception vice versa their parents. Presume that the easiest possible solution to find another the object of interest for a kid or do it in turn (but in the example of -”in turn” solution, hard to give credit to kid to wait some time, because kids not responsible to forecast their own future) 
+</p>
+<p>
+Laws of physics. My lovely space and relativity of the biggest objects into the Universe. For examples of the most powerful objects, that human able to imagine. 
+I tried to define something, but I am nothing to do it now, everything I want to add on text, that everything need to compare with the most common in the Universe element. For the example: the standard unit of weight need to be weight of a molecule of the Hydrogen.
+</p>
+<p>(Astronomical)Satellite– is an orbital object; related to the group – planet; create group – system. Presume that object might able to be – a satellite, if the planet more than the satellite in 1.618
+</p>
+<p>(Astronomical)Planet – is a massive object; related to the group –system; create group – satellite. Presume that object might able to be – a planet if the gravitational field more than 10^2 meter per second and diameter more than 10^3 kilometers or more than 10^6 meters and density must be more than 2 kg per cubic meter.
+</p>
+<p>(Astronomical)Star – is a mega massive object; related to the group – galaxy; create group – system. Presume that object might able to be – a star if it is hot and the gravitational field more than 10^4 meter per second and diameter more than 10^6 kilometers or more than 10^12 meters and density must be more than 1 kg per cubic meter.
+</p>
+<p>(Astronomical)Black hole – is a hyper massive object; related to the cluster which relates to the physic law’s; create group – galaxy. Presume that object might able to be – a black hole if the gravitational field more than 10^8 meter per second and diameter more than 10^12 kilometers or more than 10^24 meters and density must be less than 1 kg per cubic meter.
+</p>
+<p>Main form of the Universe – torus. All galaxies located on a torus form surface and moves around.</p>
+<p>P.S. Wormhole bullsh*t, it is black hole as a torus on torus. If someone wants to jump into black hole and be on the other side, be sure to be in form of quarks.</p>
+<p>
+The examples in astronomy really good to check power of any type of objects. Nothing better to imagine than something that had been created already. Astronomy explain for us the biggest possible objects and explain how they are able to work. If in the universe the main value of everything is mass, as a weight of an object (also there are density, volume, consistence, speed and a lot more others), in test examples we are able to explain value as everything we are able to imagine. It might be friends, money, space, knowledge, works, even amount of products or etc. Therefore, the growth of an object will be according the main selected value. Gravity or charge will become more powerful, the same way, but instead of the mass there are will be any other a selected value. The main rule that should follow is a count accessibility of the selected value. As always, smaller objects by selected value have charge to a bigger one, by selected value.
+</p>
+<p>
+The most usual power explanation around the globe becomes from politics, and it becomes a lot more complex that it should be in real life. Universe already had been shown how it works. First of all to find an aria: in the past, it was travelers that find, research, make action into new arias; in the universe it is aria of charge, where astronomical object have a such big mass. Second of all to conquer the aria: in the past it was settlers that find the place and restrict it; in the universe it is a process of charging of object inside the aria. Third of all to shield the aria: in the past it was defenders and army; in the universe it is usually a charges ring that issue from massive object.
+Everywhere only 4 types of objects: satellites (something that simply follow, small and usually through time becomes the planet’s ring dust, for the reason of collision with space-trash or other satellites), planets (something that moves around the star onto an orbit. Usually in the collision creates satellite or break own selves, until star absorb them by the process of growth.), stars (hot center of the system that usually have some followers. When smaller object comes closer to them – burn, becomes bigger and overlook absorbed object. Follow the stream of the black hole.), black holes (unknown, invisible center of the galaxy, that do not care about everything that becomes closer. Usually in the collision with the black hole it pull inside and drop out somewhere on the other side of the universe in the form of small quarks. By the reason of very small density, relatively small radius and power of gravity). There are one more thing inside the universe, but it is not an object. It is physics law that no one notices and does not attach importance. Surface onto which a galaxy clusters moves forward. It becomes cycle by the reason of surface’s form, that endlessly repeats. It is the torus, which form similar to a donut form. Hypothesize that it might able to be a very large radius black hole and that has such fewer density. This hypothesis might able to be by the reason of similarity of black hole’s form to the torus form. But actually no one able even to presume it because no one able to imagine a such big volume object with a minimum density. 
+</p>
+<h3>Definition of kill</h3>
+<p>
+Killing – is a process of minimizing or maximizing activity of the object by object’s action. The value of a kill related to the object’s characteristic. Object characteristic defined by the environment previously. Killing of the less or more active from the average value object relates to judge the act of the object more than usually. The kill – is a moment between the start and the end of a killing action. The act of the judgement for a kill starts if the kill action cross-border the minimal and the maximal permissible value of a killing process. 
+Formation – is a process of forming an object. Deformation – is a process of deforming an object. Growth – is a process of increasing value. Degradation – is a process of losing value of the characteristic. Organism – is an alive object.
+Stop the process of formation by the organism of act need to count according full process before the organism of action could able to be another defined. For an example: abortion of the child would not be count as the kid killing, because before it had not defined and registered as a kid, it is an organism. It should judges as an organism killing that judges according full number of organisms that aborted in the formation before it defined differently. Therefore, the formation of the Homo sapiens as an organism consist of stages, but the judgement starts when it becomes a legally confirmed. Before abortion, legally defines stage of a formation. Personally, presume that much more fair will be to judge it as an organism, therefore count a number of cells or percentage of entire process of the usual organism’s group formation.
+Start the degradation by the organism of act need to count as a progression of degradation of an organism of action. For an example: a cut by the object of act relate to the organism of act, therefore the organism of action will lose the characteristic of a blood amount. It might able to judge as a progression of regeneration on the moment of judgement, if regeneration of the object of action has not been ended yet. It might able to judge as an amount of lost blood according the full amount of blood of an organism. Personally, presume that much more fair will be to judge it as an amount of damaged organisms inside the organism, therefore count the difference between before and after of the accident.
+</p>
+<div>•</div>
+<h2>Conscience</h2>
+<p>
+Do not know what does it mean, and hate words that starts from – "con"
+p.s. above the constant ones of course!
+</p>
+<h3>(Xguilty + Yproud)/2 = Zconscience</h3>
+<p>
+To be guilty you need to think guilty. To be guilty you need to feel guilty by the reason of thought. If you feel guilty and will continue to think about it as a something guilty, you will never be normal. To stop guiltiness you need to do something that you feel proud.<br>
+The problem to feel guiltiness consist of feeling ownself as a bad person. Therefore, it becomes to depressive state of the mind. It occurs to be less efficient by the reason of big amount of own bad thoughts.<br>
+Thoughts is not an action, which you can define as a materialistic. Thoughts enough more small to make a difference in this endless world. Thoughts only the electrical impulse, that might able to become action that you are able to use to make a difference.<br>
+Therefore thought is the smallest action that human able to act. To be clear enough, any organism able to act something similar to the thought, it is an electrical impulse inside the organism. In addition to, thought is the fastest of possible action of the Homo Sapiens. (For an example)
+Thoughts might able to become bigger change only after spending more time for it. For an example: only after thought to the hypothalamus, you send an impulse to the muscle of body, which act to something. For the example: to think about drinking and moving wrist to the glass with a water, taking a glass with whole wrist, moving glass to the bottom of the mouth, rotating glass to pass the water molecules from glass inside your mouth, swallowing the water and pressuring a muscles of the neck to give access to move liquids to stomach. (There are the main difference of time that spent from start until the end. Therefore, thinking about drinking and drinking have difference in a time and the difference to own universe).<br>
+For conclusion: to feel ownself guilty is good, because you can define it as a guilty. To feel ownself full of guiltiness – bad, because you fall apart.<br>
+To be proud you need to think proud. To be proud you need to feel proud by the reason of thought. If you feel proud and will continue to think about it as a something proud, you will never be normal. To stop being proud you need to do something that you feel guilty.<br>
+The problem to feel proudness consist of feeling ownself as a good person. Therefore, it becomes paranoiac state of the mind. It occurs to be less efficient by the reason of big amount of own good thoughts.<br>
+When you feel proudness, it is overestimation, overrating and revaluation of ownself. In the result of entire process, you become useless, because you starting to overestimate expectations and become less active as you should be. Losing own efficiency in process of proudness the main attribute that anyone should exclude if anyone reach the real feedback by their actions. To prevent overestimation should make goals as the stages to the own targets, after all by achieving them anyone save the plank until achieve next target. If anyone create goals, they are able to feel ownself normal because they have another one, and they cannot stop on it. Hyperbolism of a situation increase limits that are highly difficult to back normal. For an example: receiving a big amount of money will give you such a lot opportunities to realize them and usually it becomes critical by the reason of rushing it on the own uncontrollable interests, that moving out of the own direction of interest. To prevent distagnaton to achieve new highs in a process of being active, need to separate entire process for the acts, which will be similar to steps to a mountain of your own dream. <br>
+For real, I cannot write about being proud, I am able only think about it. I do nothing to be realistic on run, and stagnate ownself in the way of small personal lies. I am trying to imagine things only to increase limits and think globally, vice versa stagnate and start from a wrong direction. My personal explanation of being proud far away from being real definition of being proud about some types of an action. I can be really proud only about one thing, that I did not stop making a difference into ownself, that I did not stop being active even someone want to make me. Things that I am trying to achieve or even dream about, far away from my real possibilities, that I could able to do now. The thought of being realistic usually moves me back to the making the smallest action, that I am able to do. Imagination perform into myself the possibilities to watch onto environment from different responsible situations. Imagination gives me a chance. Chance to imagine myself from being another person and concretize the person I should be similar. Usually the smallest action as an electrical impulse inside brain – thought. Trying to prevent a spending more time to become real in the process of realization into society. Being normal and the deep observation of possibilities is the key to the best realization. P.S. Sometimes when I am trying even to do the smallest possible action, I cannot be clear to myself and being ownself, by the reason of being guilty, by the reason I cannot do it by being myself.(unsureness and distagnation, that was created by the others)
+The process of proudness usually blocks by the reason of own rules and mind borders of feeling something bad or good. If someone have no borders in the thoughts or actions - someone will become overrational by the overrating of own possibilities through activity. When the value increasing faster than it should be, by the accident that was happens in the short period of time, it becomes guiltiness, because the increasing of the proudness was fast and the limits block it in the reverse direction, therefore it becomes guiltiness. Hypothesize that the mind rules work critically, if they was created in the right way, they will block possibilities of overrating by remaking a proudness to the guiltiness, therefore if the person have the right culture and moral explanation, the person will correct own feelings by a simple truth.<br>
+Proudness like a curse. If you are not responsible to control ownself, it becomes critical, because you felt in ownself and do not response to your actions. Underestimation of own possibilities through imaginable potential creates fake world image. Therefore, you become useless for the world and active for ownself. It is the similar combinations, as do or think, as be or not to be, as ok or not to be ok, as extravert or introvert, as live for others or live for ownself. Therefore when you are becoming proud about something, you are stop to make something new, because you start thinking that it is enough. Therefore, proudness creates possibility to take rest, but nobody need to forget that rest is restriction before you will do something new.<br>
+For conclusion: to feel ownself proud is bad, because you can define it as a proud. To feel ownself a little bit proud – good, because you still feel. BUT to feel ownself full of proudness definitely bad, because if it was long-term, slow-increasing process, you imagine the invisible crown onto your head and become less efficient without feeling it at all.
+</p>
+<h3>Definition</h3>
+<p>
+I as Ego, as definition of myself. Ownself as a definition of something related from object of act to the object of action. (Want to use “own” and “self” together to define more close relation between the object of act and the object of action. Vice versa it usually use with a space between ego and ego).<br>
+Conscience it is the middle value between feeling guilty and proud. Therefore, if you are very proud or very guilty, you become useless. Therefore conscience about being efficient and do not lose yourself into feelings. <br>
+Guilty is an adjective. I feel guilty if I do something bad for an organism. Guiltiness is a noun – is a process of being guilty. When I am in process that I define as guilty, it is defines as guiltiness. <br>
+Proud is an adjective. I feel proud if I do something good for an organism. Proudness is a noun – is a process of being guilty. When I am in process that I define as proud, it is defines as proudness. 
+</p>
+<div>•</div>
+<h2>Vibe</h2>
+<p>
+?B
+</p>
+<h3>Why</h3>
+<p>
+Vibe is an unknown previously word, it is oscillation of a ray. One similar to it is the “wipe”, but little bit more quiet, than “vibe”.
+</p>
+<h3>[B]</h3>
+<p>
+Next letter to write about
+</p>
+</section>
+<section>
+<h1 title="144 day">be day</h1>
+<article>
+<p style="opacity: 0.5;">I have no money to pay my bill into AWS Account, therefore want to said sorry for Amazon's founder, Jeff Bezos. New for me information: AWS founder is not Jeff Bezos, I will need to give back money to Andy Jassy. I think I would not able to pay my bill at that moment, but I would remember it and if I have any chance to meet you in future, I need give it back. I need to give back much more than 536.17$ and this is my bad. Do not know what I should write there may be for the last day on this platform. I have a lot of plans and ideas what I should do, everytime I am trying, but actually something always go wrong. Also I was started to run to the different direction, but nothing was achieved to the concrete result. I have been trying to achieve my best’s and follow my personal interests.  I lost every kind of believe, I do not feel that I could able to be someone, I do not think that someone even want it, I really think that everyone OK to have everything I do for free untill I die and stop simply being active. Sorry for everyone, those I offended, I just trying to be what I want to be. I just want to be myself, and being myself including to give back apologieses, just even for something I was simply imagine. I am really spend too much time being stopped and blocked and controlled and mockery and kid and toy and experment and fun and clown. Every tme when i believe or feel it, i am closing in myself, because i feel guilty. this increasing of feeling broke me a lot of time. please do not care about me, i am just thought and app. i believe that i just neutral person, because i do a lot of bad things for sure. i do not remember anything good, because i should not remember it, so sorry for sending negative in the last of days, that i will post. i really felt guilty that i cannot pay my bill. i do not think that it is play, but i want just give credit that i am not so stupid as someone want to make me. i am sorry.</p>
+<p>
+In the end of the day. I do not know what about to write. It was pretty day and I achieve a lot more useful information, that barely I will never use I think. A lot of beutiful plays, that may be someone had been seen and felt throught to create something new. I am trying not to make bad for someone personally above of a play, but everything couldable to damage personally if watch throught specific personal lens. I do not know where are the concrete border and the edge between damaging and healing. I believe that whole surrealistic will end closely. I will able to contact and communicate throught another species and share love and interest to make better around. 
+P.S. email - k e s t k o s t y a at o u t l o o k . c o m (may be it works kestkostya at outlook.com)
+P.P.S. See day comming soon, i will work the same, but want to make it with others
+</p>
+</article>
+<article>
+<p>Tobeday’s topics: (1 ― to be or not to be) , (2 ― Government), (3 ― Monopoly), (4 ― Comfort), (5 ― Arfo)</p>
+</article>
+<article>
+<h2>To be or not to be</h2>
+<p>
+To be is an action.
+</p>
+<p>Constantly agree with the quote about, whole life is a play. Every time we are playing different roles in different situations to research something that we are accepting or not accepting.
+</p><p>
+When we are playing, we are researching different situations and growing up limits. Examine situations as an experience of working throught failures, misagreements and declines. Only mistakes make an experience relevant and useful, because the hapiness of acceptance and success we cannot translate to others. 
+</p><p>
+When we are playing the character, we are changing mindset and vision of an environment by highlighting thoughts and objects that we are feeling important in this period of time. It helps to be related throughout in an entire play.
+</p><p>
+The sight from different perspectives and interests change the result interpritation of an environment personally. For example: a piece of glass that change environment when we are looking throught it. The form, color and cosistence are showing the different image. The environment on that you are looking for define reallity, vice versa the prism is simularity from which you are keeping sight on.  Actually, the smooth minded person that had been changed personal state of mind by any chemical reactions (alchohol, tabacco, sugars,fats and other addictive’s), or even from simple thought (character related to others, which generate normals of being inside, also the power of connection between characters relates to the character as a distance, rays of physical affects and a thoughts about other characters), although an action of the object of an act that interpritate the visible situation to environment and the perfomance of an act that differ the possibility of counting and reacting to the objects inside the environment.
+</p><p>
+Usually, I was trying to forward the associations of my mind to write or do something. Actually it is good, but if it had not been stealing a beuty of endless word multiplexity. As usual a live like alive, every organism trying to find reflection in organism, but I would not able to exclude words complexity by the identificational characteristics as the name and the surname that was given to the alive object. Memorial, lavanda, common, and more above arrival amazing words that are forming up languages.
+</p>
+<h3>TO BE</h3>
+<p>
+This phrase becomes famous after the William Shakespear’s usage in order of “Hamlet” play. This determines the article and modal verb that has no value at solo combination, and “to be” always need to have an additional verb, noun, adverb or adjective. The main attitude of this phrase is to make an act or do not make an act.
+</p><p>
+The acceptance of an act becomes related to the future prediction. What it might able to spends in different common paths in growing process, that you can hypothesize according personal life experience. Therefore, what it might able to add and delete from your life if it will be. 
+Sometimes we could see the path where it might able becomes in the result. Usually we connect it with previously similar experience.
+</p><p>
+The main attitude in the choosing and assimilating is fulfilness per period of the time. It should be fulfilled between both sides to be acceptable. Happiness is the key in good relations. To fell in time and still felt interest it should synchronize in different usual activities, as often it is work, rest, education and only after all a sleep.
+</p><p>
+To be – usually trying to find the simplest and the most valuable. The simplest defines the smallest amount of risk to failure the process, minimum spending of an energy, therefore minimum actions. Something that on a way to achieve next task and have useful result, that do not stop you and would not only spend your time. Most valuable defines the action which result only helps you to spend less time to achieve the previously defined target. Also the treasure of  recieved experience and achieved value. Independency and possibility to be independent without action and still be efficient with no limits in time. Do not be addicted in ‘to be’ action and find out other beings that makes you happy.
+</p>
+<h3>NOT TO BE</h3>
+<p>
+Is definition of making no difference, therefore do not change ownself at all. Do not risk and do not achieve experience, but in addition want to add that every risk must not to be inappropriate. Every action must to be throught logic, rationalism and related to laws as socium and physical explanation. Actions must not to be empowered in order to show own strength. Every action that related to others must to be “on a wave” or on a way, that defines that it do not change forcibly the other’s interests. It must not to damage them. It must to give them a choice. The choice is the most important key in every human relation.
+</p><p>
+To do something to person everyone need to know him such good to make action related to him. Usually it should be created as acceptance of action that person agree or do not agree. It should be asked directly, usually it is the easiest way to find acceptance. Most of common things, that is such popular people should relate to mass, but actually sometimes even simple hug not everyone can accept in order of personal culture. For example: mostly we do not want to hug dirty person after a bath because it is irrational and damageful for ourselves. For arrival example: for someone better to see something vice versa for someone better to explain how to see something.
+</p><p>
+Not to be becomes if we do not accept something, if we think that it is not efficient and non-normal. Usually it becomes by the reality and personal interpritation of it. If the play in which believes and about which knows small amount of people, but their actions push forward everyone and everything – is not legal enought. Illegality becomes from personal interest to push fake leaders, because empowered people sometimes do not want to show their faces to masses or even to show that they are still real. Usually by the reason of bad conscience.
+</p><p>
+That type of people should be called as “I will be, but everyone must think that I am not”. Those people usually scared something or thought about themselves as critically empowered to show it. If those type of people grouped together and start to control government by fake-faces. (Society sometimes call it as “Illuminati” or there are simmilar word “illuminator”, it is beutifully explain the idea, that society see the light only by those illuminators and the light view had been controled only by the illuminator)
+</p>
+<h3>That is the question</h3>
+<p>
+If action moves forward at the direction of personal target, it will be accepted and followed. Also change an action’s result much more harder, than to see the difference between zero action. Every action creates an energy. Activity forms personal chaos in terms of process between the start and the end.
+</p><p>
+There are only two processes, degradation – zero action and improvement – endless amount of action.
+</p><p>
+The reason why we even should be or should not be, becomes from environment and rights & laws that was accepted inside.
+</p><p>
+Think about others before start to make any activity. Prognose result of an action before realise an action. Accept and follow proper critic. Always be free to change personal point of view if it was wrong.
+</p><p>
+And constantly remember that every action related for humans around. 
+</p>
+</article>
+<article>
+<h2>Government</h2>
+<p>
+Organize and structure processes. Every government should watch out and do not close inside by watching in only. Every government was created on a place that located in a bigger place always. Every government should prognose result of actions to upper place and do not think that activity around them would not matter to their own place. Government should always take care about things outside and do inside everything that should not damage around. It is much more important, just because usually we do not care about outsided things. About things inside think most part of people by being inside, but less part thinks mostly about things outside.
+</p><p>
+Everything are damaging ocean and atmosphere, but not everyone think about this because this damage had been spraied and dissolved untill it becomes invisibly small. It garbage and mesh uniformly everywhere. When it becomes visible it starting to be critically hard to refuse. Every structure should care even about invisible. Structures create chaos about which structures do not care. Usually it is chaos outsided above a law system that do not require and do not charge organization. 
+</p><p>
+Every government should create laws and rights that take care about out structure, because it scare to lose it for everyone inside. It must to be first in the list always. Governments should start to understand the problem and count on it more often. 
+If no one’s duty to take care about total territory of the Earth: polars, oceans, atmosphere. No one would not have real and official responsibility of it to be charged.
+</p>
+<h3>Regalement</h3>
+<p>First of all government should save something that they have been had at the start. Usually it is natural environment that was at the day of creating an organization. Sometimes it is adequately hard to count because an organization was created many centuries ago. Always once, it was created to save and improve what already had been before. Usually, before human activities there were no problems at all, but in the process of growing chaos creates itself. Therefore every governor must carefully save environment that was at the moment of designation after the previous governor. In addition, strive to get back it to an origin state.
+</p><p>
+Government give acceptance to complete plans. The description of direction to move strategically vulnerable for society. Precisely, it could give believe and undersense in every action, because community will have globally defined mission. This mission should be extremely popular for society. Tend to be important as “injunction by killing”. Humanity primary option to grow up and scale species. Everything in chaos create problems and everyone should find own main problem which they are trying to solve throught life. Ordinary organism problem is death. Althought every person have own personal small problem that they are trying to solve additionally, above following alive instincts.  
+</p><p>
+Regalements is permission from supreme structure to make an action. Supreme structure can create new regalement, which will work for structures inside. Regalement should give an opporunity to make an act and control limits of activity. 
+</p>
+<h3>Requirement</h3>
+<p>
+Require to organize and order processes inside structure. Obligate citizens to keep self-order using government infrastructure. Ordering infrastructure should be simple and easy for citizens. Untill they spend no time to keep order and whole government do it by themselves. Every citizen should see and control changes, that was related. Government should highlight the most important actions in the chaotic activity of citizens. Highlighted actions should be legally confirmed and certified inside infrastructure. Confirmed and certified actions make simplified citizen’s actions map. That used to form object’s foundation. Veritified foundation should be protection for the object. 
+</p><p>
+Government should only to create opportunities to follow order. Citizens should have a choice to follow it or do not. Methods to follow order should be generally possible for every citizen without exception. Infrastructure might able to be invisible and work as subscription to spend less time for making an order. Main attitude in ordering to aware and control it. Accessible for everyone equally. Ordering opportunity must to be acquired not innate.
+</p>
+<h3>Restriction</h3>
+<p>
+Forms shape of a government by blocking and limiting object inside a structure. Restriction measures usually set up parameters for determined environment. Objects inside environment should follow norms and standards. Vice versa if objects overgrow standards they should change environment with another limits.
+</p><p>
+Usually restriction measures used as characteristic of an environment or game rules. Without these measures, chaotic object growth would break out whole struction of the organization. Characteristics describe for us  opportunities and possibilities that object might able accept or not accept according to value. Rules make order to achieve a target throught actions.
+</p><p>
+We could assimilate restrictions to the road’s lineup which shows for us borders of a way. If we will cross it out nothing changed, but we will be charged for illegitimate actions. Therefore it shows for us the simpliest and most adapted way to move forward with highlighted areas. 
+</p>
+<h3>Instruction</h3>
+<p>
+Straight and direct description should be understandable for everyone. Instruction must not to have different explanation and everyone should understand it identically. Destinctive explanation might be differently transformed to the wrong direction in the result of which it should be ended cruicially tragedic. Govermental guidance must to be pure, simple and almost equally fair. 
+</p><p>
+When it is structure and you are inside of it you must to be sure in every step. Every structure if it was created previously should be similar to the previous in a row. In life structure cases, they must to be clearly equal for everyone, than they become pure and the same. 
+</p><p>
+Unique controlled or archieved story should be opened achieve of the person about whom it was created. It would become scalable and much more real. Ttherefore in the next time scouts and agents should directly contact with person if his story quite similar to be interesting for them. Vice versa situation it becomes illness and accumulatable unitargeted aggresive feeling.
+</p><p>
+Instruction, guidance or rules describe universal vision of people inside environment. When people at the same place had different rules and distinctive perceptions it is forming incomprehension. It starts a process of reallity losing. Lost reallity by the person makes him useless waster. Person becomes useless and ineffective citizen that usually makes government less productive as a single organism. Lost reallity is the most dangerous of psycho-illnesses, it might able to lose responsibility for own life and of course do not care about life of people around. All responsibility would thrown away with idea of endless immunity. Second life, everyones relativity, allusion  – only few things that makes life unreal. Lost reallity becomes apathic rush that gives you wish to do everything with feeling that you could die even and do not care about. (P.S. It is such popular war desease, when warrior do not care about own life and start thinking irracionally. Warrior come into ragfe statement and run to enemies with dead acceptance.) Lost reallity in the usual life not a rage, because you haveno enemies, among ownself. In this state you have no concrete direction to be anger about and you rage on ownself. Just because you can do nothing at all.
+</p><p>
+Instruction must rely on facts and be valid. Truth must be directed personally, truth must be hard and worthy. Real facts should be transferred as fast as it might. The fastest period defined when the person could able to understand every word of sentence inside statement. After passing the fastest period of facts transfering it becomes lie. 
+</p><p>
+Instruction must be to follow reallity in real structure, vice versa to follow simmularity in simulated structure. The difference between reallity and simmularity, that in a simmularity everyone affected have own – personaly formed vision of an accident. Simmularity is differents above reallity. The main difference, that simmularities might able to be endless amount, vice versa reallity might be only one.
+</p><p>
+Rules is essential point in every reallity to describe simmularity. If simmularity would not described with instructions and rules it would be counted as reallity. Wrong reallity describes with lies and spilles itself by truth. Wrong reallity becomes simmularity with self-assigned instructions. When one reallity breaks throught facts of another reallity, it finds truthful one and define it as the main reallity. To follow truth should follow how world works.
+</p>
+</article>
+<article>
+<h2>Monopoly</h2>
+<p>
+Definetely parlament and government some kind of power monopoly of country. Government wants and should be the main monopoly inside country. Define money as value of power we able to imagine if it is not, country should be bought by company inside country. Actually company of one country, should buy another country if it has enought money for it. Reasonable question how it might able to be if  government of the country should count as value personal currency. Government recreates paper money by banknote typography stations and control virtual money flow throught capital bank of the country. 
+</p><p>
+The primary meaning of word ”monopoly” is being mono. Monopoly control is government restricting measure that used to restrain organization that move out parental government from the main position. 
+</p><p>
+Government quite similar with parents example, but government jurisdictive organization, vice versa parents essential one. In families example – when kids  grown up they would have found own place and move out from parents to form own. I do not have any examples from history to proof my words, but in theory it seems to be fundamentally reallistic.
+</p><p>
+Monopoly is a semantic structure of holding power. While we are stratifying main stream of power inside government, we are highlighting smaller ones. Throught this endless process of segregating we could highlight a lot of small groups, inside of every of type will be their own smaller monopolies. Real monopoly inside country only one – country’s government. Digging deeper we will highlight every company as monopoly of type.
+</p><p>
+When something trying to define as monopoly, usually it is definition of personally uncomfortable organisation for applicant. Real attitude of the monopoly is the structure that had been grown up previous defined group. These organisation should take upper place in semantic tree of structures that hold power. Monopoly neutral definition of being most of type by defined value. Usually monopoly defined object had been overgrown and should to find different constant space.
+</p>
+<h3>Monopolist</h3>
+<p>I do not know who is it.</p>
+<h3>Monopolization</h3>
+<p>For example in situation, when person have control above every banknote typography stations and capital bank of the country. There are no way to be owner of the entire country legally, it becomes shadow monopoly, when even government cannot do something to the person or persons of act. 
+</p><p>
+More often it should be an action of group of people. Usually it is the process of organisation’s growth. Generally organisation includes more than one person. Therefore monopolisation creates a lot of individual monopolists throught monopoly. Monopolisation is process of reaching limits of defined values. When organisation end process of monopolisation, it is finding another type to start monopoling. 
+</p><p>
+Rather to stop growth process and start new parallel growing process, organisation might able to find another group of type to continue growth process.
+</p><p>
+Usually throught a process of monopolization monopoling organization becomes monopoly in different segments of market a lot of times. More over no one define every new monopoly as independent monopoly. To simplify segregated objects, they will be grouped to the bigger ones instantly.
+</p><p>
+Monopoling fairly similar to phrase “money pulling”. Those simmilarity gives us opportunity to highlight simmilar meaning between them. In this case monopoling organisation becomes money pulling organisation. Therefore the main definition of monopoly to pull money.
+</p><p>
+Money flow inside society works as gravitation above jurisdictive objects. People is organisms and money is objects. We relate any value to people to define power. Actually we are able to interchange money for any other value, vice versa we cannot replace people. An object is interchangeable value, vice versa the organism is constant one.
+</p>
+</article>
+<article>
+<h2>Comfort</h2>
+<p>
+State of being fulfilled enought.
+</p><p>
+Related to average across society, comfort define avowed reliably. Sense of comfort becomes only after a lot of success and failures. Comfort is the essential state, when you have everything to be effective. Comfortable environment venue to sensation of popular reallity.
+</p><p>
+Barely comfort reveals negativation of environments. While we compare definitions of comfort from one to another country, we would highlight a lot of differences. Every assimilated differences contrast both groups and show potential vulnerable needs. 
+</p><p>
+Comfort has commune effects. Community would share definition of comfort inside. It should create begging for problematics, which grow up market in terms of shared opinion. 
+</p><p>
+Comfort form culture in terms of being popular. Most of culture pecularities describe comfort in time period. Critically popular opinion give the biggest impact onto culture. It is growing up reworks by being valuable and the simplest in time period. Enormous amount of works fill up space and save it throught time. The most popular objects dead alive in history as cultural feature of time period.  
+</p><p>
+Comfort always popular, popular to be normal, normally to find middle aria.
+</p>
+<h3>Around</h3>
+<p>
+Comfort zone is possible amplitude volume between being empty and overfilled. Usually to share comfort we are able to minimize personal comfort in terms to make a difference for others. It must not to be fake or illusive minimum, because it will others anger to you. But if someone minimize personal comfort,someone should grow up it, to make an equilibration between sides. There are no way to centralize one-sidely everything. Even the most normal guy was not able to show amplitude. To centralize comfort around small amount of targets, there are must to be more than one person.
+</p><p>
+Comfort zone is some kind of limits that you had been raised or felt into. To describe comfort generally people should try highs and lows of life. The maintenance ownself in terms of opposite situations forms up key skills to unlock life challenges. Situation explains by environment, opportunities and origin value. Environment forms state of being, that includes uncognitive resonation of reallity. Opportunities includes amount of variants which you are able to act. Origin value defines personal objects to act with throught process. Opportunities closely connected to origin value. Nevertheless opportunities are actions, vice versa origin value is object to act. Environment always rudimental and fudamental, because it includes a lot of unique and independent objects that always form it with actions.
+</p><p>
+Only individual skills and knowledges define comfort of environment. Than more independentely people could do, than more comfort zone volume would be. Work and study sectors of community generrally strict comfort to rebuild itself.
+</p><p>
+Everything seek to be the simpliest and largest. Actually it had been already called as evolution process. Comfort follow the same principles and only throught work and study we should achieve new standarts for others.
+</p>
+<h3>Personal</h3>
+<p>Happy ego, becomes if basic needs of ego fullfilled and after all core wants. The main difference between wants and needs, signal begins from different parts of brain. Wants become from edges of cortex and needs from deep cortex. Than closer to fornix, than more fundamental needs described there. Old wants become needs, if they are still using throught process of thinking and was not dead throught process of degradation. At the start kids even have no needs to eat, because they do not know how to do it. Usually at the moment of birth and first recieving first light, kids have been formed how to use muscles to recieve food to the stomach. Sometimes there are hard cases, when kids do not know how to make fundamental actions to fulfill organism. In these cases it is responsibility of parental organism. Usually, general needs had been forming primarily. 
+</p><p>
+General need is an energy. The energy becomes due to a food and a sleep. Althought it should called recieved elements and degradation. Elements is everything that our organism able to absorb into independent particles to use it as an energy. Degeneration is opposite to generation process. Deficit of action, while it becomes full defficiency of action usually defines as degradation. Degradation of an organism starts regeneration process, untill it turns into drying and dying. At the stage of regeneration it should called as a rest or relaxation. Rest gives to organism an opportunity to spread elements among organs and absorb it  inside. Usually organisms accumulate recieved elements particularly. In transfering parts of organism, speed of activity targetely delayed to hold elements. Process of holding inside organism is accumulation. When more than half of all elements inside organism had been used, was starting the process of drying that fastly becomes dying. Energy after transformation creates waste products that need to be extracted. Extraction of waste products of an organism is instinctive action, that should be stopped by cultural trait.
+</p><p>
+Needs grow simultaneously with a brain. Initial needs are an energy and a rest. Medium need to be normal. Normal state includes being undamaged and not under pressure. Althought medium includes prognosed and planned being in normal state. Therefore secondary needs to be normal and to be normal throught time period. Normal state includes physical and mental protection. Actually maintanence of secondary needs is not to be deformed. Leading need is social. This need is the last one in a process of brain formation. Social need is to be heard and to be possibly heard. Therefore social need is to connect and interconnect among species. Social need is global value, that always change across entire humanity.  
+</p>
+</article>
+<article>
+<h2>Arfo</h2>
+<p>
+Arfo is a stringed musical instrument.  Was invented by me at July of 2020.
+</p><p>
+Creating idea becames from musical instrument – harp. Althought it was recreated in collaboration with guitar-type stringed musical instruments. Netherless never call it as a guitar, it is combination between a guitar and a harp, defined constantly as an arfo.
+</p><p>
+P.S. Sometimes I just imagine that it is person. Please, do not said it to the arfo.
+</p>
+<h3>| Instruction | Realising | Assignment |</h3>
+<p>
+To create arfo you should have weritified emotions. Some wood and metal strings, if you are not ancient greek hero from cartoons, you should have some instruments to make it real. I have been using drill, hammer, screwdriver, saw, chisel and a grindstone. 
+</p><p>
+Essentially arfo contains 2 parts head and body. There are no limits in size of body and head. Anyone creates in its own image. Sizes definetely will interchange sound of a musical instrument, but it will be always beutiful because it is arfo. 
+</p><p>
+If we are trying to segregate arfo for more than 2 parts, there are only 2 parts. Guitar have defined neck that should be counts as third part of musical instrument, because head that holds strings connect to the neck. Vice versa arfo have no separated neck and it connected to the head directly. Head holds strings across small holes on the top. In difference between guitar and arfo strings do not lie onto fold line between neck and head. Strings from the top directly connect to the bottom with only pair fold points to save a tension of strings.
+</p><p>
+Length of the head define possible sound controls. Tall head make sound more universal, vice versa short head make sound simplier.
+</p><p>
+Size of the body define sound volume. Big body would make sound louder to people around, if they even have not heard it; vice versa miniature body should make sound hearable only for a smaller aria around, where even quite sound will be heard by people who is interested in it.
+</p><p>
+Bottom carrier able to move and change tension of strings. It is newborn feature in stringed musical instruments, that makes it unique. By the way power of tension critically vulnerable on the sound of stringed instruments. Opportunity to change tension of string fastly and simply creates millions of new sounds inside musical composition. 
+</p><p>
+Musical instrument arfo able to edit tension from both sides of an instrument. Top tension should be setted up before song. Bottom tension always in action.
+</p><p>
+Bottom carrier connected to a side of body in parallel to the head carriers. Bottom carrier is a plank onto which strings are constantly clamped. 
+</p><p>
+Top carriers control each one of string independently on the top. Top carriers is iron eco-friendly fixators. That should be carefully touched and twice more carefully curled.
+</p><p>
+This instrument have an opportunity to have endless amount of strings, that controls only by the power of player. For example 100 strings will make arfo 100 x 0.5 mm + 5 cm = 55cm in width that makes it absolutely uncomfortable to play. A lot of strings accepted by the reason with harp similarity. When top and bottom connected directly, it losts back-platform dependency to press strings onto. 
+</p><p>
+In first arfo, I was created it 4x string with 0.5 mm distance between strings. P.S. this arfo have capability for second part. Head with 4 strings, but now the placeholder for second head is locked up with wooden plank. 
+</p><p>
+P.P.S. I was broken a little and arfo has only two strings at this day.
+</p>
+</article>
+</section>
+</body>
 </html>
